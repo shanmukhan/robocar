@@ -1,0 +1,13 @@
+Rover CAD Design Pack
+
+01_Cute_N20_4WD
+- cute_rover_complete.scad : corrected assembled parametric master
+- cute_rover_complete.csg : generated syntax/CSG validation artifact
+- parts/*.scad : individual printable component wrappers
+
+02_Rugged_37D_Future_Proof
+- rugged_rover_complete.scad : previous rugged parametric design
+- parts/*.scad : individual component wrappers
+
+Important: The cute rover N20 motor interface is generic until the exact motor is selected.
+Do not print final motor mounts or wheel hubs until motor dimensions are confirmed.

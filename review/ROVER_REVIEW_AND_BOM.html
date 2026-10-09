@@ -1,0 +1,1234 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Two rover designs: CAD audit and India BOM</title><style>body{font:16px/1.6 system-ui,-apple-system,sans-serif;color:#203142;margin:0;background:#f4f6f8}main{max-width:1240px;margin:auto;background:white;padding:36px 44px}h1{font-size:36px;line-height:1.15}h2{margin-top:50px;padding-top:20px;border-top:2px solid #e4eaf0}h3{margin-top:28px}a{color:#0964ac}img{max-width:100%;height:auto}table{border-collapse:collapse;min-width:900px;width:100%;font-size:13px}td,th{padding:12px;vertical-align:top;border:1px solid #dbe2e8;text-align:left}th{background:#eaf1f8;position:sticky;top:0}tr:nth-child(even){background:#f8fafc}.table-scroll{overflow:auto;margin:20px 0}code{background:#edf1f5;padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:#13283b;color:#e3edf7;padding:20px;overflow:auto}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}figure{margin:0;padding:12px;border:1px solid #dbe2e8;border-radius:8px}figure img{width:100%;height:190px;object-fit:contain}figcaption{font-size:13px}nav{position:sticky;top:0;background:#15354f;color:white;padding:12px;z-index:3;display:flex;gap:18px;flex-wrap:wrap}nav a{color:white}input{padding:8px;min-width:240px;border:1px solid #8fa2b2;border-radius:5px}.controls{padding:15px;background:#eaf1f8;margin:20px 0}blockquote{padding:12px 20px;background:#fff4dc;border-left:4px solid #e0ab2b} @media print{body{background:white}main{max-width:none;padding:0}nav,.controls{display:none}h2{break-before:page}table{min-width:0;font-size:9px}td,th{padding:5px}.table-scroll{overflow:visible}.gallery{grid-template-columns:repeat(3,1fr)}a{color:#203142}figure{break-inside:avoid}}</style></head><body><nav><a href="#decision-and-budget">Budget</a><a href="#compact-car-bill-of-materials">Compact BOM</a><a href="#rugged-car-bill-of-materials">Rugged BOM</a><a href="#cad-findings">CAD findings</a><a href="#component-photos">Photos</a><a href="bom.csv">Download BOM CSV</a></nav><main><div class="controls"><label>Filter table rows: <input id="filter" placeholder="e.g. battery, Compact, R05"></label> <button onclick="window.print()">Print / save PDF</button></div><h1 id="two-rover-projects-design-review-component-details-and-india-buying-guide">Two rover projects — design review, component details and India buying guide</h1>
+<p><strong>Prepared 3 October 2026 (India). Budget instruction: below ₹15,000.</strong> This report assumes that limit is per car and also gives a combined-budget route. Prices marked <strong>live</strong> came from public listing pages/product JSON during this review; all other numbers are spending allowances or explicitly labelled indexed snapshots. GST is included only where the seller states it; shipping, tools and external fabrication quotes are separate. Saved photo/listing metadata is in <a href="component_sources.json">component_sources.json</a>.</p>
+<p><strong>Neither supplied design is ready for final manufacturing.</strong> There are 58 documented findings across the two SCAD masters, their part wrappers, the one existing STL and the accompanying project documents. Fix the mounting, clearance, battery and wheel interfaces before final prints. The findings distinguish measured mesh defects, directly derived SCAD defects, integration gaps and unverified fit risks.</p>
+<h2 id="decision-and-budget">Decision and budget</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>Build</th>
+  <th>What you receive</th>
+  <th style="text-align:right">Planning parts subtotal</th>
+  <th style="text-align:right">Reserve</th>
+  <th style="text-align:right">Planning total</th>
+  <th>Budget conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Compact N20</td>
+  <td>Four N20 motors; rubber wheels; S3 motor/sensor controller; separate streaming camera; three ToF; battery/charger/printing/hardware</td>
+  <td style="text-align:right">₹7,602.00</td>
+  <td style="text-align:right">₹1,000</td>
+  <td style="text-align:right"><strong>₹8,602.00</strong></td>
+  <td>Comfortably below ₹15,000 if you print yourself and source to the stated caps</td>
+</tr>
+<tr>
+  <td>Rugged budget</td>
+  <td>Four 12 V encoder motors; four BTS7960 channels requiring qualification; one ToF; metal frame; 3S battery/charger; S3 phone control</td>
+  <td style="text-align:right">₹12,476.00</td>
+  <td style="text-align:right">₹1,000</td>
+  <td style="text-align:right"><strong>₹13,476.00</strong></td>
+  <td>Budget-first option; qualify driver modules and obtain motor/wheel/fabrication quotes</td>
+</tr>
+<tr>
+  <td>Rugged with genuine Cytron drivers</td>
+  <td>Same rover, with two MDD10A dual boards instead of four generic bridges</td>
+  <td style="text-align:right">₹14,699.64</td>
+  <td style="text-align:right">₹250</td>
+  <td style="text-align:right"><strong>₹14,949.64</strong></td>
+  <td>Very tight: shipping/quotes can exceed ₹15,000; reduce cost or use budget option if they do</td>
+</tr>
+<tr>
+  <td>Rugged with original autonomy architecture</td>
+  <td>Above plus Pi, cooling, storage, proper mobile Pi supply, rotating LiDAR, IMU, camera and supports</td>
+  <td style="text-align:right">Roughly another ₹25,000–30,000 in upgrade allowances</td>
+  <td style="text-align:right">Actual shipping/fabrication</td>
+  <td style="text-align:right">Typically around ₹40,000+</td>
+  <td>Does not fit a new-parts ₹15,000 ceiling</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are <strong>complete planning lists, not guaranteed checkout quotes</strong>. A single unavailable motor variant, outsourced print job or frame fabrication quote can change the total. The rugged budget build has <strong>no Pi, no LiDAR and no ROS SLAM</strong>. It preserves encoder wiring and a metal frame so those can be added later. Phone teleoperation and basic ToF stop logic are within its scope; grass/slope/payload capability remains to be tested.</p>
+<p>The budget battery change is deliberate: original 4S LiFePO₄ 15 Ah is 192 Wh nominal, whereas the selected 3S LiPo 2.2 Ah is 24.42 Wh, about one eighth of that energy. If subsequent measurement gives a 20–40 W mean load, an illustrative 80% usable-energy assumption means 24.42 Wh would imply roughly 29–59 minutes. This is an estimate, not a runtime claim. At 60 RPM on 100 mm tyres the no-load geometric speed is 0.314 m/s (1.13 km/h); 90 mm tyres reduce that to 0.283 m/s. Compact 44 mm wheels at 100 RPM give 0.230 m/s no-load.</p>
+<p>If ₹15,000 means <strong>both cars combined</strong>, target about <strong>₹5,500 compact + ₹8,500 rugged</strong>, keeping ₹900 shared reserve (₹14,900 combined target). This is a reduced prototype plan: share the charger, programmer and tools; omit compact video initially; use four BTS7960 modules requiring qualification instead of two Cytron boards for the rugged car; postpone all compute/LiDAR upgrades. It is conditional on actual local frame/printing and encoder-motor prices. If those caps fail, finish the compact rover first. Do not buy four incompatible cheaper motors just to satisfy a subtotal.</p>
+<h2 id="what-was-actually-checked">What was actually checked</h2>
+<p>Read both master SCAD files, all <strong>29 individual SCAD wrappers</strong> (12 compact and 17 rugged), the two detailed project documents, READMEs, manifest and research notes. Inspected the existing assembled PNG. Parsed the <strong>only supplied STL</strong> directly, welded identical vertex coordinates, counted edge incidence and winding, zero-area and duplicate triangles, vertex-connected components and physical bounds. Calculated SCAD coordinate intervals and mating-hole patterns from source.</p>
+<p><strong>OpenSCAD is not installed in this workspace.</strong> No fresh F6/CGAL renders, source-to-STL Boolean comparison, slicer run, self-intersection test, FEA, physical fit test or load test was performed. Syntax/runtime validity of wrappers and SCAD defaults remains to be confirmed in OpenSCAD. The <code>.csg</code> file is a historical validation artefact; it does not certify manufacturability. Source files and existing STL were left unchanged; all new outputs are under <code>review/</code>.</p>
+<h3 id="existing-stl-measurements">Existing STL measurements</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>Check</th>
+  <th>Result</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>File</td>
+  <td><code>01_Cute_N20_4WD/cute_rover_complete.stl</code>, ASCII, 3,492,129 bytes</td>
+  <td>Existing historical full assembly</td>
+</tr>
+<tr>
+  <td>Triangles / unique vertices</td>
+  <td>21,410 / 10,643</td>
+  <td>Exact-coordinate welding</td>
+</tr>
+<tr>
+  <td>Bounds</td>
+  <td>X −77.4263 to 150; Y −67.5 to 105; Z 0 to 48.9263</td>
+  <td>STL has no inherent unit metadata; mm assumed from source</td>
+</tr>
+<tr>
+  <td>Dimensions</td>
+  <td><strong>227.4263 × 172.5 × 48.9263 mm</strong></td>
+  <td>Does not match the current centred 150 mm chassis assembly</td>
+</tr>
+<tr>
+  <td>Boundary edges</td>
+  <td>0</td>
+  <td>Closed edge incidence alone does not guarantee a valid solid</td>
+</tr>
+<tr>
+  <td>Non-manifold edges</td>
+  <td><strong>1</strong></td>
+  <td>Four faces meet one edge: (−10,−16,24) to (10,−16,24)</td>
+</tr>
+<tr>
+  <td>Inconsistent orientation at two-face edges</td>
+  <td>0</td>
+  <td>Good locally; does not negate non-manifold edge</td>
+</tr>
+<tr>
+  <td>Zero-area / duplicate triangles</td>
+  <td>0 / 0</td>
+  <td>No such defects under exact-coordinate checks</td>
+</tr>
+<tr>
+  <td>Vertex-connected components</td>
+  <td><strong>5</strong></td>
+  <td>Does not equal a valid printable parts set; vertex/tangent contacts may join bodies</td>
+</tr>
+<tr>
+  <td>Signed mesh volume</td>
+  <td>239,820.97 mm³</td>
+  <td>Analytical metric only; do not treat as slicer filament estimate for this defective assembly</td>
+</tr>
+<tr>
+  <td>Current SCAD expected outer envelope</td>
+  <td>About 150 × 138 × 48 mm including motor placeholders; wheel/hub width about 133 mm</td>
+  <td>Source-based: base z=2..6, wheels z=4..49, camera up to z=50; therefore source Z extent is <strong>48 mm</strong> from z=2 to 50. Placeholder shaft tips extend Y to ±69. Not freshly rendered</td>
+</tr>
+</tbody>
+</table></div>
+<p>Re-run the audit with <code>python3 review/audit_stl.py</code>; raw results and component bounds are in <a href="stl_metrics.json">stl_metrics.json</a>. The STL SHA-256 is <code>d78348921ff9c3e0a4fbb2df4da57c51c3a032d2f0173866e0911068205e1e5f</code>.</p>
+<p><img src="images/existing_stl.png" alt="Existing STL measured projection" /></p>
+<p><img src="images/cad_diagnostics.png" alt="Analytical SCAD problem diagrams" /></p>
+<p>The drawings above are computed diagnostics, not corrected CAD renders. They make the ground-clearance, disconnected-frame and motor-plate errors visible.</p>
+<h2 id="compact-car-bill-of-materials">Compact car bill of materials</h2>
+<p>This recommended budget configuration uses <strong>two boards</strong>: an ESP32-S3 DevKit controls the four motors and ToF sensors; a separate ESP32-CAM streams video. This is an explicit change from the original single S3-camera-board idea, made to avoid unverified camera/GPIO conflicts. The selected camera listing currently calls its sensor <strong>OV3660</strong>, even though some photos and old text show OV2640. Check the delivered module and firmware pin map. One S3 camera board can replace both only after its motor/I²C/XSHUT GPIO budget and power interfaces are verified.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>ID / Qty</th>
+  <th>Component and required specification</th>
+  <th style="text-align:right">Unit / line ₹</th>
+  <th>Buy source / price evidence</th>
+  <th>Best alternative and fit implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>C01 / <strong>4</strong></td>
+  <td><strong>N20 gearmotor</strong> — 6 V, 100 RPM target, 3 mm D shaft; all four identical</td>
+  <td style="text-align:right">300.00 / <strong>1,200.00</strong></td>
+  <td><a href="https://robu.in/product-category/dc-motors/motors/n20-gear-motor/micro-gear-motor-without-encoder/">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Same N20 6 V 60 RPM: slower, greater reduction; encoder version if odometry needed; <a href="https://robocraze.com/products/n20-6v-60-rpm-micro-metal-gear-box-dc-motor">Alternative portal</a>. <strong>Fit/check:</strong> Buy one first: gearbox length, 12×10 body, shaft length/flat, stall current. Robocraze ₹225 listing is unavailable; ₹300 cap uses a different seller. Mount redesign required.</td>
+</tr>
+<tr>
+  <td>C02 / <strong>4</strong></td>
+  <td><strong>Rubber wheel</strong> — 44–45 mm diameter; 3 mm D shaft; width/offset measured</td>
+  <td style="text-align:right">35.00 / <strong>140.00</strong></td>
+  <td><a href="https://kitsguru.com/products/car-wheel-tyre-44mm-n20-dc-gear-motor-wheel">Buy / inspect</a>; Live product JSON ₹35; available</td>
+  <td>42 mm N20 wheel, or TPU tyre on redesigned D-hub; <a href="https://techdepot.in/products/n20-dc-gear-motor-wheel-42mm">Alternative portal</a>. <strong>Fit/check:</strong> ₹35 each listing; confirm whether one or pair. Set WHEEL_D to actual 44 mm; bought wheel replaces printed wheel AND separate adapter.</td>
+</tr>
+<tr>
+  <td>C03 / <strong>2</strong></td>
+  <td><strong>DRV8833 dual driver</strong> — One bridge per motor, four independent channels; 3.3 V input</td>
+  <td style="text-align:right">72.00 / <strong>144.00</strong></td>
+  <td><a href="https://robocraze.com/products/drv8833-2-channel-dc-motor-driver">Buy / inspect</a>; Live ₹72; available</td>
+  <td>Same DRV8833 at Zbotic; TB6612FNG only after stall/thermal check; <a href="https://zbotic.in/product/drv8833-2-channel-dc-motor-driver/">Alternative portal</a>. <strong>Fit/check:</strong> Choose real chip/carrier; full-current TI package differs from 500 mA PW package. Budget module seller claims 1.2 A; prove thermal margin. Fit new mounting holes.</td>
+</tr>
+<tr>
+  <td>C04 / <strong>1</strong></td>
+  <td><strong>ESP32-S3 DevKit controller</strong> — Header-equipped PCB-antenna DevKitC-compatible; USB; 3.3 V GPIO</td>
+  <td style="text-align:right">911.00 / <strong>911.00</strong></td>
+  <td><a href="https://evelta.com/7semi-esp32-s3-devkitc-1-esp32-s3-wroom-wi-fi-bluetooth-5-ble-development-board/">Buy / inspect</a>; Page headline ₹910.96 rounded; variant confirmation</td>
+  <td>WROOM-32 DevKit for control only; confirm available pins/firmware; <a href="https://robu.in/?s=ESP32+DevKit&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Evelta headline ₹910.96 incl GST; selectable board variants differ. Advertised 64×25 mm board is too long for current 58×32 tray. Use a carrier cradle.</td>
+</tr>
+<tr>
+  <td>C05 / <strong>1</strong></td>
+  <td><strong>Separate camera board</strong> — ESP32-CAM with included OV3660; 5 V board input; Wi-Fi stream</td>
+  <td style="text-align:right">689.00 / <strong>689.00</strong></td>
+  <td><a href="https://robocraze.com/products/esp32-camera-module">Buy / inspect</a>; Live JSON ₹689; stock conflicts with cached page</td>
+  <td>Seeed XIAO ESP32-S3 Sense camera board; <a href="https://robu.in/?s=XIAO+ESP32S3+Sense&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Intentional two-board budget architecture: S3 controls motors, camera streams independently. JSON says available; web snapshot says sold out. Confirm checkout and exact sensor pin map; CAM is classic ESP32, not S3.</td>
+</tr>
+<tr>
+  <td>C06 / <strong>1</strong></td>
+  <td><strong>Camera programmer</strong> — USB-UART with 3.3 V signal levels or matching ESP32-CAM-MB base</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=ESP32+CAM+MB&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Existing USB-UART adapter with verified 3.3 V TX/RX; <a href="https://robu.in/?s=CP2102+USB+UART&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Needed if camera has no USB; its board needs adequate 5 V power, not a weak 3.3 V UART regulator.</td>
+</tr>
+<tr>
+  <td>C07 / <strong>3</strong></td>
+  <td><strong>VL53L0X breakout</strong> — I²C, exposed XSHUT; 3.3 V-safe bus and regulator-compatible input</td>
+  <td style="text-align:right">126.00 / <strong>378.00</strong></td>
+  <td><a href="https://robocraze.com/products/vl53l0x-laser-ranging-sensor">Buy / inspect</a>; Live JSON ₹126; available; web snapshot ₹123</td>
+  <td>Same VL53L0X breakout at another seller; VL53L1X with firmware/bracket change; <a href="https://robu.in/?s=VL53L0X&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Default 7-bit address 0x29; initialize separately to e.g. 0x30/31/32. Buy actual breakout, not bare sensor. Three independent bracket angles.</td>
+</tr>
+<tr>
+  <td>C08 / <strong>1</strong></td>
+  <td><strong>2S LiPo battery</strong> — 7.4 V nominal / 8.4 V full; ~850–1000 mAh; ≥10 A verified discharge</td>
+  <td style="text-align:right">900.00 / <strong>900.00</strong></td>
+  <td><a href="https://robu.in/product/pro-range-1000mah-2s-30c60c-lithium-polymer-battery-pack-lipo/">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>2S 850 mAh GNB/CNHL from hobby supplier; <a href="https://techhobby.in/product/cnhl-ministar-850mah-7-4v-2s-70c-lipo-battery-with-xt30u">Alternative portal</a>. <strong>Fit/check:</strong> PRICE/stock/dimensions unverified. Original 62×32 opening has no floor and is probably too shallow. Obtain L/W/H and connector exits before tray redesign.</td>
+</tr>
+<tr>
+  <td>C09 / <strong>1</strong></td>
+  <td><strong>LiPo balance charger</strong> — 2S-capable 4.20 V/cell; mains input or include required adapter</td>
+  <td style="text-align:right">450.00 / <strong>450.00</strong></td>
+  <td><a href="https://robocraze.com/collections/battery-chargers">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Genuine SkyRC B6neo plus required power source; <a href="https://robu.in/?s=SkyRC+B6neo&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> B3 is a lower-cost 2S/3S option (~₹332 category snapshot); verify quality/cell current. TP4056 is single-cell and cannot charge this pack.</td>
+</tr>
+<tr>
+  <td>C10 / <strong>1</strong></td>
+  <td><strong>Motor buck regulator</strong> — 2S → 5.5–6.0 V; ≥5 A continuous demonstrated at selected input</td>
+  <td style="text-align:right">400.00 / <strong>400.00</strong></td>
+  <td><a href="https://robu.in/?s=5A+adjustable+buck+converter&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Two adequately rated 3 A motor regulators, one per side; <a href="https://robu.in/?s=3A+buck+regulator&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Prevents full 8.4 V from reaching 6 V motors. Must handle four starts and braking energy; choose converter/TVS clamp arrangement after tests; LM2596 labelled 3 A is not a proven 5 A solution.</td>
+</tr>
+<tr>
+  <td>C11 / <strong>1</strong></td>
+  <td><strong>Logic buck regulator</strong> — 2S → 5.0 V; ≥2 A continuous, low ripple</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=5V+3A+buck+converter&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Quality 5 V 2–3 A BEC; <a href="https://robu.in/?s=5V+BEC&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Separate motor and logic branches. 5 V goes to board input, not GPIO; sensor input per breakout schematic.</td>
+</tr>
+<tr>
+  <td>C12 / <strong>1</strong></td>
+  <td><strong>Low-voltage monitor/cutoff</strong> — 2S cell monitor plus firmware stop; hardware cutoff if unattended</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=1S+8S+lipo+battery+low+voltage+alarm&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Protected high-discharge 2S Li-ion pack with appropriate BMS; <a href="https://robu.in/?s=2S+battery+BMS&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Alarm alone does not disconnect load. Use ADC divider/cell monitor and test disconnect behaviour; confirm per-cell thresholds with pack maker.</td>
+</tr>
+<tr>
+  <td>C13 / <strong>1</strong></td>
+  <td><strong>Fuse and holder kit</strong> — DC fuse close to battery; spare fuse; provisionally 5 A</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=inline+fuse+holder&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Blade fuse holder from auto electrical shop; <a href="https://robu.in/?s=blade+fuse&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Final rating from starts and measured current; must be below wire/connector safe limit. Motor wiring differs from main wiring.</td>
+</tr>
+<tr>
+  <td>C14 / <strong>1</strong></td>
+  <td><strong>Main switch</strong> — DC-rated ≥10 A at battery voltage; accessible</td>
+  <td style="text-align:right">60.00 / <strong>60.00</strong></td>
+  <td><a href="https://robu.in/?s=DC+rocker+switch+10A&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Removable XT30 disconnect + rated motor enable switch; <a href="https://robu.in/?s=XT30&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> CAD has no switch aperture or switch bracket; add before printing.</td>
+</tr>
+<tr>
+  <td>C15 / <strong>2</strong></td>
+  <td><strong>XT30 connector pairs</strong> — Genuine matching male/female, insulated; battery and charging lead</td>
+  <td style="text-align:right">60.00 / <strong>120.00</strong></td>
+  <td><a href="https://robu.in/?s=XT30+connector+pair&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Match existing pack connector using a rated adapter; <a href="https://robu.in/?s=battery+connector+adapter&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Confirm pack polarity and included plugs; JST-PH signal connectors are not main power substitutes.</td>
+</tr>
+<tr>
+  <td>C16 / <strong>1</strong></td>
+  <td><strong>Wire kit</strong> — ~1 m each red/black 18–20 AWG main, motor 22 AWG; ~3 m 26 AWG signal</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=silicone+wire+20AWG&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Local stranded copper cable in equivalent cross-section; <a href="https://robu.in/?s=silicone+wire&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Gauge is a starting plan; validate voltage drop/current and protect against wheel rubbing. Avoid copper-clad aluminium.</td>
+</tr>
+<tr>
+  <td>C17 / <strong>1</strong></td>
+  <td><strong>Signal connector kit</strong> — At least 8 locking 2/4/6-pin pairs for boards, sensors and motors</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=JST+XH+connector+kit&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Soldered harness + heat shrink for prototype; <a href="https://robu.in/?s=heat+shrink&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Use correct pitch; crimp contacts count with housings. Dupont is bench-only under vibration.</td>
+</tr>
+<tr>
+  <td>C18 / <strong>1</strong></td>
+  <td><strong>Noise/filter kit</strong> — 4×100 nF ceramics at motors; 2×470 µF ≥16 V driver bulk; 1×470 µF logic; 100 nF local bypass</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=capacitor+kit&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>220–1000 µF bulk chosen from ripple/start measurements; <a href="https://robu.in/?s=electrolytic+capacitors&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Bulk caps complement existing carrier caps. Add input clamp/filter for regen on buck-fed motor rail; choose clamp voltage against driver limit.</td>
+</tr>
+<tr>
+  <td>C19 / <strong>1</strong></td>
+  <td><strong>Perfboard carrier</strong> — ~50×70 mm, headers and screw terminals</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=perfboard&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Small custom PCB later; <a href="https://robu.in/?s=PCB+prototyping&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Add rigid carrier mount and connector strain relief; no solderless breadboard in final mobile chassis.</td>
+</tr>
+<tr>
+  <td>C20 / <strong>1</strong></td>
+  <td><strong>Fastener kit</strong> — M3×8 (20), ×12 (12), ×16 (8), ×45 (6 if using through-bolted printed spacers); nuts (40), washers (40); M2×6 (12) + nuts/spacers</td>
+  <td style="text-align:right">220.00 / <strong>220.00</strong></td>
+  <td><a href="https://robu.in/?s=M3+screw+nut+assortment&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Local metric hardware, nylon spacers for electronics; <a href="https://robu.in/?s=nylon+standoff&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Planning quantities with spares; final screw lengths depend on corrected stack. Camera/ToF board holes may be M2, not M3; threaded metal spacers use short screws instead of long through bolts.</td>
+</tr>
+<tr>
+  <td>C21 / <strong>4</strong></td>
+  <td><strong>Deck spacers</strong> — ~32 mm at present reference; final CAD-derived length, M3 bore</td>
+  <td style="text-align:right">20.00 / <strong>80.00</strong></td>
+  <td><a href="https://robu.in/?s=M3+32mm+standoff&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Printed tubular spacer with through bolt; <a href="https://robu.in/?s=M3+spacer&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Current 32 mm spacers leave 2 mm gap. Once base top is fixed, length = deck underside minus base top; add matched holes.</td>
+</tr>
+<tr>
+  <td>C22 / <strong>2</strong></td>
+  <td><strong>Battery straps</strong> — 10–15 mm hook-and-loop + foam pad</td>
+  <td style="text-align:right">30.00 / <strong>60.00</strong></td>
+  <td><a href="https://robu.in/?s=battery+velcro+strap&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Hook-and-loop tape through new slots; <a href="https://robu.in/?s=velcro&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Keep straps away from terminals; new slots and solid battery floor required.</td>
+</tr>
+<tr>
+  <td>C23 / <strong>1</strong></td>
+  <td><strong>Printing allocation</strong> — Corrected PETG chassis/modules; estimated 200–300 g incl failed fit tests</td>
+  <td style="text-align:right">650.00 / <strong>650.00</strong></td>
+  <td><a href="https://robu.in/?s=PETG+filament&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>PLA indoor prototype; paid print service if no printer; <a href="https://robu.in/?s=3D+printing+service&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Material/own-printer allowance, not a print-service quote. Wheels are purchased; do not print assembly STL. External printing may cost substantially more.</td>
+</tr>
+<tr>
+  <td>C24 / <strong>1</strong></td>
+  <td><strong>USB data cable</strong> — S3 USB connector matched, 0.5–1 m</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=USB+C+data+cable&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Existing tested data cable; <a href="https://robu.in/?s=USB+cable&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> A charge-only cable cannot program the controller.</td>
+</tr>
+<tr>
+  <td>C25 / <strong>1</strong></td>
+  <td><strong>Assembly consumables</strong> — Heat shrink, cable ties, foam, labels, solder, strain relief</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=heat+shrink+cable+ties&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Existing workshop stock; <a href="https://robu.in/?s=solder&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Protect all moving clearances; reserve space for antenna, regulator ventilation and plug access.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Compact subtotal: ₹7,602.00.</strong> Every row is included once; optional encoder upgrades below replace the base motors. Tools and labour are excluded. Purchased rubber wheels replace both the SCAD wheels and hub adapters.</p>
+<h2 id="rugged-car-bill-of-materials">Rugged car bill of materials</h2>
+<p>The table below uses the <strong>higher-quality Cytron driver option</strong>. For the budget-first build, substitute R05 with <strong>four BTS7960/IBT-2 boards at a ₹350 per-board cap (₹1,400 total)</strong> and add a <strong>₹150 logic-interface kit</strong>, reducing the subtotal to ₹12,476.00; the other rows stay the same. The substituted full list is <a href="rugged_budget_bom.csv">rugged_budget_bom.csv</a>, including R28: one 8-channel SN74AHCT245 carrier/IC on perfboard, 100 nF bypass, fixed direction/output-enable wiring and pull-downs. At 5 V, AHCT TTL input thresholds accept 3.3 V control and supply 5 V signals to the driver; verify the actual module's requirements. This buffer is MCU-to-driver only, separate from encoder downshift. RPWM/LPWM use two outputs per motor rather than Cytron PWM/DIR; hardware enables need a defined default-off stop path. <a href="https://www.ti.com/product/SN74AHCT245">TI SN74AHCT245</a></p>
+<p>Both options use four individual encoder motor channels. <strong>Two MDD10A boards provide four channels, not eight</strong>. Do not connect both motors of a side to one bridge if you intend to control all four speeds independently. Keep a common logic reference, eight verified A/B encoder signal inputs and a hardware stop path. The Pololu motor photo below is a <strong>premium reference/alternative</strong>, not the budget JGB37 motor; a live photo of the EngineersToy listing could not be retrieved.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>ID / Qty</th>
+  <th>Component and required specification</th>
+  <th style="text-align:right">Unit / line ₹</th>
+  <th>Buy source / price evidence</th>
+  <th>Best alternative and fit implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>R01 / <strong>4</strong></td>
+  <td><strong>JGB37-520 encoder motors</strong> — 12 V, 60 RPM, quadrature A/B, 6 mm D shaft; matching four</td>
+  <td style="text-align:right">650.00 / <strong>2,600.00</strong></td>
+  <td><a href="https://www.engineerstoy.com/product/dc-geared-motor-with-encoder-jgb37-520-12v/">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>RMCS-3012 60 RPM quadrature (~₹1500 indexed) if encoders must remain; cheap Rhino GB37 without encoder or premium Pololu #4755 as separate trade-offs; <a href="https://robokits.co.in/motors/encoder-dc-servo/high-torque-12v-dc-encoder-motor/dc-12v-60rpm-high-torque-quad-encoder-motor">Alternative portal</a>. <strong>Fit/check:</strong> ₹650 cap provisional: EngineersToy live fetch blocked. Confirm exact encoder variant, stall/current and mount/shaft offset. RMCS needs new brackets, shaft-length and 5V encoder checks; four add ≥₹3400 and may exceed budget. Nonencoder GB37 loses PID/odometry.</td>
+</tr>
+<tr>
+  <td>R02 / <strong>4</strong></td>
+  <td><strong>Rubber drive wheels</strong> — 90–100 mm, ~20–32 mm wide; complete metal clamp hub where possible</td>
+  <td style="text-align:right">250.00 / <strong>1,000.00</strong></td>
+  <td><a href="https://robokits.co.in/robot-wheels">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>90 mm 6 mm-ID Robokits wheel, or 12 mm-hex RC tyre + matching 6 mm adapter; <a href="https://robokits.co.in/robot-wheels">Alternative portal</a>. <strong>Fit/check:</strong> ₹250/each is purchasing cap, not verified quote. Match 6 mm bore, shaft flat, hub offset, fastening pattern and retention. BO double-flat holes are not automatically compatible.</td>
+</tr>
+<tr>
+  <td>R03 / <strong>4</strong></td>
+  <td><strong>6 mm metal wheel hubs</strong> — Clamp or radial set screw, matches wheel holes/hex and shaft engagement</td>
+  <td style="text-align:right">100.00 / <strong>400.00</strong></td>
+  <td><a href="https://robu.in/?s=6mm+wheel+hub&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Integrated 6 mm locking wheel saves separate hub; <a href="https://robokits.co.in/robot-wheels">Alternative portal</a>. <strong>Fit/check:</strong> Skip only if R02 includes proper retention. Current printed hub cannot transmit torque reliably and wheel lacks its bolt pattern.</td>
+</tr>
+<tr>
+  <td>R04 / <strong>4</strong></td>
+  <td><strong>Metal motor L-brackets</strong> — Purchased-motor face pattern, pilot boss and chassis foot</td>
+  <td style="text-align:right">100.00 / <strong>400.00</strong></td>
+  <td><a href="https://robu.in/?s=37mm+motor+mounting+bracket&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Custom bent/cut 2–3 mm aluminium plate; Pololu 37D bracket for Pololu only; <a href="https://robu.in/?s=Pololu+37D+bracket&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Current generic 62×62×8 flat plate needs redesign/foot; buy matched brackets or fabricate from measured drawing.</td>
+</tr>
+<tr>
+  <td>R05 / <strong>2</strong></td>
+  <td><strong>Cytron MDD10A Rev2</strong> — Two independent motors per board; 5–30 V, 10 A continuous/channel</td>
+  <td style="text-align:right">1,886.82 / <strong>3,773.64</strong></td>
+  <td><a href="https://evelta.com/mdd10a-10amp-5v-30v-dc-motor-driver-2-channels/">Buy / inspect</a>; Live Evelta ₹1,886.82 incl GST; checkout stock ambiguous</td>
+  <td>Four BTS7960/IBT-2 single-channel modules (~₹250–450 each); <a href="https://robokits.co.in/index.php?main_page=product_info&amp;products_id=1859">Alternative portal</a>. <strong>Fit/check:</strong> One channel per motor. Primary manufacturer confirms 10 A, not retailer 13 A text. No reverse-polarity protection. Current motor variant must meet channel limits.</td>
+</tr>
+<tr>
+  <td>R06 / <strong>1</strong></td>
+  <td><strong>ESP32-S3 controller</strong> — Header-equipped PCB-antenna DevKit, 8 encoder inputs, 8 drive outputs</td>
+  <td style="text-align:right">911.00 / <strong>911.00</strong></td>
+  <td><a href="https://evelta.com/7semi-esp32-s3-devkitc-1-esp32-s3-wroom-wi-fi-bluetooth-5-ble-development-board/">Buy / inspect</a>; Page headline ₹910.96 rounded; confirm variant</td>
+  <td>ESP32 WROOM-32 DevKit; GPIO/PCNT redesign needed; <a href="https://robu.in/?s=ESP32+DevKit&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Do not use XIAO without extra pin planning; current tray holes are generic, advertised 64 mm board leaves little cable margin.</td>
+</tr>
+<tr>
+  <td>R07 / <strong>1</strong></td>
+  <td><strong>3S LiPo battery (budget)</strong> — 11.1 V nominal / 12.6 V full, Bonka 2200 mAh 35C, XT60</td>
+  <td style="text-align:right">2,039.00 / <strong>2,039.00</strong></td>
+  <td><a href="https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery">Buy / inspect</a>; Live JSON ₹2,039; available</td>
+  <td>Original 4S LiFePO4 15 Ah pack after BMS/current/dimension confirmation; <a href="https://robu.in/product/4s1p-lifepo4-battery-pack/">Alternative portal</a>. <strong>Fit/check:</strong> Budget substitution drops nominal energy from 192 Wh to 24.42 Wh (~7.9× less). Verify C-rating authenticity; add per-cell cutoff. Charger chemistry changes.</td>
+</tr>
+<tr>
+  <td>R08 / <strong>1</strong></td>
+  <td><strong>2S/3S LiPo balance charger</strong> — 3S 4.20 V/cell balance charging, AC input</td>
+  <td style="text-align:right">450.00 / <strong>450.00</strong></td>
+  <td><a href="https://robocraze.com/collections/battery-chargers">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Genuine SkyRC charger + appropriate power source; <a href="https://robu.in/?s=SkyRC+LiPo+charger&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> May be shared with compact pack; no LFP charger in this 3S build. Check actual balance connector pitch/current and three-cell readout.</td>
+</tr>
+<tr>
+  <td>R09 / <strong>1</strong></td>
+  <td><strong>5 V logic buck</strong> — 3S → 5 V, ≥2 A verified, filtered</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=5V+3A+buck&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Quality 5 V BEC; <a href="https://robu.in/?s=5V+BEC&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> This budget regulator is for ESP32/sensors only. Replace/add the Pi-rated supply before Pi upgrade.</td>
+</tr>
+<tr>
+  <td>R10 / <strong>1</strong></td>
+  <td><strong>Cell monitor/cutoff kit</strong> — 3S balance connector alarm + MCU voltage stop + appropriate hardware cutoff</td>
+  <td style="text-align:right">120.00 / <strong>120.00</strong></td>
+  <td><a href="https://robu.in/?s=lipo+voltage+alarm&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Pack with documented integrated high-current protection; <a href="https://robu.in/?s=3S+BMS&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Typical RC LiPo has no BMS; alarm is not cutoff. Thresholds from pack spec, stop before a low cell and leave power recovery margin.</td>
+</tr>
+<tr>
+  <td>R11 / <strong>1</strong></td>
+  <td><strong>Encoder level converter</strong> — Eight channels 5 V→3.3 V where needed; two 4-channel unidirectional buffers</td>
+  <td style="text-align:right">120.00 / <strong>120.00</strong></td>
+  <td><a href="https://robu.in/?s=74LVC125+module&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Resistor dividers for eight verified push-pull outputs at tested encoder frequency; <a href="https://robu.in/?s=resistor+kit&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Power buffers at 3.3 V and verify their inputs tolerate 5 V. Use pullups instead only when encoder outputs are confirmed open collector. Generic slow I²C shifter is not preferred for fast edges.</td>
+</tr>
+<tr>
+  <td>R12 / <strong>1</strong></td>
+  <td><strong>Front VL53L0X</strong> — 3.3 V-safe I²C breakout; forward-facing</td>
+  <td style="text-align:right">126.00 / <strong>126.00</strong></td>
+  <td><a href="https://robocraze.com/products/vl53l0x-laser-ranging-sensor">Buy / inspect</a>; Live JSON ₹126; available</td>
+  <td>HC-SR04 budget ultrasound with 5 V echo divider; VL53L1X upgrade; <a href="https://robu.in/?s=HC+SR04&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> One sensor baseline, add two later. Short-range ToF is not a 360° scan or outdoor mapping sensor.</td>
+</tr>
+<tr>
+  <td>R13 / <strong>1</strong></td>
+  <td><strong>Aluminium frame allocation</strong> — Two ~330 mm rails + two crossmembers, 20×20 extrusion or angle; four corner brackets; 16 matching T-nuts/bolts if extrusion</td>
+  <td style="text-align:right">700.00 / <strong>700.00</strong></td>
+  <td><a href="https://robu.in/?s=2020+aluminium+extrusion&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Local 20×20 aluminium angle and drilled crossmembers; <a href="https://robu.in/?s=aluminium+angle&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Fabrication cap; not matching current solid SCAD bars. Angle joints use through bolts instead of T-nuts. Rotate crossmembers across rails, prepare cut/drill drawing and check flex. Flat plate only if redesigned load path needs one.</td>
+</tr>
+<tr>
+  <td>R14 / <strong>1</strong></td>
+  <td><strong>Protected electronics box</strong> — Small ventilated/splash-guard box with mounting carrier</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=electronics+enclosure&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Printed PETG cover with cable grommets; <a href="https://robu.in/?s=waterproof+project+box&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Waterproofness is unproven; ensure airflow and driver clearance, keep connectors reachable.</td>
+</tr>
+<tr>
+  <td>R15 / <strong>1</strong></td>
+  <td><strong>Print allocation</strong> — Corrected PETG trays/brackets/bumper, ~150–250 g</td>
+  <td style="text-align:right">350.00 / <strong>350.00</strong></td>
+  <td><a href="https://robu.in/?s=PETG+filament&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Local fabrication for trays; existing filament; <a href="https://robu.in/?s=3D+printing+service&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Own-printer material allocation only. Excludes structural rails/wheels; external print quotes can exceed cap.</td>
+</tr>
+<tr>
+  <td>R16 / <strong>1</strong></td>
+  <td><strong>Main fuse kit</strong> — DC blade holder + spare fuse; provisional 10–15 A for low-current motor variant</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=automotive+fuse+holder&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Higher-rated documented holder only when current/pack require it; <a href="https://robu.in/?s=blade+fuse&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Do not freeze rating before motor stall/current-limiting test. Rating protects the chosen main wire and connector.</td>
+</tr>
+<tr>
+  <td>R17 / <strong>1</strong></td>
+  <td><strong>Main battery disconnect</strong> — DC-rated ≥20 A switch or accessible XT60 isolator</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=DC+power+switch+20A&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Rated automotive battery switch; <a href="https://robu.in/?s=battery+disconnect+switch&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> A household AC switch rating is insufficient evidence for DC interrupt rating.</td>
+</tr>
+<tr>
+  <td>R18 / <strong>1</strong></td>
+  <td><strong>Emergency stop / drive inhibit</strong> — Latching switch into hardware enable/qualified power switch path</td>
+  <td style="text-align:right">150.00 / <strong>150.00</strong></td>
+  <td><a href="https://robu.in/?s=emergency+stop+button&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Latching DC-rated motor power switch within easy reach; <a href="https://robu.in/?s=latching+switch&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Do not run battery current through signal-only mushroom contacts. If contactor is needed, budget it separately; keep controller alive for diagnostics.</td>
+</tr>
+<tr>
+  <td>R19 / <strong>1</strong></td>
+  <td><strong>Power distribution</strong> — Insulated terminal/bar rated ≥planned fuse, ring terminals, branch terminals</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=power+distribution+terminal&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Covered automotive terminal strip; <a href="https://robu.in/?s=terminal+block&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Star return for logic/encoders; no motor current through Dupont or breadboard.</td>
+</tr>
+<tr>
+  <td>R20 / <strong>2</strong></td>
+  <td><strong>XT60 connector pairs</strong> — Battery disconnect and charger/harness; genuine matching set</td>
+  <td style="text-align:right">60.00 / <strong>120.00</strong></td>
+  <td><a href="https://robu.in/?s=XT60+connector+pair&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Reuse included battery mating plug if supplied; <a href="https://robu.in/?s=XT60&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Female exposed contact side convention must not replace polarity verification; insulate every joint.</td>
+</tr>
+<tr>
+  <td>R21 / <strong>1</strong></td>
+  <td><strong>Power/signal wire kit</strong> — Main ~1 m each red/black 16 AWG; motors ~4 m 20 AWG; signal ~5 m 26 AWG</td>
+  <td style="text-align:right">200.00 / <strong>200.00</strong></td>
+  <td><a href="https://robu.in/?s=silicone+wire+16AWG&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Equivalent stranded copper from auto-electrical supplier; <a href="https://robu.in/?s=silicone+wire+20AWG&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Illustrative low-current JGB choice only; upgrade gauge for higher current/long runs after voltage-drop/temperature checks.</td>
+</tr>
+<tr>
+  <td>R22 / <strong>1</strong></td>
+  <td><strong>Connector kit</strong> — 4×6-pin encoder harness sets (confirmed pitch), sensor and driver headers</td>
+  <td style="text-align:right">80.00 / <strong>80.00</strong></td>
+  <td><a href="https://robu.in/?s=JST+XH+6+pin&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Locking screw terminal signal connectors; <a href="https://robu.in/?s=6+pin+connector&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Buy contacts/housings/crimp tool or precrimp leads; motor pin colour assignment varies by vendor.</td>
+</tr>
+<tr>
+  <td>R23 / <strong>1</strong></td>
+  <td><strong>Noise/filter/clamp kit</strong> — 4×100 nF motor caps; driver bulk 2×470–1000 µF ≥25 V; 5 V bulk/local bypass</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=capacitor+kit&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Equivalent low-ESR parts sized from measured ripple; <a href="https://robu.in/?s=low+ESR+capacitor&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Motor driver regen returns energy to battery; BMS disconnection/high-full-pack conditions need clamp assessment. No single diode across bidirectional motor.</td>
+</tr>
+<tr>
+  <td>R24 / <strong>1</strong></td>
+  <td><strong>Metric fastener kit</strong> — M4×10 (20), ×16 (20), ×20 (12); M3×6/8/10 (12 each); locknuts/washers, electronics spacers</td>
+  <td style="text-align:right">200.00 / <strong>200.00</strong></td>
+  <td><a href="https://robu.in/?s=M4+M3+screw+assortment&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Local metric hardware; nylon/metal electronics spacers; <a href="https://robu.in/?s=M3+nylon+standoff&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Planning counts; final joint drawing required. Motor screws must not exceed maker thread-depth limit; Pi uses M2.5 later.</td>
+</tr>
+<tr>
+  <td>R25 / <strong>2</strong></td>
+  <td><strong>Battery straps/pad</strong> — 15–20 mm hook-and-loop + anti-slip insulating foam</td>
+  <td style="text-align:right">30.00 / <strong>60.00</strong></td>
+  <td><a href="https://robu.in/?s=battery+strap&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Mechanical clamp with insulated contact pads; <a href="https://robu.in/?s=velcro+strap&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Tray needs solid bottom, retaining lips, matched holes and cable exit.</td>
+</tr>
+<tr>
+  <td>R26 / <strong>1</strong></td>
+  <td><strong>USB programming cable</strong> — S3 USB connector matched</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=USB+C+data+cable&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Shared cable from compact build; <a href="https://robu.in/?s=USB+cable&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> Later Pi↔S3 needs tested short data cable and protection against USB power backfeed.</td>
+</tr>
+<tr>
+  <td>R27 / <strong>1</strong></td>
+  <td><strong>Consumables / strain relief</strong> — Cable ties, grommets, heat shrink, solder, labels, foam</td>
+  <td style="text-align:right">100.00 / <strong>100.00</strong></td>
+  <td><a href="https://robu.in/?s=heat+shrink+grommet&amp;post_type=product">Buy / inspect</a>; Estimate / spending cap</td>
+  <td>Existing workshop stock; <a href="https://robu.in/?s=cable+ties&amp;post_type=product">Alternative portal</a>. <strong>Fit/check:</strong> This and enclosure provide basic splash guards only, not a weatherproof rating.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Rugged Cytron subtotal: ₹14,699.64; budget-driver subtotal: ₹12,476.00.</strong> No external bearing parts or Pi/LiDAR purchases are silently included. If a matched wheel includes its locking hub, remove R03 to save ₹400; check engagement and retention first. If paid printing/fabrication pushes the price above the ceiling, reduce nonessential body panels and buy quotes before motors in bulk. Printing allocation assumes trays are redesigned with thinner floors/ribs rather than printing the current thick solid plates; slice the corrected set and adjust material cost before checkout.</p>
+<h2 id="original-architecture-and-optional-upgrade-inventory">Original architecture and optional upgrade inventory</h2>
+<p>These items complete the original documented architecture and useful future options. They are <strong>excluded from both base subtotals</strong>. Select one battery chemistry and one corresponding charger system; do not sum mutually exclusive batteries or replacement motors. Four-motor external bearing support is a mechanical redesign, not a plug-in addition.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>Stage</th>
+  <th>ID / Qty</th>
+  <th>Component / specification</th>
+  <th style="text-align:right">Unit / line ₹ allowance</th>
+  <th>Buying route / alternative / compatibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U01 / 1</td>
+  <td><strong>Raspberry Pi 5</strong> — 4 GB is a reasonable initial ROS/vision option; 8 GB for heavier workloads</td>
+  <td style="text-align:right">9,000.00 / 9,000.00</td>
+  <td><a href="https://robu.in/product/raspberry-pi-5-model-4gb/">Buy / inspect</a>; alternative: Use an existing laptop over local network; used full-working Pi 4 after test (<a href="https://robu.in/?s=Raspberry+Pi+4+4GB&amp;post_type=product">portal</a>). ₹9,000 is allowance, not verified current price. Changes in Pi pricing make historic ₹5–6k unsafe to assume. No Pi required for base teleoperation.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U02 / 1</td>
+  <td><strong>Pi active cooler</strong> — Official Pi 5 active cooler, accessible airflow</td>
+  <td style="text-align:right">600.00 / 600.00</td>
+  <td><a href="https://robu.in/?s=Raspberry+Pi+5+active+cooler&amp;post_type=product">Buy / inspect</a>; alternative: Compatible fan/heatsink with proven sustained cooling (<a href="https://robu.in/?s=Pi5+cooling+fan&amp;post_type=product">portal</a>). Check cooler height, port access and fan header; protect from wheel spray.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U03 / 1</td>
+  <td><strong>microSD</strong> — 32–64 GB endurance A1/A2 from reputable seller</td>
+  <td style="text-align:right">650.00 / 650.00</td>
+  <td><a href="https://robu.in/?s=64GB+high+endurance+microSD&amp;post_type=product">Buy / inspect</a>; alternative: Existing tested card or NVMe + HAT at higher cost (<a href="https://robu.in/?s=32GB+microSD&amp;post_type=product">portal</a>). Capacity/speed chosen to workload; image and backup. Generic unbranded cards create intermittent faults.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U04 / 1</td>
+  <td><strong>Pi mobile supply</strong> — Battery → regulated ~5.1 V ≥5 A continuous, Pi-compatible USB-C PD delivery</td>
+  <td style="text-align:right">1,500.00 / 1,500.00</td>
+  <td><a href="https://robu.in/?s=Raspberry+Pi+5+battery+power+5A&amp;post_type=product">Buy / inspect</a>; alternative: Qualified fused 5 V GPIO supply by experienced builder; powered USB hub as needed (<a href="https://robu.in/?s=5V+8A+buck+converter&amp;post_type=product">portal</a>). Bare 5 A buck + USB-C adapter does not prove 5 A negotiation. Test voltage at Pi under CPU+USB load; firmware USB limit must match a real supply.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U05 / 1</td>
+  <td><strong>2D rotating LiDAR</strong> — SLAMTEC RPLIDAR A1 kit, USB interface and cable included; revision recorded</td>
+  <td style="text-align:right">11,000.00 / 11,000.00</td>
+  <td><a href="https://robu.in/product/rp-lidar-a1m8-360-degrees-laser-range-finder/">Buy / inspect</a>; alternative: YDLIDAR X2/X4 kit after Linux/ROS driver test; used genuine unit (<a href="https://robu.in/?s=YDLIDAR&amp;post_type=product">portal</a>). Estimate ₹8–12k class, no live quote. Model revisions vary range. Single ToF on servo is not an equivalent SLAM sensor. Plate holes must match actual device.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U06 / 1</td>
+  <td><strong>IMU breakout</strong> — 6-axis I²C/SPI e.g. ICM-42688 class, documented 3.3 V interface</td>
+  <td style="text-align:right">500.00 / 500.00</td>
+  <td><a href="https://robu.in/?s=ICM42688+IMU&amp;post_type=product">Buy / inspect</a>; alternative: Budget MPU6050 (~₹150–250) after authenticity/calibration checks (<a href="https://robu.in/?s=MPU6050&amp;post_type=product">portal</a>). Mount firmly, define orientation, timestamp and calibration; magnetometer near motors often unreliable.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U07 / 1</td>
+  <td><strong>Pi camera or USB camera</strong> — Camera Module 3/compatible UVC; front-facing rigid bracket</td>
+  <td style="text-align:right">2,800.00 / 2,800.00</td>
+  <td><a href="https://robu.in/?s=Raspberry+Pi+camera+module+3&amp;post_type=product">Buy / inspect</a>; alternative: ESP32-CAM ₹689 for streaming; not a direct CSI/ROS camera replacement (<a href="https://robocraze.com/products/esp32-camera-module">portal</a>). Pi 5 needs 22-pin cable to appropriate camera end; current camera slot is not a board mounting pattern.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U08 / 1</td>
+  <td><strong>Pi camera cable</strong> — Pi 5 22-pin to camera 15-pin, correct connector orientation/length</td>
+  <td style="text-align:right">250.00 / 250.00</td>
+  <td><a href="https://robu.in/?s=Raspberry+Pi+5+camera+cable&amp;post_type=product">Buy / inspect</a>; alternative: UVC camera with USB data cable eliminates CSI cable (<a href="https://robu.in/?s=USB+camera&amp;post_type=product">portal</a>). Do not buy old 15→15 cable for Pi 5.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U09 / 1</td>
+  <td><strong>Pi mounting kit</strong> — M2.5 screws/nuts and four ≥6 mm spacers; carrier with 58×49 pattern</td>
+  <td style="text-align:right">150.00 / 150.00</td>
+  <td><a href="https://robu.in/?s=M2.5+Raspberry+Pi+standoff&amp;post_type=product">Buy / inspect</a>; alternative: Printed insulating spacers with M2.5 hardware (<a href="https://robu.in/?s=M2.5+screws&amp;post_type=product">portal</a>). Current CAD M3 3.4 mm clearance is loose; redesign for actual M2.5 board holes and board offset/ports.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U10 / 2</td>
+  <td><strong>Additional ToF breakouts</strong> — Left/right, exposed XSHUT</td>
+  <td style="text-align:right">126.00 / 252.00</td>
+  <td><a href="https://robocraze.com/products/vl53l0x-laser-ranging-sensor">Buy / inspect</a>; alternative: Reuse one forward sensor until needed (<a href="https://robocraze.com/products/vl53l0x-laser-ranging-sensor">portal</a>). Add bracket angles, two XSHUT pins; avoid duplicated addresses.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U11 / 1</td>
+  <td><strong>Sensor/compute deck supports</strong> — Four rigid posts plus cross-braced short mast if LiDAR requires</td>
+  <td style="text-align:right">350.00 / 350.00</td>
+  <td><a href="https://robu.in/?s=aluminium+standoff&amp;post_type=product">Buy / inspect</a>; alternative: Short aluminium tube mast with flange plates (<a href="https://robu.in/?s=aluminium+tube&amp;post_type=product">portal</a>). Current LiDAR mast is detached and incorrectly bored; add real through holes and deck supports.</td>
+</tr>
+<tr>
+  <td>Autonomy upgrade</td>
+  <td>U12 / 1</td>
+  <td><strong>USB link / hubs</strong> — Short Pi↔S3 USB data cable; powered USB hub if USB budget demands</td>
+  <td style="text-align:right">350.00 / 350.00</td>
+  <td><a href="https://robu.in/?s=powered+USB+hub&amp;post_type=product">Buy / inspect</a>; alternative: Direct short USB/UART link with documented power scheme (<a href="https://robu.in/?s=USB+data+cable&amp;post_type=product">portal</a>). Account for Pi USB current allocation, boot brownouts and supply backfeed.</td>
+</tr>
+<tr>
+  <td>Original LFP option</td>
+  <td>U13 / 1</td>
+  <td><strong>Original 15 Ah LFP pack</strong> — 4S LiFePO4 12.8 V nominal, 14.6 V-class full, 192 Wh nominal</td>
+  <td style="text-align:right">3,519.00 / 3,519.00</td>
+  <td><a href="https://robu.in/product/4s1p-lifepo4-battery-pack/">Buy / inspect</a>; alternative: Documented high-current 4S LFP 6–10 Ah pack; existing suitable pack (<a href="https://robu.in/?s=12.8V+LiFePO4+battery&amp;post_type=product">portal</a>). ₹3519 is indexed category snapshot, live page not readable. Need L/W/H, mass, discharge and whether BMS included. Not same as 3S LiPo budget battery.</td>
+</tr>
+<tr>
+  <td>Original LFP option</td>
+  <td>U14 / 1</td>
+  <td><strong>LFP BMS if not included</strong> — 4S LiFePO4, balancing/temperature, current &gt;=actual load but &lt;=cell/wire limits</td>
+  <td style="text-align:right">500.00 / 500.00</td>
+  <td><a href="https://makerbazar.in/products/12-8v-bms-4s-20a-32650-lithium-battery-protection-board-only-for-lifepo4">Buy / inspect</a>; alternative: JBD 4S LFP matched-current variant (<a href="https://makerbazar.in/products/jiabaida-jbd-normal-bms-4s-12v-lifepo4">portal</a>). Conditional: buy only if bare pack needs it. Do not duplicate integrated BMS or substitute Li-ion chemistry; BMS does not replace fuse.</td>
+</tr>
+<tr>
+  <td>Original LFP option</td>
+  <td>U15 / 1</td>
+  <td><strong>LFP charger</strong> — Manufacturer-matched 4S LFP CC/CV, ~14.4–14.6 V, 2–3 A budget / 5 A faster</td>
+  <td style="text-align:right">1,500.00 / 1,500.00</td>
+  <td><a href="https://robu.in/?s=14.6V+LiFePO4+charger&amp;post_type=product">Buy / inspect</a>; alternative: Lower-current LFP charger matched to selected pack (<a href="https://quartzcomponents.com/search?q=LiFePO4+charger">portal</a>). Follow exact pack charge voltage, not nominal chemistry alone. Quartz 6 Ah listing conflicts 14.4 V spec vs 14.6 V suggested charger; resolve before ordering. Never 16.8 V Li-ion.</td>
+</tr>
+<tr>
+  <td>Mechanical option</td>
+  <td>U16 / 4</td>
+  <td><strong>External axle support kits (conditional)</strong> — Each: one 6 mm-ID 626-2RS (OD19×W6), redesigned carrier, one separate axle if needed, two collars and one matched coupling</td>
+  <td style="text-align:right">350.00 / 1,400.00</td>
+  <td><a href="https://robu.in/?s=626+bearing&amp;post_type=product">Buy / inspect</a>; alternative: Separate 8 mm axle on 608 bearings plus 6-to-8 mm coupling (<a href="https://robu.in/?s=608+bearing&amp;post_type=product">portal</a>). Four kits imply four bearings, four carriers, up to four axles/couplings and eight collars. Current Ø22 cavity suggests 608 (8 mm-ID), not direct 6 mm support. Freeze radial load, axle length/alignment and retention before purchase.</td>
+</tr>
+<tr>
+  <td>Monitoring option</td>
+  <td>U17 / 1</td>
+  <td><strong>Current/voltage telemetry</strong> — Suitable shunt + amplifier for real branch current; 3.3 V output/bus</td>
+  <td style="text-align:right">300.00 / 300.00</td>
+  <td><a href="https://robu.in/?s=INA226+current+sensor&amp;post_type=product">Buy / inspect</a>; alternative: Bench current measurement first; higher-range hall sensor after calibration (<a href="https://robu.in/?s=current+sensor&amp;post_type=product">portal</a>). Tiny module shunts/terminals may not tolerate main motor current. Optional per-channel sensors need four channels and budget.</td>
+</tr>
+<tr>
+  <td>Odometry upgrade</td>
+  <td>U18 / 4</td>
+  <td><strong>Encoder N20 upgrade</strong> — Same voltage/ratio, A/B outputs compatible with 3.3 V MCU</td>
+  <td style="text-align:right">550.00 / 2,200.00</td>
+  <td><a href="https://robu.in/product/n20-6v-100rpm-micro-metal-gear-motor-with-encoder/">Buy / inspect</a>; alternative: Keep nonencoder first build and add odometry later (<a href="https://robu.in/product-category/dc-motors/motors/n20-gear-motor/micro-gear-motor-without-encoder/">portal</a>). REPLACES C01, not additional four motors. Rear encoder adds length; eight more signals; redesign wiring/mount and check stall current.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="important-rejected-or-conditional-battery-alternatives">Important rejected or conditional battery alternatives</h3>
+<p>The <a href="https://quartzcomponents.com/products/12v-6ah-lithium-battery-lifepo4-battery">WATTNINE 12.8 V 6 Ah listing</a> shows about ₹1,880 in live product JSON and explicitly specifies <strong>6 A continuous discharge</strong> with integrated protection. That is insufficient for an unrestricted four-motor build whose simultaneous starts/stalls can exceed it. Its stated 14.4 V charging requirement also conflicts with the suggested 14.6 V charger; resolve with the manufacturer. It is not the default substitute in this BOM.</p>
+<p>The <a href="https://elbotics.com/products/12-8v-6ah-lifepo4-battery-smart-bms-76-8wh">ELBOTICS 12.8 V 6 Ah candidate</a> shows ₹1,699 and a built-in BMS, but the accessible specifications do not establish continuous/peak discharge, precise dimensions or a complete protection specification. It also contains inconsistent capacity/chemistry fields. It remains <strong>purchase pending specifications</strong>, even though its price is attractive.</p>
+<p>The original <a href="https://robu.in/product/4s1p-lifepo4-battery-pack/">15 Ah Robu LiFePO₄ pack</a> has an indexed category price near ₹3,519; the live product body could not be read. Do not infer an included BMS from the title. Four 32140 cells imply a cell-length scale of approximately 140 mm; a linear arrangement or packaging may not fit the CAD's 200×80 cavity in the assumed orientation. Require the complete pack drawing and weight.</p>
+<h2 id="component-photos">Component photos</h2>
+<p>Actual supplier/manufacturer images are saved locally and attributed below. Photos help identify the part family; they do not prove the delivered variant or mechanical fit. International reference products are not priced as Indian budget parts. Image-source URLs and timestamps are preserved in the metadata file.</p>
+<div class="gallery"><figure><img src="images/n20_motor.png" alt="N20 family example, unavailable ₹225 Robocraze listing; choose measured alternative." loading="lazy"><figcaption>N20 family example, unavailable ₹225 Robocraze listing; choose measured alternative. <a href="https://robocraze.com/products/robocraze-dc6v-100rpm-gm12-n20-miniature-gear-motor-with-metal-gear">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/drv8833.png" alt="DRV8833 module, C03. Carrier/chip/thermal rating must be checked." loading="lazy"><figcaption>DRV8833 module, C03. Carrier/chip/thermal rating must be checked. <a href="https://robocraze.com/products/drv8833-2-channel-dc-motor-driver">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/tof.png" alt="VL53L0X breakout, C07/R12." loading="lazy"><figcaption>VL53L0X breakout, C07/R12. <a href="https://robocraze.com/products/vl53l0x-laser-ranging-sensor">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/small_wheel.jpg" alt="44 mm N20 wheel, C02; use actual diameter in CAD." loading="lazy"><figcaption>44 mm N20 wheel, C02; use actual diameter in CAD. <a href="https://kitsguru.com/products/car-wheel-tyre-44mm-n20-dc-gear-motor-wheel">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/esp32s3.jpg" alt="ESP32-S3 DevKit, C04/R06; selected variant dimensions govern mount." loading="lazy"><figcaption>ESP32-S3 DevKit, C04/R06; selected variant dimensions govern mount. <a href="https://evelta.com/7semi-esp32-s3-devkitc-1-esp32-s3-wroom-wi-fi-bluetooth-5-ble-development-board/">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/esp32_camera.png" alt="ESP32-CAM C05; photo/listing may show different camera revision. Confirm delivered sensor." loading="lazy"><figcaption>ESP32-CAM C05; photo/listing may show different camera revision. Confirm delivered sensor. <a href="https://robocraze.com/products/esp32-camera-module">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/mdd10a.jpg" alt="Cytron MDD10A, R05; two boards give four independent channels." loading="lazy"><figcaption>Cytron MDD10A, R05; two boards give four independent channels. <a href="https://evelta.com/mdd10a-10amp-5v-30v-dc-motor-driver-2-channels/">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/bonka_3s.jpg" alt="Bonka 2200 mAh 3S battery, R07; lower-cost/shorter-runtime chemistry change." loading="lazy"><figcaption>Bonka 2200 mAh 3S battery, R07; lower-cost/shorter-runtime chemistry change. <a href="https://robocraze.com/products/bonka-2200mah-35c-3s1p-11-1v-lipo-battery">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/pololu_37d.jpg" alt="Pololu #4755 premium alternative/reference, not the budget JGB37 motor." loading="lazy"><figcaption>Pololu #4755 premium alternative/reference, not the budget JGB37 motor. <a href="https://www.pololu.com/product/4755">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/large_wheel.jpg" alt="Hiwonder 100 mm wheel, illustrative premium alternative; not priced into ₹250 wheel allowance." loading="lazy"><figcaption>Hiwonder 100 mm wheel, illustrative premium alternative; not priced into ₹250 wheel allowance. <a href="https://www.hiwonder.com/products/100mm-high-load-bearing-and-wear-resistant-tire">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/lfp_6ah.jpg" alt="ELBOTICS 6 Ah candidate: current/BMS/dimensions not documented enough for approval." loading="lazy"><figcaption>ELBOTICS 6 Ah candidate: current/BMS/dimensions not documented enough for approval. <a href="https://elbotics.com/products/12-8v-6ah-lifepo4-battery-smart-bms-76-8wh">Photo / listing source</a></figcaption></figure>
+<figure><img src="images/wattnine_6ah.jpg" alt="WATTNINE 6 Ah candidate: only 6 A continuous; rejected as an unrestricted four-motor swap." loading="lazy"><figcaption>WATTNINE 6 Ah candidate: only 6 A continuous; rejected as an unrestricted four-motor swap. <a href="https://quartzcomponents.com/products/12v-6ah-lithium-battery-lifepo4-battery">Photo / listing source</a></figcaption></figure></div>
+
+<h2 id="fabrication-and-printed-component-inventory">Fabrication and printed component inventory</h2>
+<p>All named mechanical modules are accounted for, including inactive modules and optional parts. Quantities represent pieces, <strong>not export-file count</strong>. <code>assembly</code> wrappers are visualization/export helpers and are not physical components. Camera, sensor, regulator, driver, switch and power-distribution brackets missing from the current CAD must be designed as part of final integration.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>Car</th>
+  <th>Module / component</th>
+  <th style="text-align:right">Qty</th>
+  <th>Material / source</th>
+  <th>Manufacturing note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Compact</td>
+  <td>base_plate</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>150×105; currently z-shifted; fix before printing</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>n20_motor_mount</td>
+  <td style="text-align:right">4</td>
+  <td>PETG or matched metal/plastic bracket</td>
+  <td>Rebuild cavity, flange and clamp for purchased motor</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>wheel</td>
+  <td style="text-align:right">4</td>
+  <td>Purchase rubber wheel preferred</td>
+  <td>Printed option only; not additional to C02</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>wheel_hub_adapter</td>
+  <td style="text-align:right">4</td>
+  <td>Purchase compatible D wheel / redesign</td>
+  <td>Optional only; existing split adapter unusable</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>battery_tray</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Add floor/straps and purchased pack dimensions</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>esp32_tray</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Replace with selected board carrier</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>camera_mount</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Replace with forward camera-specific holder</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>camera_front_mount</td>
+  <td style="text-align:right">0</td>
+  <td>PETG option</td>
+  <td>Defined but inactive; no wrapper; use instead of another camera bracket</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>tof_sensor_bar</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Replaces bar with three actual angled brackets or carries three boards</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>top_deck / top_cover</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>One identical part; alias is not a second cover</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>standoffs</td>
+  <td style="text-align:right">4</td>
+  <td>Metal/nylon or PETG</td>
+  <td>Module exports four at once; do not print four copies of four</td>
+</tr>
+<tr>
+  <td>Compact</td>
+  <td>front_bumper</td>
+  <td style="text-align:right">1</td>
+  <td>TPU/PETG</td>
+  <td>Move to X front; add tabs/clearance</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>side_rail</td>
+  <td style="text-align:right">2</td>
+  <td>Aluminium actual profile</td>
+  <td>~330 mm preliminary cut length; need joint drawing</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>cross_member</td>
+  <td style="text-align:right">2</td>
+  <td>Aluminium actual profile</td>
+  <td>Across width; ~250 mm source length only after joint design</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>electronics_tray</td>
+  <td style="text-align:right">1</td>
+  <td>PETG/metal</td>
+  <td>205×135×8 baseline; supports missing</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>battery_tray</td>
+  <td style="text-align:right">1</td>
+  <td>PETG/metal</td>
+  <td>220×100×12 baseline; roof must become floor</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>pi5_mount</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Upgrade only; M2.5 carrier and cooler clearance</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>esp32_mount</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>65×42×6 baseline; selected board cradle</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>motor_mount</td>
+  <td style="text-align:right">4</td>
+  <td>Metal bracket preferred</td>
+  <td>62×62×8 source plate replaced by real L brackets</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>wheel_bearing_block</td>
+  <td style="text-align:right">4</td>
+  <td>PETG/metal option</td>
+  <td>Do not build until bearing/axle architecture frozen</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>wheel</td>
+  <td style="text-align:right">4</td>
+  <td>Purchased rubber tyre</td>
+  <td>100×32 baseline; update if 90 mm choice</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>wheel_hub</td>
+  <td style="text-align:right">4</td>
+  <td>Metal</td>
+  <td>Omit separate hub if purchased wheel includes proper hub</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>camera_mount</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>Upgrade only, board-specific forward mount</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>tof_bracket</td>
+  <td style="text-align:right">1</td>
+  <td>PETG</td>
+  <td>140×18×12 baseline; one/three boards properly aimed</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>lidar_plate</td>
+  <td style="text-align:right">1</td>
+  <td>PETG/aluminium</td>
+  <td>Upgrade only; 110×110×8 grid not final scanner interface</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>lidar_mast</td>
+  <td style="text-align:right">1</td>
+  <td>Short braced tube preferred</td>
+  <td>Upgrade only; source 38×38×120 has blind bore/detachment</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>bumper</td>
+  <td style="text-align:right">2</td>
+  <td>TPU / aluminium with foam</td>
+  <td>330×24×28 baseline; current positioning collides with wheels</td>
+</tr>
+<tr>
+  <td>Rugged</td>
+  <td>side_panel</td>
+  <td style="text-align:right">2</td>
+  <td>Thin PETG sheet/print</td>
+  <td>Optional; actual generated width15 despite target5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Use PETG for general chassis/module prototypes, TPU for optional tyres/bumpers, and aluminium for the rugged primary structure. ASA needs a suitable printer/enclosure. The initial document's 0.2 mm layers, 5 perimeters and 35–50% infill are only starting settings; mounting strength depends on orientation and load path. Reserve material for fit coupons. Long 330 mm rails/bumper parts exceed many 220 mm print beds, so fabricate structural rails in metal and segment optional bumpers with real joining features if necessary. The rugged overall envelope is about <strong>400×332 mm</strong>, larger than its intended structural footprint; choose printer/fabrication from individual part sizes.</p>
+<h2 id="cad-findings">CAD findings</h2>
+<p>Read all blockers before purchasing mount-specific parts. Each entry gives a source location, observation and correction; CSV contains the same findings for tracking. Source links are relative to this local report; the <code>:line</code> label identifies the exact source even if your browser does not scroll to <code>#L</code> fragments in local SCAD files.</p>
+<h3 id="compact-scad-findings">Compact SCAD findings</h3>
+<h3 id="c-a01-blocker-base-is-shifted-upward-causing-negative-ground-clearance">C-A01 · Blocker · Base is shifted upward, causing negative ground clearance</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L63">01_Cute_N20_4WD/cute_rover_complete.scad:63</a>.</p>
+<p>rounded_box(center=true) centres only X/Y and starts at Z=0. Additional BASE_T/2 makes base Z=2..6. Wheel bottom=26.5−22.5=4; underside is 2 mm below wheel ground plane.</p>
+<p><strong>Correction:</strong> Place base at Z=0..4; choose ground clearance e.g. 5–8 mm and compute shaft Z = wheel radius − clearance with base datum 0. Rebuild motor/deck constraints together.</p>
+<h3 id="c-a02-blocker-base-mounting-holes-are-blind">C-A02 · Blocker · Base mounting holes are blind</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L69">01_Cute_N20_4WD/cute_rover_complete.scad:69</a>.</p>
+<p>Hole cutter Z=−1..5; base Z=2..6 leaves a 1 mm roof.</p>
+<p><strong>Correction:</strong> Normalize base origin and use cuts extending past both faces.</p>
+<h3 id="c-a03-major-base-cable-slots-cut-only-lower-face">C-A03 · Major · Base cable slots cut only lower face</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L73">01_Cute_N20_4WD/cute_rover_complete.scad:73</a>.</p>
+<p>Centred height-6 cube translated Z=−1 gives −4..2; base begins at 2, so only coplanar contact, no useful through slot.</p>
+<p><strong>Correction:</strong> Use a full-thickness slot cutter centred at true base midpoint plus epsilon.</p>
+<h3 id="c-a04-blocker-battery-tray-is-a-bottomless-ring">C-A04 · Blocker · Battery tray is a bottomless ring</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L162">01_Cute_N20_4WD/cute_rover_complete.scad:162</a>.</p>
+<p>Tray Z=0..7; centred void translated Z=3 has Z=−1..7, removing the entire floor.</p>
+<p><strong>Correction:</strong> Add 2–3 mm floor, height matching pack, retaining lips, two strap slots and cable exit.</p>
+<h3 id="c-a05-major-tray-screw-holes-occupy-cavity-instead-of-proper-mounting-tabs">C-A05 · Major · Tray screw holes occupy cavity instead of proper mounting tabs</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L163">01_Cute_N20_4WD/cute_rover_complete.scad:163</a>.</p>
+<p>Hole centres ±29/±15 are inside 62×32 opening (±31/±16), cutting only edge fragments.</p>
+<p><strong>Correction:</strong> Add tabs outside battery cavity with bolt-head/nut clearance; choose holes shared by chassis.</p>
+<h3 id="c-a06-blocker-standoffs-miss-the-deck-and-base-holes">C-A06 · Blocker · Standoffs miss the deck and base holes</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L219">01_Cute_N20_4WD/cute_rover_complete.scad:219</a>.</p>
+<p>Standoffs Z=4..36; deck underside=38, so 2 mm gap. Their XY ±50/±30 do not match base grid ±60/±30/0 × ±35/0.</p>
+<p><strong>Correction:</strong> Tie four base/deck holes to one shared array and derive spacer length from mating surfaces.</p>
+<h3 id="c-a07-blocker-deck-centre-opening-leaves-a-roof">C-A07 · Blocker · Deck centre opening leaves a roof</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L206">01_Cute_N20_4WD/cute_rover_complete.scad:206</a>.</p>
+<p>Centred height-5 cutter at Z=37 reaches only Z=39.5; deck Z=38..41 leaves 1.5 mm roof.</p>
+<p><strong>Correction:</strong> Cut through Z=38..41 plus epsilon; add protected wire edges.</p>
+<h3 id="c-a08-blocker-wheels-overlap-chassis-sides">C-A08 · Blocker · Wheels overlap chassis sides</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L260">01_Cute_N20_4WD/cute_rover_complete.scad:260</a>.</p>
+<p>Wheel tyre inner Y=58.5−7=51.5, base edge=52.5, giving 1 mm lateral intrusion. At wheel low arc Z=4..6 this is physical solid intersection.</p>
+<p><strong>Correction:</strong> Position wheel from motor shaft engagement/offset and ≥1–2 mm assembled moving clearance, then re-check entire rotation.</p>
+<h3 id="c-a09-blocker-gearbox-intersects-wheel-hub-and-shaft-engagement-is-incomplete">C-A09 · Blocker · Gearbox intersects wheel hub and shaft engagement is incomplete</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L117">01_Cute_N20_4WD/cute_rover_complete.scad:117</a>.</p>
+<p>Right motor centre Y=42.5; gearbox Y=55..61. Wheel centre=58.5, integral hub Y=50.5..66.5 with Ø3.2 bore. Ø12 gearbox occupies that hub bore region. Shaft Y=61..69 gives only 5.5 mm engagement within 16 mm integral hub.</p>
+<p><strong>Correction:</strong> Use exact motor face-to-shaft dimensions and actual bought wheel hub depth; resolve gearbox/hub collision before print.</p>
+<h3 id="c-a10-major-n20-cavity-models-a-cylinder-instead-of-rectangular-motor">C-A10 · Major · N20 cavity models a cylinder instead of rectangular motor</h3>
+<p>Evidence type: <strong>Motor fit risk; exact profile unverified</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L90">01_Cute_N20_4WD/cute_rover_complete.scad:90</a>.</p>
+<p>N20_BODY_H=10 is unused. 12×10 rectangular body diagonal is 15.62 mm; largest cylindrical cavity is Ø13.5. A full rectangular envelope cannot fit; actual rounded-can fit needs measurement.</p>
+<p><strong>Correction:</strong> Model rounded rectangular can/gearbox profiles, tolerances and retaining clamp from measured motor.</p>
+<h3 id="c-a11-major-mount-insertion-cut-is-asymmetric-on-the-wrong-local-axis">C-A11 · Major · Mount insertion cut is asymmetric on the wrong local axis</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L98">01_Cute_N20_4WD/cute_rover_complete.scad:98</a>.</p>
+<p>Cut cube spans X=−16..0, Y=−22..0; every mount uses same transform, despite comment saying mirror for opposite side.</p>
+<p><strong>Correction:</strong> Design insertion access in shaft-side/inward direction, explicitly mirror/clamp left and right variants.</p>
+<h3 id="c-a12-blocker-motor-mounts-have-no-working-chassis-fastening-retention">C-A12 · Blocker · Motor mounts have no working chassis fastening/retention</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L102">01_Cute_N20_4WD/cute_rover_complete.scad:102</a>.</p>
+<p>Two local screws ±10 map to X=±42/±62,Y=±42.5; base grid has neither. Cutter stops Z=10 in mount Z=4..29; no defined accessible screw head/nut or motor clamp.</p>
+<p><strong>Correction:</strong> Add foot/flange, shared base holes, head/nut pockets, clamp screws and cable clearance.</p>
+<h3 id="c-a13-blocker-wheel-adapter-splits-into-two-disconnected-halves">C-A13 · Blocker · Wheel adapter splits into two disconnected halves</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L151">01_Cute_N20_4WD/cute_rover_complete.scad:151</a>.</p>
+<p>Full-height 1.2 mm slot crosses entire hub diameter. Axial holes at X=±5 do not join the halves radially; wheel has no matching bolt holes or adapter pocket.</p>
+<p><strong>Correction:</strong> Prefer purchased D-shaft wheel; otherwise closed slotted clamp with cross bolt and wheel bolt/pocket interface.</p>
+<h3 id="c-a14-major-round-bore-has-no-torque-lock">C-A14 · Major · Round bore has no torque lock</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L136">01_Cute_N20_4WD/cute_rover_complete.scad:136</a>.</p>
+<p>Ø3.2 wheel / Ø3.25 adapter on Ø3 D shaft has no D flat, radial set screw or designed interference; adapter omitted from assembly.</p>
+<p><strong>Correction:</strong> Use D-shaped bore or metal clamping hub and axial retention; do not assume loose round bore transmits torque.</p>
+<h3 id="c-a15-major-bumper-is-detached-and-projects-into-wheel-envelope">C-A15 · Major · Bumper is detached and projects into wheel envelope</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L243">01_Cute_N20_4WD/cute_rover_complete.scad:243</a>.</p>
+<p>Bumper Y=−61.5..−53.5 versus base minimum Y=−52.5 gives 1 mm gap. Its X width overlaps side wheel positions at the bumper Z span.</p>
+<p><strong>Correction:</strong> Move actual front to chassis X end, add bolt tabs and swept wheel clearance; evaluate TPU option.</p>
+<h3 id="c-a16-major-sensors-bumper-labelled-front-are-on-lateral-edge">C-A16 · Major · Sensors/bumper labelled front are on lateral edge</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L227">01_Cute_N20_4WD/cute_rover_complete.scad:227</a>.</p>
+<p>Length/front-rear declared X, wheel shafts along Y, so rolling direction is ±X. Camera/ToF/bumper are on −Y (left/right side).</p>
+<p><strong>Correction:</strong> Adopt one axis convention and move/aim front sensors at −X or redefine all drivetrain coordinates consistently.</p>
+<h3 id="c-a17-major-camera-fixture-floats-and-orientation-is-unresolved">C-A17 · Major · Camera fixture floats and orientation is unresolved</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L291">01_Cute_N20_4WD/cute_rover_complete.scad:291</a>.</p>
+<p>camera_mount bottom Z=42; deck top=41 gives 1 mm gap. Horizontal 36×24 slot fixture is not actual camera PCB pattern; camera_front_mount exists but is never called.</p>
+<p><strong>Correction:</strong> Use camera-specific forward bracket with shared holes, adjustment, lens opening and ribbon/connector clearance.</p>
+<h3 id="c-a18-major-esp-tray-fastening-pattern-does-not-match-deck">C-A18 · Major · ESP tray fastening pattern does not match deck</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L283">01_Cute_N20_4WD/cute_rover_complete.scad:283</a>.</p>
+<p>Tray holes translate to X=−1/45,Y=0/24; deck has only four ±50/±30 holes and partial centre opening. Tray rests on deck without fasteners.</p>
+<p><strong>Correction:</strong> Add carrier mounting holes independent from actual board holes and model underside solder/header clearance.</p>
+<h3 id="c-a19-major-tof-bar-has-circular-apertures-but-no-pcb-interface">C-A19 · Major · ToF bar has circular apertures but no PCB interface</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L188">01_Cute_N20_4WD/cute_rover_complete.scad:188</a>.</p>
+<p>Three Ø8 holes along Z do not define forward pointing PCBs; no breakout dimensions, M2 holes, left/right angle or chassis tab matches.</p>
+<p><strong>Correction:</strong> Create three named angled PCB brackets from selected sensor drawings; keep optics clear of printed walls.</p>
+<h3 id="c-a20-major-battery-tray-height-depends-on-erroneous-base-datum">C-A20 · Major · Battery tray height depends on erroneous base datum</h3>
+<p>Evidence type: <strong>Integration gap</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L275">01_Cute_N20_4WD/cute_rover_complete.scad:275</a>.</p>
+<p>Current tray bottom Z=6 touches erroneous base top=6, but holes do not match; if base-origin fix is made alone it introduces a 2 mm gap. Capacity/type dimensions absent.</p>
+<p><strong>Correction:</strong> Constrain tray bottom to corrected base top, fit exact pack including connector and straps; do not change only one Z constant.</p>
+<h3 id="c-a21-minor-wheel-tread-comment-and-production-thickness-disagree">C-A21 · Minor · Wheel tread comment and production thickness disagree</h3>
+<p>Evidence type: <strong>Documentation drift</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L139">01_Cute_N20_4WD/cute_rover_complete.scad:139</a>.</p>
+<p>Comment says six grooves; loop 0:30:330 creates twelve. WHEEL_W=14 versus design document 12; deck 38 versus document 42–45.</p>
+<p><strong>Correction:</strong> Use one dimensional source and update prose/counts; design tread/material against actual tyre.</p>
+<h3 id="c-a22-major-individual-exports-retain-assembly-z-transforms">C-A22 · Major · Individual exports retain assembly Z transforms</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.scad#L239">01_Cute_N20_4WD/cute_rover_complete.scad:239</a>.</p>
+<p>top_cover exports at Z=38, bumper at Z=10; wheels/hub span negative Z; standoffs export four positioned parts.</p>
+<p><strong>Correction:</strong> Separate local printable geometry from placement transforms; normalise each printable part to Z≥0 and document copies.</p>
+<h3 id="rugged-scad-findings">Rugged SCAD findings</h3>
+<h3 id="r-a01-blocker-crossmembers-do-not-cross-the-chassis">R-A01 · Blocker · Crossmembers do not cross the chassis</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L292">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:292</a>.</p>
+<p>Both 250×24 members have length along X and are at Y=±55. Rails lie at ±125. Crossmember Y edge=67; rail inner edge=111 leaves 44 mm gap.</p>
+<p><strong>Correction:</strong> Rotate crossmembers 90° about Z, place at selected X positions, create four joints and matched holes/angle brackets.</p>
+<h3 id="r-a02-blocker-motors-motor-plates-hubs-and-bearings-absent-from-assembly">R-A02 · Blocker · Motors, motor plates, hubs and bearings absent from assembly</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L315">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:315</a>.</p>
+<p>assembly calls only wheels. motor_mount, motor_placeholder, wheel_hub and wheel_bearing_block are defined but unused. Wheels have no physical connection to frame.</p>
+<p><strong>Correction:</strong> Add four measured motors, face planes, brackets, hubs, shafts and fixation; model optional bearing supports only if actually used.</p>
+<h3 id="r-a03-blocker-37d-hole-circle-is-wrong">R-A03 · Blocker · 37D hole circle is wrong</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L26">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:26</a>.</p>
+<p>Six 60° holes at R=17.9 create 17.9 mm neighbour spacing. Stated reference is 15.5 mm neighbours / Ø31 circle, so R must be 15.5. MOTOR_HOLE_NEIGHBOR unused.</p>
+<p><strong>Correction:</strong> Use purchased-motor measured PCD/offset/pattern, not generic equivalence; for published Pololu drawing set R=15.5 and correct plate opening.</p>
+<h3 id="r-a04-blocker-correcting-hole-circle-alone-breaks-screw-seats">R-A04 · Blocker · Correcting hole circle alone breaks screw seats</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L135">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:135</a>.</p>
+<p>Current central opening radius=15; corrected M3 clearance radius 1.7 around R=15.5 extends inward to 13.8, overlapping opening by 1.2 mm.</p>
+<p><strong>Correction:</strong> Reduce opening to actual shaft/pilot-boss clearance with adequate material around each screw and washer; check reference pilot dimensions.</p>
+<h3 id="r-a05-blocker-motor-plate-has-no-suitable-frame-foot-orientation">R-A05 · Blocker · Motor plate has no suitable frame foot/orientation</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L131">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:131</a>.</p>
+<p>Plate is local XY, normal Z, but wheel shafts are Y. No L foot, rotated location or chassis mating pattern.</p>
+<p><strong>Correction:</strong> Use metal L-bracket with vertical face normal Y, finite foot and matched frame holes; reserve screw-tool access.</p>
+<h3 id="r-a06-blocker-wheel-intersects-rails-and-bumpers">R-A06 · Blocker · Wheel intersects rails and bumpers</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L316">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:316</a>.</p>
+<p>Wheel Y=134..166 overlaps side rail Y=111..139 by 5 mm; at X near ±150,Z=0..24 wheel solid crosses rail. Bumpers Y=±138..162,Z=20..48 overlap wheels too.</p>
+<p><strong>Correction:</strong> Increase track from actual frame/shaft/hub/tyre offsets or cut/reposition members; add dynamic clearances and redefine front bumpers at X ends.</p>
+<h3 id="r-a07-blocker-zero-frame-underside-ground-clearance">R-A07 · Blocker · Zero frame underside ground clearance</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L290">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:290</a>.</p>
+<p>Rails start Z=0; wheel bottom=50−50=0. Structure sits on ground plane.</p>
+<p><strong>Correction:</strong> Specify ≥20–30 mm provisional clearance for this terrain aim and tie rail/motor locations to it; validate payload/load and actual obstacle height.</p>
+<h3 id="r-a08-major-declared-structural-footprint-is-not-model-controlled">R-A08 · Major · Declared structural footprint is not model-controlled</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L15">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:15</a>.</p>
+<p>BASE_L=360, BASE_W=290 and BASE_T=5 are unused. Rail length 330, outer width 278; bumpers to Y±162; wheels span X±200,Y±166.</p>
+<p><strong>Correction:</strong> Derive member lengths, wheelbase, track and bumper positions from parameters; label structural footprint separately from 400×332 overall envelope.</p>
+<h3 id="r-a09-blocker-battery-tray-has-a-roof-rather-than-an-open-top">R-A09 · Blocker · Battery tray has a roof rather than an open top</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L298">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:298</a>.</p>
+<p>Tray local Z=0..12; centred void Z=−8..8 removes bottom to 8, leaving top slab Z=8..12. Battery cannot drop into it from above.</p>
+<p><strong>Correction:</strong> Start cavity above a solid floor and cut out past top; resize exact battery, add straps, lips and tabs.</p>
+<h3 id="r-a10-major-battery-mounting-holes-are-in-roof-over-cavity">R-A10 · Major · Battery mounting holes are in roof over cavity</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L91">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:91</a>.</p>
+<p>Centres ±95/±35 lie inside cavity ±100/±40 and drill roof. No deck/shared frame bolt pattern or battery restraint.</p>
+<p><strong>Correction:</strong> Place mounting tabs outside cavity, grounded to supported deck; keep fasteners clear of cell casing.</p>
+<h3 id="r-a11-blocker-electronics-and-compute-decks-have-no-supports">R-A11 · Blocker · Electronics and compute decks have no supports</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L296">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:296</a>.</p>
+<p>Electronics bottom=35 vs rails top=24 gives 11 mm gap. Battery bottom=48 vs electronics top=43 gives 5 mm gap. Pi/ESP mounts bottom=60 with no defined supported connection.</p>
+<p><strong>Correction:</strong> Add posts at matching holes and explicit load path; put heavy battery low, compute above with airflow and service access.</p>
+<h3 id="r-a12-major-electronics-cable-channels-remain-capped">R-A12 · Major · Electronics cable channels remain capped</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L81">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:81</a>.</p>
+<p>Height-12 centred cube at Z=−1 reaches Z=5; tray thickness=8 leaves 3 mm roof.</p>
+<p><strong>Correction:</strong> Make real through channels with grommet/strain relief or label intentionally blind channels and route accordingly.</p>
+<h3 id="r-a13-major-pi-ventilation-opening-remains-capped">R-A13 · Major · Pi ventilation opening remains capped</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L111">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:111</a>.</p>
+<p>Same centred cube reaches Z=5 in 8 mm plate, leaving 3 mm plastic over supposed opening.</p>
+<p><strong>Correction:</strong> Through cut and validate Pi underside clearance, airflow, cooler and connector access.</p>
+<h3 id="r-a14-blocker-lidar-mast-is-above-and-detached-from-plate">R-A14 · Blocker · LiDAR mast is above and detached from plate</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L308">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:308</a>.</p>
+<p>Plate Z=105..113; mast Z=160..280 gives 47 mm gap above plate rather than support beneath it. Plate itself unsupported.</p>
+<p><strong>Correction:</strong> Use short mast between supported deck and plate; model upper/lower flanges, hole patterns, cable exit and torsional restraint.</p>
+<h3 id="r-a15-major-lidar-cable-bore-is-blind-for-almost-half-its-height">R-A15 · Major · LiDAR cable bore is blind for almost half its height</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L243">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:243</a>.</p>
+<p>Centred 125 mm bore at Z=−1 extends −63.5..61.5 in 120 mm mast, leaving top 58.5 mm solid. Screw holes reach only Z=19.</p>
+<p><strong>Correction:</strong> Bore full height plus epsilon and add upper fastening/cable relief; eliminate dangling mast until chosen sensor needs one.</p>
+<h3 id="r-a16-blocker-wheel-hub-cannot-lock-onto-d-shaft">R-A16 · Blocker · Wheel hub cannot lock onto D shaft</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L185">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:185</a>.</p>
+<p>Ø6.15 round bore on 6 mm D shaft, no D flat, radial screw or clamp; hub 20 mm long may exceed Pololu 16 mm shaft after plate loss.</p>
+<p><strong>Correction:</strong> Metal clamping hub matched to shaft and chosen wheel; budget shaft engagement, motor face plate and bearing spacing.</p>
+<h3 id="r-a17-blocker-wheel-has-no-hub-fastening-pattern">R-A17 · Blocker · Wheel has no hub fastening pattern</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L167">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:167</a>.</p>
+<p>Hub has four M4 holes on radius 15 at 45/135/225/315°, wheel only has Ø6.2 bore. No pockets/holes/axial retention marry them.</p>
+<p><strong>Correction:</strong> Add matching wheel holes/nut recesses or buy wheel+hub kit; locate clamping screw and verify all fasteners accessible.</p>
+<h3 id="r-a18-major-bearing-cavity-has-no-compatible-shaft-or-retention-design">R-A18 · Major · Bearing cavity has no compatible shaft or retention design</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L156">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:156</a>.</p>
+<p>22 mm OD cavity suggests 608 bearing (8 mm ID), whereas shaft is 6 mm. 16 mm-deep open bore has no shoulder/cap/fit tolerance.</p>
+<p><strong>Correction:</strong> If support needed, use chosen 6 mm-ID bearing such as 626 with changed OD19 seat, retain both races appropriately and provide axle/collar/alignment.</p>
+<h3 id="r-a19-major-rounded-side-panel-violates-its-requested-width">R-A19 · Major · Rounded side panel violates its requested width</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L266">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:266</a>.</p>
+<p>rounded_box 330×5 with r=5 requires at least 10 mm width, but centres at Y±2.5 produce overall width15 mm. Horizontal holes are centred Z=0, creating half holes at bottom.</p>
+<p><strong>Correction:</strong> Assert 2r≤min(x,y), reduce radius or use true thin panel geometry; move hole centres above edge with proper mounting tabs.</p>
+<h3 id="r-a20-major-camera-tof-and-front-bumpers-on-side-without-mating-tabs">R-A20 · Major · Camera/ToF and front bumpers on side, without mating tabs</h3>
+<p>Evidence type: <strong>Confirmed source defect</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L303">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:303</a>.</p>
+<p>Wheel axes Y mean driving X. Sensors at Y=−155/−160 and bumper Y=±150 are lateral; no actual PCB interfaces/support.</p>
+<p><strong>Correction:</strong> Move forward sensors to X end, add angled bracket patterns for exact boards and defined frame attachment.</p>
+<h3 id="r-a21-major-pi-hole-spacing-correct-but-fastener-board-interface-incomplete">R-A21 · Major · Pi hole spacing correct but fastener/board interface incomplete</h3>
+<p>Evidence type: <strong>Integration gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L104">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:104</a>.</p>
+<p>58×49 nominal grid is plausible, but clearance uses M3=3.4; actual Pi board uses M2.5-compatible mounting. Board outline, hole offset, solder, cooler/cables not modelled.</p>
+<p><strong>Correction:</strong> Use manufacturer mechanical drawing, M2.5 spacers, real board offset and port cable clearance; mount never rests PCB on solid plate.</p>
+<h3 id="r-a22-major-lidar-grid-is-not-a-sensor-specific-mount">R-A22 · Major · LiDAR grid is not a sensor-specific mount</h3>
+<p>Evidence type: <strong>Integration gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L224">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:224</a>.</p>
+<p>110×110 generic grid offers no chosen scanner mounting pattern, connector envelope or scan-plane clearance. Mast, battery/compute volumes omitted.</p>
+<p><strong>Correction:</strong> Pick scanner kit, import mechanical drawing, keep 360° optical plane unoccluded and vibration restrained.</p>
+<h3 id="r-a23-major-scad-solid-rails-differ-from-intended-aluminium-construction">R-A23 · Major · SCAD solid rails differ from intended aluminium construction</h3>
+<p>Evidence type: <strong>Integration gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L50">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:50</a>.</p>
+<p>330×28×24 solid bars with vertical holes are not 2020 extrusion or angle profiles; no T-nuts, joints or cut/drill drawing.</p>
+<p><strong>Correction:</strong> Create actual metal frame drawings/BOM with section/material and connection hardware; do not simply print bars and assume rugged strength.</p>
+<h3 id="r-a24-major-motor-placeholder-does-not-establish-a-purchased-motor-envelope">R-A24 · Major · Motor placeholder does not establish a purchased-motor envelope</h3>
+<p>Evidence type: <strong>Integration gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/rugged_rover_complete.scad#L275">02_Rugged_37D_Future_Proof/rugged_rover_complete.scad:275</a>.</p>
+<p>Centred 65 mm cylinder plus partly overlapping 26.5 mm face and Ø6 shaft is illustrative; shaft offset, encoder and wire exits unmodelled. JGB37 and Pololu references differ.</p>
+<p><strong>Correction:</strong> Choose exact motor SKU, body/gearbox/encoder length, face pilot, eccentricity and harness envelope; do not mix motor families.</p>
+<h3 id="stl-electrical-and-documentation-findings">STL, electrical and documentation findings</h3>
+<h3 id="s-a01-blocker-compact-stl-is-stale-relative-to-current-source">S-A01 · Blocker · Compact STL is stale relative to current source</h3>
+<p>Evidence type: <strong>Measured mesh/source mismatch</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.stl#L1">01_Cute_N20_4WD/cute_rover_complete.stl:1</a>.</p>
+<p>Existing bounds X −77.4263..150, Y −67.5..105, Z 0..48.9263; extents 227.4263×172.5×48.9263. Current source X envelope −75..75; tyres/hubs Y about −66.5..66.5, motor placeholder shafts extend to ±69. File mtime also older.</p>
+<p><strong>Correction:</strong> Archive existing STL as an unreleased historical artefact; regenerate separate parts only after corrected CAD is checked.</p>
+<h3 id="s-a02-major-existing-stl-has-a-nonmanifold-edge">S-A02 · Major · Existing STL has a nonmanifold edge</h3>
+<p>Evidence type: <strong>Measured mesh defect</strong>. Source: <a href="../01_Cute_N20_4WD/cute_rover_complete.stl#L1">01_Cute_N20_4WD/cute_rover_complete.stl:1</a>.</p>
+<p>One edge from (−10,−16,24) to (10,−16,24) has four incident faces. No boundary edges; five vertex-connected components.</p>
+<p><strong>Correction:</strong> Fix source tangency/union responsible in original source if available; regenerated part meshes must have exactly two incident faces per edge.</p>
+<h3 id="s-a03-major-manufacturing-exports-incomplete">S-A03 · Major · Manufacturing exports incomplete</h3>
+<p>Evidence type: <strong>Release gap</strong>. Source: <a href="../MANIFEST.txt#L1">MANIFEST.txt:1</a>.</p>
+<p>Only one STL exists, for old complete compact assembly. No rugged STL and no per-part STLs; assembly exports include nonprinted placeholders/unjoined/fused geometry.</p>
+<p><strong>Correction:</strong> Release explicit named part STLs/3MF, quantity/orientation table, source hash and dimensions; never print motor placeholders.</p>
+<h3 id="s-a04-minor-concept-images-referenced-by-documents-are-missing">S-A04 · Minor · Concept images referenced by documents are missing</h3>
+<p>Evidence type: <strong>Documentation defect</strong>. Source: <a href="../01_Cute_N20_4WD/Compact_4WD_Smart_Rover.md#L1">01_Cute_N20_4WD/Compact_4WD_Smart_Rover.md:1</a>.</p>
+<p>compact_rover_top.svg and rugged_rover_top.svg do not exist; images/ at repository root is empty. Existing assembled PNG is a preview, not proof of fit.</p>
+<p><strong>Correction:</strong> Replace missing references with real current-source renders after CAD fixes and retain diagnostic drawings clearly labelled.</p>
+<h3 id="s-a05-major-no-complete-electrical-or-pin-assignment-design">S-A05 · Major · No complete electrical or pin assignment design</h3>
+<p>Evidence type: <strong>Design gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md#L1">02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md:1</a>.</p>
+<p>No schematic, selected board pin map, driver mounting, XSHUT/encoder level interface, wire routing or switch/power mounts in CAD.</p>
+<p><strong>Correction:</strong> Freeze hardware pin plan, supply branches, harness and failure-stop logic; list mounts for every purchased board.</p>
+<h3 id="s-a06-major-encoder-11-wire-claim-appears-to-confuse-pulse-count-with-conductors">S-A06 · Major · Encoder “11-wire” claim appears to confuse pulse count with conductors</h3>
+<p>Evidence type: <strong>Likely documentation error; seller confirmation needed</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md#L1">02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md:1</a>.</p>
+<p>Rugged document calls the motor 11-wire. Manufacturer JGB37 example says 11 signals per motor revolution and shows six signal/power leads; selected listing live read blocked.</p>
+<p><strong>Correction:</strong> Delete blanket 11-wire assumption; require purchased motor pinout. Establish PPR vs quadrature counts and gear ratio experimentally.</p>
+<h3 id="s-a07-major-6-v-n20-power-baseline-and-driver-peak-rating-are-unresolved">S-A07 · Major · 6 V N20 power baseline and driver peak rating are unresolved</h3>
+<p>Evidence type: <strong>Electrical integration gap</strong>. Source: <a href="../01_Cute_N20_4WD/Compact_4WD_Smart_Rover.md#L1">01_Cute_N20_4WD/Compact_4WD_Smart_Rover.md:1</a>.</p>
+<p>Compact document proposes 2S battery straight into drivers; full charge is 8.4 V vs recommended 6 V motor. DRV8833 RMS differs by package and board cooling.</p>
+<p><strong>Correction:</strong> Use regulated motor rail with transient handling, or exact motor rated for selected rail; verify stall and current protection.</p>
+<h3 id="s-a08-major-original-rugged-battery-can-overvolt-a-12-v-motor">S-A08 · Major · Original rugged battery can overvolt a 12 V motor</h3>
+<p>Evidence type: <strong>Electrical integration gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md#L1">02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md:1</a>.</p>
+<p>4S LFP approaches 14.6 V, ~22% above 12 V. Motor tolerance not established; brake regeneration and BMS trips unanalysed.</p>
+<p><strong>Correction:</strong> Verify motor permitted voltage or use suitable regulation/voltage selection. PWM duty reduction limits average drive but does not remove higher terminal pulses.</p>
+<h3 id="s-a09-major-rugged-terrain-payload-goals-have-no-quantified-validation">S-A09 · Major · Rugged terrain/payload goals have no quantified validation</h3>
+<p>Evidence type: <strong>Performance gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md#L1">02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md:1</a>.</p>
+<p>No total mass, centre of gravity, slope target, traction coefficient, radial motor load or suspension/articulation calculation. A rigid four-wheel chassis can lose contact on uneven ground.</p>
+<p><strong>Correction:</strong> Set mass/slope/obstacle targets, model motor torque/load and tipping limits; test progressively. Treat terrain claims as targets, not verified capability.</p>
+<h3 id="s-a10-major-bom-baseline-omits-practical-integration-purchases">S-A10 · Major · BOM baseline omits practical integration purchases</h3>
+<p>Evidence type: <strong>Procurement gap</strong>. Source: <a href="../02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md#L1">02_Rugged_37D_Future_Proof/Rugged_Smart_4WD_Rover.md:1</a>.</p>
+<p>No fixed camera programmer, Pi5-specific cable, level conversion, pack restraint, connectors/contact counts, regulator transients or exact hardware lengths.</p>
+<p><strong>Correction:</strong> Use revised BOM plus optional inventory below; fastener lengths remain conditional on corrected joints.</p>
+<h3 id="s-a11-major-no-print-fit-tolerance-or-fabrication-acceptance-criteria">S-A11 · Major · No print fit/tolerance or fabrication acceptance criteria</h3>
+<p>Evidence type: <strong>Manufacturing gap</strong>. Source: <a href="../RESEARCH_NOTES.md#L1">RESEARCH_NOTES.md:1</a>.</p>
+<p>No printer clearances for shafts/bearing seats/heat-set inserts; no metal plate drawings/load tests. $fn segmentation is adequate for visuals, not proof of shaft fit.</p>
+<p><strong>Correction:</strong> Print bore/hole coupons, measure real motor/wheel, inspect F6 part mesh and slicer; record acceptance before full prints.</p>
+<h3 id="s-a12-minor-legacy-pololu-reference-is-discontinued">S-A12 · Minor · Legacy Pololu reference is discontinued</h3>
+<p>Evidence type: <strong>Verified sourcing drift</strong>. Source: <a href="../RESEARCH_NOTES.md#L1">RESEARCH_NOTES.md:1</a>.</p>
+<p>Research references #2826; manufacturer now marks obsolete and points to #4755, which is 100 RPM, not budget JGB 60 RPM.</p>
+<p><strong>Correction:</strong> Update documentation and differentiate reference drawing from recommended purchasable SKU.</p>
+<h2 id="compatibility-details-to-freeze-before-ordering">Compatibility details to freeze before ordering</h2>
+<h3 id="motor-hub-wheel-and-frame">Motor, hub, wheel and frame</h3>
+<p>For <strong>each motor SKU</strong>, collect rated voltage, no-load/loaded RPM, reduction ratio, usable continuous torque, stall current at selected voltage, gearbox and can L/W/H, face PCD/pilot, shaft diameter/flat-depth/length, any shaft eccentricity, encoder board/cap and lead exits. A family name is not a manufacturing drawing. The Pololu drawing's 15.5 mm adjacent mounting spacing implies <strong>R=15.5 mm for a regular six-hole hexagon</strong>; <code>R=17.9</code> is wrong. The reference requires no more than 3 mm screw penetration into gearbox holes. Do not generalise that depth to a different vendor without its drawing. <a href="https://www.pololu.com/file/0J1735/37d-metal-gearmotors-dimension-diagram.pdf">Pololu mechanical drawing</a></p>
+<p>For each wheel, require diameter, width, hub depth, axle bore shape/flat, offset, bolt pattern and fastening method. Compute <strong>shaft engagement after bracket, pilot and hub placement</strong>, then choose wheel Y from that mating geometry. Prefer metal locking hubs for the rugged car. A round printed clearance hole needs a separate torque and axial locking mechanism. Check tyre runout, rim clearance, full-rotation clearance, bolt-head clearance and motor wire clearance. Match mass/radial-load limits before adding bearings.</p>
+<h3 id="drivers-voltage-and-protected-power">Drivers, voltage and protected power</h3>
+<p>DRV8833 supports 2.7–10.8 V operating supply, but chip package ratings differ: the thermally enhanced packages support 1.5 A RMS/2 A peak per bridge under stated conditions; the PW package is 500 mA RMS. A carrier's thermal capability may be lower. Treat a seller's “2 A” as a peak claim until demonstrated. <a href="https://www.ti.com/product/DRV8833">TI DRV8833</a></p>
+<p>The genuine MDD10A Rev2 supports 5–30 V, <strong>10 A continuous and 30 A peak for 10 seconds per channel</strong>, 3.3/5 V control and regenerative braking; it has no motor-supply reverse-polarity protection. A “13 A” seller sentence does not override the manufacturer. <a href="https://www.cytron.io/p-10amp-5v-30v-dc-motor-driver-2-channels">Cytron MDD10A</a></p>
+<p>An alternative <strong>four BTS7960/IBT-2 boards</strong> costs less but uses one board per motor, takes more space and requires inspection of PCB terminals, logic buffers, heatsink and current-sense implementation. “43 A” in a module title is not a demonstrated continuous board current. Start with a conservative tested current and use enable pull-downs. It does not provide closed-loop encoder control by itself. <a href="https://robokits.co.in/index.php?main_page=product_info&amp;products_id=1859">Robokits listing route</a> has an indexed ₹307/in-stock snapshot; <a href="https://robocraze.com/products/bts7960b-43a-h-bridge-motor-driver">Robocraze's alternative</a> has an indexed ₹316 but is sold out. Verify checkout GST and stock before using the ₹350 cap.</p>
+<p>If the budget JGB37 encoder motor cannot be obtained, <a href="https://robokits.co.in/motors/encoder-dc-servo/high-torque-12v-dc-encoder-motor/dc-12v-60rpm-high-torque-quad-encoder-motor">Robokits RMCS-3012</a> is a documented 12 V 60 RPM quadrature alternative, indexed at ₹1,500 each. Its 37 mm gearbox, offset 6 mm shaft, 30 mm shaft length, 87 mm body and 5 V encoder require new brackets/level conversion; advertised load current is up to 7.5 A, so redo stall/driver/fuse checks. Availability snapshots conflict between in stock and 45-day shipment. Four add at least ₹3,400 over the motor allowance and exceed the budget configuration. The <a href="https://robokits.co.in/motors/rhino-gb37-12v-dc-geared-motor/dc-geared-12v-motors/rhino-gb37-12v-60rpm-10.4kgcm-dc-geared-motor">Rhino GB37 nonencoder alternative</a>, indexed around ₹382, is the cheaper trade-off; it drops encoder speed control/odometry rather than retaining the full feature set.</p>
+<p>Size motor branches from <strong>measured and maker-specified stall/start current</strong>, not nominal running current. For illustration only, the manufacturer-indexed JGB37-520B 12 V 60 RPM table reports about 2.3 A stall for one variant; all four would be 9.2 A at 12 V. That is not the confirmed EngineersToy motor. A Pololu #4755 instead lists 5.5 A per motor, so four would be 22 A. Driver, BMS, fuse, connectors and gauge must change accordingly. <a href="https://www.aslongdcmotor.com/photo/aslongdcmotor/document/26547/37mm%20Round%20Spur%20Gear%20Motor_PDF00.pdf">JGB37 manufacturer reference</a>, <a href="https://www.pololu.com/product/4755">Pololu alternative</a></p>
+<p>Suggested initial power routes:</p>
+<pre><code class="language-text">COMPACT: 2S LiPo → fuse → DC main switch → distribution
+           ├─ motor regulator 5.5–6 V + tested braking clamp → two DRV8833 → four N20
+           └─ filtered 5 V regulator → S3 DevKit + camera board
+                                        └─ 3.3 V-compatible ToF bus
+
+RUGGED BUDGET: 3S LiPo → fuse → battery disconnect → distribution
+                ├─ hardware drive-stop path → two MDD10A → four JGB motors
+                └─ filtered 5 V regulator → S3 + verified encoder interface + ToF
+                     └─ optional separate qualified Pi supply added later
+</code></pre>
+<p>Connect battery/motor returns at power distribution; keep sensor/encoder returns clear of motor current. Use reverse-polarity protection or a keyed checked harness. Do not place a single flyback diode directly across a bidirectional motor. Braking energy needs a return path; ordinary buck regulators often cannot sink current. Check rail overshoot, especially with a full battery or a BMS that disconnects. Suppression component values in the BOM are starting allocations, not a validated transient circuit.</p>
+<h3 id="controller-and-gpio-budget">Controller and GPIO budget</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>Function</th>
+  <th style="text-align:right">Compact recommended two-board build</th>
+  <th style="text-align:right">Rugged four-channel build</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Motor controls</td>
+  <td style="text-align:right">8 GPIO for two-input DRV8833 control per motor</td>
+  <td style="text-align:right">8 GPIO for PWM + DIR per motor</td>
+</tr>
+<tr>
+  <td>Encoder inputs</td>
+  <td style="text-align:right">0 base; +8 if encoder upgrade</td>
+  <td style="text-align:right">8</td>
+</tr>
+<tr>
+  <td>Sensor bus</td>
+  <td style="text-align:right">2 GPIO I²C</td>
+  <td style="text-align:right">2 GPIO I²C</td>
+</tr>
+<tr>
+  <td>XSHUT</td>
+  <td style="text-align:right">3 GPIO for three ToF</td>
+  <td style="text-align:right">0 required for one; 3 if expanded to three</td>
+</tr>
+<tr>
+  <td>Disable/stop monitor</td>
+  <td style="text-align:right">At least 1, tied to defined hardware stop path</td>
+  <td style="text-align:right">At least 1; more if driver/circuit requires</td>
+</tr>
+<tr>
+  <td>Battery sensing</td>
+  <td style="text-align:right">1 ADC-capable input for suitable divider or external monitor</td>
+  <td style="text-align:right">1 ADC-capable input or external cell monitor</td>
+</tr>
+<tr>
+  <td>Camera</td>
+  <td style="text-align:right">Own separate camera board; no control GPIO consumed by camera on S3</td>
+  <td style="text-align:right">Upgrade camera on own board/Pi; exclude camera bus from motor pins</td>
+</tr>
+<tr>
+  <td>Pi link later</td>
+  <td style="text-align:right">Optional</td>
+  <td style="text-align:right">USB or UART pins planned; native USB reserves its pins</td>
+</tr>
+</tbody>
+</table></div>
+<p>The compact S3 needs about <strong>14 general inputs/outputs plus one ADC</strong>, the rugged base about <strong>19 plus one ADC</strong>. Those are resource budgets, not tested pin assignments. Check exact module flash/PSRAM occupied pins, USB pins, strapping pins and onboard LED. Use pull-downs on drive-enable/PWM so reset and boot cannot move wheels. The advertised 7Semi board exposes headers; the selected variant still needs a pinout review. <a href="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html">Espressif DevKit guide</a></p>
+<p>A Seeed XIAO S3 Sense has camera, microphone and SD functions that reserve/share pins. With camera streaming plus four independent DRV8833 channels, I²C and three XSHUT lines, a direct pin allocation is tight; use an I/O expander for static XSHUT or separate control board, and disable conflicting SD/microphone functions as needed. An I/O expander should not carry timing-critical motor PWM or quadrature signals. <a href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/">Seeed pin map</a></p>
+<h3 id="encoders-and-sensors">Encoders and sensors</h3>
+<p>For encoder wiring, require the actual motor's six-or-other-wire pinout. The JGB manufacturer example's <strong>11 pulses/signals per motor revolution does not mean 11 wires</strong>. If PPR=11 per channel, quadrature x4 and reduction=168, output counts are <code>11×4×168=7392</code>, only if those definitions and ratio match your unit. Rotate the wheel through one revolution and verify counts, direction and noise. Do not reuse Pololu's 64 CPR definition on a JGB motor. Use ESP32-S3 PCNT where appropriate and calibrate for the skid-steer effective track/slip. <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/peripherals/pcnt.html">Espressif PCNT</a></p>
+<p>The Pololu alternative needs encoder Vcc at least 3.5 V and produces outputs approximately up to Vcc, so 5 V encoder power requires a suitable 3.3 V input interface. For JGB variants, obtain the voltage/output type before wiring; do not infer pin colours across brands. Eight channels need eight conversions if outputs are push-pull 5 V. Establish common reference and route A/B away from motor leads.</p>
+<p>VL53L0X uses I²C and programmable address with XSHUT. Three identical modules start at the same address; hold all off, enable/address one at a time, and repeat after every reset. Breakout board regulator/pull-ups matter: a bare sensor is not a 5 V module. Mount optics facing forward, angle side boards deliberately, and test in sunlight, on black surfaces and near shiny/transparent objects. Do not promise 2 m usable distance in every condition. <a href="https://www.st.com/en/imaging-and-photonics-solutions/vl53l0x.html">ST VL53L0X</a></p>
+<h3 id="pi-lidar-upgrade">Pi/LiDAR upgrade</h3>
+<p>A Pi 5 should have a qualified mobile supply capable of its workload and USB peripherals. A 3 A supply can boot it but peripheral USB power is restricted; detecting a suitable 5 A supply raises the USB budget. A generic 5 A buck and passive USB-C lead do not automatically provide the correct supply negotiation. Include cooler, reliable storage, M2.5 carrier, proper Pi 5 camera cable, USB data cable and power scheme. <a href="https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply">Official Pi power documentation</a></p>
+<p>For LiDAR, confirm exact model revision, scan range/rate, Linux driver, USB interface, rated supply/current, footprint and height. Keep scan plane clear of Pi box, mast, camera and handles. RPLIDAR A1 is primarily a low-cost indoor mapping option; rugged outdoor use needs actual sunlight/terrain tests or a suitable outdoor-rated scanner. Validate IMU timestamps/calibration and four-wheel odometry before SLAM/Nav2. Defer model-specific software versions until the hardware/OS choice is frozen.</p>
+<h2 id="buying-sequence-and-acceptance-checks">Buying sequence and acceptance checks</h2>
+<ol>
+<li><strong>Fix geometry constraints first:</strong> choose X front, Z ground/base convention, actual wheel/shaft alignment, battery floor and frame joints; add supported decks. Keep originals and make a reviewed revision.</li>
+<li><strong>Buy one drivetrain sample per car:</strong> motor, compatible wheel/hub and bracket. If seller cannot provide stall current, mounting drawing, encoder pinout and package contents, choose another supplier. Test motor dimensions before buying all four.</li>
+<li><strong>Obtain pack and fabrication quotes:</strong> exact battery drawing/current/BMS/connector, correct charger, printed part service if no printer, aluminium cut lengths/section and hole drawing. Keep a reserve inside ₹15,000.</li>
+<li><strong>Print fit coupons:</strong> rectangular motor cavity, shaft D bore/metal hub pocket, one motor bracket, one PCB mount, bolt/insert and optional bearing seats. Measure before final quantity printing.</li>
+<li><strong>Render every individual part in OpenSCAD F6:</strong> no warnings/undefined variables/empty geometry; no coplanar-only joints; slicer dimension/unit/orientation sanity check; manifold per-part STLs with source revision/hash.</li>
+<li><strong>Bench-test power one motor at a time:</strong> current-limited supply, polarity, 5 V stability, logic levels, current/temperature and brief controlled start-current checks. Avoid prolonged stalls. Verify all-four starts and worst skid turns within branch/fuse/BMS ratings.</li>
+<li><strong>Test failsafe before wheels on ground:</strong> boot/reset/offline command/USB disconnect must disable movement; per-cell low-voltage stop, emergency drive disable and recovery must work. Physical stop must work independently of Wi-Fi.</li>
+<li><strong>Validate mechanical and terrain:</strong> wheel spin clear of rails/bumper, no harness rub, pack restrained, all fasteners locked, no PCB contact with metal. Start unloaded on tile; then intended mass, grass and specified slope while logging current, temperature and wheel slip.</li>
+</ol>
+<p>For slope sizing, set total mass <code>m</code>, wheel radius <code>r</code>, angle <code>θ</code> and estimated rolling resistance <code>Crr</code>. A first traction force is <code>F=m·g·(sinθ+Crr·cosθ)</code>. If four wheels share load, each needs at least <code>F·r/4</code> torque before drivetrain losses and acceleration/turning margin. Use <strong>continuous rated torque</strong>, not seller stall torque, for sustained hills. Centre-of-gravity height and track/wheelbase determine tipping; skid turns can need more current than straight driving.</p>
+<p>Recommended tools already owned or acquired separately: digital caliper, multimeter, suitable current-limited bench supply/current meter, soldering iron, connector crimper or precrimped leads, hex drivers and drill/reamer for metal. Add their actual cost if purchasing them; neither car subtotal includes a printer, tools, computer or labour.</p>
+<h2 id="files-and-sources">Files and sources</h2>
+<p>The main reading version is <a href="ROVER_REVIEW_AND_BOM.html">ROVER_REVIEW_AND_BOM.html</a>; it includes offline photos, filterable tables and print-to-PDF support. The plain version is <a href="ROVER_REVIEW_AND_BOM.md">ROVER_REVIEW_AND_BOM.md</a>. Download <a href="bom.csv">bom.csv</a>, <a href="design_findings.csv">design_findings.csv</a> and <a href="fabrication_inventory.csv">fabrication_inventory.csv</a> for editing.</p>
+<p>Buying links in each BOM row are direct product pages when verified, or <strong>portal search routes</strong> for generic hardware when a specific SKU is not frozen. Robu, Robocraze, Evelta, Zbotic, KitsGuru, Robokits and specialist hobby sellers are sourcing options, not endorsements of every listing. Mouser India / element14 India are alternative routes for genuine semiconductor/dev-board parts but usually cost more than generic module sellers. For aluminium and metric hardware, local fabrication/fastener shops can be cheaper and allow measuring before purchase.</p>
+<p>Stock changed or conflicted between indexed pages and live JSON during this check. N20 Robocraze ₹225 is unavailable; camera JSON said available while cached page said sold out; VL53L0X JSON ₹126 differs from cached ₹123. All matching quantities/variants must be checked at checkout. No purchases were made.</p>
+</main><script>document.querySelector("#filter").addEventListener("input",e=>{let q=e.target.value.toLowerCase();document.querySelectorAll("table tbody tr").forEach(r=>r.hidden=!r.textContent.toLowerCase().includes(q))})</script></body></html>

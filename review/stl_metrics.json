@@ -1,0 +1,127 @@
+{
+  "file": "01_Cute_N20_4WD/cute_rover_complete.stl",
+  "sha256": "d78348921ff9c3e0a4fbb2df4da57c51c3a032d2f0173866e0911068205e1e5f",
+  "format": "ASCII",
+  "bytes": 3492129,
+  "triangles": 21410,
+  "vertices": 10643,
+  "edges": 32114,
+  "min_mm": [
+    -77.4263,
+    -67.5,
+    0.0
+  ],
+  "max_mm": [
+    150.0,
+    105.0,
+    48.9263
+  ],
+  "extent_mm": [
+    227.4263,
+    172.5,
+    48.9263
+  ],
+  "boundary_edges": 0,
+  "nonmanifold_edges": 1,
+  "inconsistently_oriented_two_face_edges": 0,
+  "zero_area_triangles": 0,
+  "duplicate_faces": 0,
+  "nonmanifold_edge_details": [
+    {
+      "vertices_mm": [
+        [
+          -10.0,
+          -16.0,
+          24.0
+        ],
+        [
+          10.0,
+          -16.0,
+          24.0
+        ]
+      ],
+      "incident_faces": 4
+    }
+  ],
+  "vertex_connected_components": 5,
+  "surface_area_mm2": 100694.7368305666,
+  "signed_volume_mm3": 239820.97246011527,
+  "components": [
+    {
+      "triangles": 8888,
+      "min_mm": [
+        -77.4263,
+        -67.5,
+        4.0
+      ],
+      "max_mm": [
+        77.4263,
+        -29.0,
+        48.9263
+      ],
+      "signed_volume_mm3": 78115.7965483144
+    },
+    {
+      "triangles": 5774,
+      "min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_mm": [
+        150.0,
+        105.0,
+        48.9263
+      ],
+      "signed_volume_mm3": 95707.92862114246
+    },
+    {
+      "triangles": 3248,
+      "min_mm": [
+        -77.4263,
+        24.5,
+        4.0
+      ],
+      "max_mm": [
+        -32.5737,
+        64.5,
+        48.9263
+      ],
+      "signed_volume_mm3": 33633.70112960904
+    },
+    {
+      "triangles": 2192,
+      "min_mm": [
+        -37.5,
+        -34.0,
+        16.0
+      ],
+      "max_mm": [
+        37.5,
+        21.0,
+        32.0
+      ],
+      "signed_volume_mm3": 21503.14993747734
+    },
+    {
+      "triangles": 1308,
+      "min_mm": [
+        -29.0,
+        9.0,
+        14.0
+      ],
+      "max_mm": [
+        29.0,
+        41.0,
+        20.0
+      ],
+      "signed_volume_mm3": 10860.396223572003
+    }
+  ],
+  "limitations": [
+    "Exact-coordinate vertex welding; no near-vertex merging.",
+    "No triangle self-intersection check.",
+    "Connectivity is vertex based; it does not prove independent printability.",
+    "No OpenSCAD F6 render or source-to-mesh Boolean comparison performed."
+  ]
+}

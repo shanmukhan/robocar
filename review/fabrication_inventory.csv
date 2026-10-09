@@ -1,0 +1,29 @@
+project,module,required_quantity,material_or_purchase,notes
+Compact,base_plate,1,PETG,150×105; currently z-shifted; fix before printing
+Compact,n20_motor_mount,4,PETG or matched metal/plastic bracket,"Rebuild cavity, flange and clamp for purchased motor"
+Compact,wheel,4,Purchase rubber wheel preferred,Printed option only; not additional to C02
+Compact,wheel_hub_adapter,4,Purchase compatible D wheel / redesign,Optional only; existing split adapter unusable
+Compact,battery_tray,1,PETG,Add floor/straps and purchased pack dimensions
+Compact,esp32_tray,1,PETG,Replace with selected board carrier
+Compact,camera_mount,1,PETG,Replace with forward camera-specific holder
+Compact,camera_front_mount,0,PETG option,Defined but inactive; no wrapper; use instead of another camera bracket
+Compact,tof_sensor_bar,1,PETG,Replaces bar with three actual angled brackets or carries three boards
+Compact,top_deck / top_cover,1,PETG,One identical part; alias is not a second cover
+Compact,standoffs,4,Metal/nylon or PETG,Module exports four at once; do not print four copies of four
+Compact,front_bumper,1,TPU/PETG,Move to X front; add tabs/clearance
+Rugged,side_rail,2,Aluminium actual profile,~330 mm preliminary cut length; need joint drawing
+Rugged,cross_member,2,Aluminium actual profile,Across width; ~250 mm source length only after joint design
+Rugged,electronics_tray,1,PETG/metal,205×135×8 baseline; supports missing
+Rugged,battery_tray,1,PETG/metal,220×100×12 baseline; roof must become floor
+Rugged,pi5_mount,1,PETG,Upgrade only; M2.5 carrier and cooler clearance
+Rugged,esp32_mount,1,PETG,65×42×6 baseline; selected board cradle
+Rugged,motor_mount,4,Metal bracket preferred,62×62×8 source plate replaced by real L brackets
+Rugged,wheel_bearing_block,4,PETG/metal option,Do not build until bearing/axle architecture frozen
+Rugged,wheel,4,Purchased rubber tyre,100×32 baseline; update if 90 mm choice
+Rugged,wheel_hub,4,Metal,Omit separate hub if purchased wheel includes proper hub
+Rugged,camera_mount,1,PETG,"Upgrade only, board-specific forward mount"
+Rugged,tof_bracket,1,PETG,140×18×12 baseline; one/three boards properly aimed
+Rugged,lidar_plate,1,PETG/aluminium,Upgrade only; 110×110×8 grid not final scanner interface
+Rugged,lidar_mast,1,Short braced tube preferred,Upgrade only; source 38×38×120 has blind bore/detachment
+Rugged,bumper,2,TPU / aluminium with foam,330×24×28 baseline; current positioning collides with wheels
+Rugged,side_panel,2,Thin PETG sheet/print,Optional; actual generated width15 despite target5

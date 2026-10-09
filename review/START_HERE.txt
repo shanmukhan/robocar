@@ -1,0 +1,20 @@
+Open review/ROVER_REVIEW_AND_BOM.html in a browser for the illustrated, searchable report.
+Use the CSV files in Excel, LibreOffice or Google Sheets:
+- bom.csv: compact, Cytron rugged and optional upgrade rows.
+- rugged_budget_bom.csv: complete cheaper rugged variant, including its signal-buffer kit.
+- design_findings.csv: 58 findings with source evidence and corrections.
+- fabrication_inventory.csv: 28 named mechanical modules.
+
+Planning totals including reserve: compact INR 8,602; budget rugged INR 13,476; Cytron rugged INR 14,949.64.
+Budget is assumed per car. Costs include allowances and are not checkout quotes.
+Shipping, tools, labour and outsourced printing/fabrication are separate.
+
+Original CAD is included for reference and was NOT corrected. Neither design is ready for manufacturing.
+OpenSCAD was unavailable: findings come from source calculations and an audit of the existing STL, not a fresh render or physical test.
+
+To reproduce after installing Python dependencies numpy, matplotlib and mistune:
+python3 review/audit_stl.py
+python3 review/render_diagnostics.py
+python3 review/build_report.py
+
+Component photos are genuine supplier/manufacturer images; source URLs are preserved in component_sources.json and the report.
