@@ -1,0 +1,1956 @@
+{
+  "master_source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+  "exclusions": [
+    "This inventory itself",
+    "completion_checks.json",
+    "Python cache files"
+  ],
+  "files": [
+    {
+      "path": "Compact_4WD_Smart_Rover.md",
+      "bytes": 5333,
+      "sha256": "7ab867ad2d89ce9df22b6d369fb76dfc44f9504f47d432fcb4aac7c80fb62aeb",
+      "role": "Project documentation/task instructions"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3294,
+      "sha256": "7e9563297d85516d73c705f75329201fed83846defe32787b86d503aa12a13a6",
+      "role": "Project documentation/task instructions"
+    },
+    {
+      "path": "audit/CAD_AUDIT.md",
+      "bytes": 15471,
+      "sha256": "99743dd5667cd76be22e231bb68b4e69cdf5fc44bdcbde0b62c256c018b7b023",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/IMAGE_AUDIT.md",
+      "bytes": 25966,
+      "sha256": "bef57c1965e2ab4fa67cda5b87524480d3e95c5f586b9966ee7fa98105c92bfd",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/INITIAL_FINDINGS.md",
+      "bytes": 15740,
+      "sha256": "ab31289b5dcdf88bc7f2f1c1eb19f23f7c44542c6bc1fd2550f0ed9540aafa75",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/MECHANICAL_REVIEW.md",
+      "bytes": 13600,
+      "sha256": "6e1fdcbcee4b9c8660d027ff2169afb1d3438dcf71838134df6faf7d65c295e9",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/PRINT_GUIDE.md",
+      "bytes": 8082,
+      "sha256": "a50b20ea2d26110ce8dae558ce5738cdaa2d36b114921c741bb40c3b33380579",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/assembly_dimensions.png",
+      "bytes": 262767,
+      "sha256": "c8500ac205a88a779e1327edd180a163a13a7279711c0d506d7c2b57b0eb4c2a",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/baseline/Compact_4WD_Smart_Rover.md",
+      "bytes": 4582,
+      "sha256": "c0b4bbdcd2389a55ecfdee8e7260903960bd2a6fd1c7c84a31713ee82b3159a0",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/README.md",
+      "bytes": 1016,
+      "sha256": "b95a28d6f40990f76c77ca9f2cbf9d7d3a05dfa15d125454e2ffe543ec89d8e2",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/cute_rover_assembled_preview.png",
+      "bytes": 53095,
+      "sha256": "a21efa9d47fd8ad42afad1cd8641a48247250b0a59bd64e07bd933fdf6b431c3",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/cute_rover_complete.csg",
+      "bytes": 43561,
+      "sha256": "de030705b524045ef35683f9d25597c107fb29b236a17c373aac0e435aa6cac3",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/cute_rover_complete.scad",
+      "bytes": 8656,
+      "sha256": "b2238388d3eda7ac30167cf43f669dda30ee666bacb0ba7d40fed2b2fe81fcf6",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/cute_rover_complete.stl",
+      "bytes": 3492129,
+      "sha256": "d78348921ff9c3e0a4fbb2df4da57c51c3a032d2f0173866e0911068205e1e5f",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/goal.md",
+      "bytes": 4699,
+      "sha256": "f7e2ce5d875985f08fff92e241dc1a1c6be265a61da012071bdd762d85e45e75",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/assembly.scad",
+      "bytes": 47,
+      "sha256": "6a8f0d4a79de89b33b660ca87655ab137e0e9b3c87e79d7b25c7b79309926679",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/base_plate.scad",
+      "bytes": 49,
+      "sha256": "27e83b66fcba933f1bb5305b8d5c513ac7c0f157fdedd6edd3dfef33409e0c50",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/battery_tray.scad",
+      "bytes": 51,
+      "sha256": "43d13115d449112f2cb3b9c85ae997c034e0e021466146ec74d92a46851769b6",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/camera_mount.scad",
+      "bytes": 51,
+      "sha256": "2b518e4ad4c40c2be261fd08c06b185f53c1f7cf68e3edf5e7a6a364fee3e60a",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/esp32_tray.scad",
+      "bytes": 49,
+      "sha256": "5e9992a14d87b7f49916ab7444629a89f2b74d7ffb278adb16106bb21e18286e",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/front_bumper.scad",
+      "bytes": 51,
+      "sha256": "7ac9d092c72f72205b97e322702968590bb3167ab45f72b114df21d6ff76161c",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/n20_motor_mount.scad",
+      "bytes": 54,
+      "sha256": "afb33f991272d7e08d477227c1b606dce0bd78528a4a0df3f4e99bbf17a0b0d3",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/standoffs.scad",
+      "bytes": 48,
+      "sha256": "6ba9fb496bb5282a56c20fedfe0306819cbb8b366b7de0138fa12749734292b2",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/tof_sensor_bar.scad",
+      "bytes": 53,
+      "sha256": "0a5c9b9840dbaa018be22b3ac3df676e4255cb0c1317cd275e9098f1a70cf530",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/top_cover.scad",
+      "bytes": 48,
+      "sha256": "1520e330cddbc727a2cff7c1f0dbf509ba36235169c555af5925da4280bf0f6e",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/wheel.scad",
+      "bytes": 44,
+      "sha256": "38c4380fd1fc0dbdab28721894d77c19d950d251a5d57b367b87609ef7f54f18",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline/parts/wheel_hub_adapter.scad",
+      "bytes": 56,
+      "sha256": "8f486110d695fdf3cf30ad3610ce64d52e8d8859ba8e8108613207269bead979",
+      "role": "Preserved original input; historical, not production release"
+    },
+    {
+      "path": "audit/baseline_fn_comparison.json",
+      "bytes": 12787,
+      "sha256": "44db0580b68dddbdb39f779bbe79829b3930ef232137dfd6fadbc3ae5d020a30",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/baseline_inventory.json",
+      "bytes": 33529,
+      "sha256": "2964e2d0255afbc863cb1d59cbb973091e450b90d1b2f5791e5feaf927ed78a6",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/baseline_mesh_metrics.json",
+      "bytes": 47703,
+      "sha256": "ce463e3f61d8fd1135989ea64c2def30ac651a1e6b265683b4cdda174a01699a",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/baseline_meshes/assembly.csg",
+      "bytes": 43452,
+      "sha256": "376f50776592a277a83e8eb88561b647cb6b8fa1e474dce0249c0149643ae6eb",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/assembly.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/assembly.stl",
+      "bytes": 1261409,
+      "sha256": "7f8380cc66ab7c0937a60b3804e4e78d059fd98b9dc7387eb54e8c2d44af9826",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/assembly.summary.json",
+      "bytes": 495,
+      "sha256": "8d3f9c18ef392673e71ad5e755187fbd9888fa14d2e33d9a0b325be90af3a182",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/base_plate.csg",
+      "bytes": 4043,
+      "sha256": "8220f89e29a790e4f510c1f4f6e8f58f9a1c612194d8da4b15534232d2d6cd54",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/base_plate.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/base_plate.stl",
+      "bytes": 77848,
+      "sha256": "bd8a7a7253fd6eb971e3d988552db01331d00deed365f02e49164fd36e8cb3af",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/base_plate.summary.json",
+      "bytes": 485,
+      "sha256": "f5794c7d92fa8a9b4dcae7ebc75469df0d21992363e1a1bf30a7c11824424fdc",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/battery_tray.csg",
+      "bytes": 1701,
+      "sha256": "e9320f3aea66e55fadec6c5301218af4288e8e3e2888bd452f48eb8eeb531a2c",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/battery_tray.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/battery_tray.stl",
+      "bytes": 29233,
+      "sha256": "e0b4e4daacb90f57ce6f2061962cbbb54b2d542962a070cbef96d8a26eb3d44e",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/battery_tray.summary.json",
+      "bytes": 547,
+      "sha256": "6a0ddce9da20ceead2e7b464525f97af9ac07d6b85eab427c2cb66beb0a69b43",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/camera_mount.csg",
+      "bytes": 1361,
+      "sha256": "459d140c44160f5c6b28ab78aa13c219a982e3f7c761afc3971a9c19d37fb7cb",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/camera_mount.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/camera_mount.stl",
+      "bytes": 26052,
+      "sha256": "c5e7c2ed6877bbc651ea73ba853dc597b3d5ff66c24541929cb017cc8e49306f",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/camera_mount.summary.json",
+      "bytes": 548,
+      "sha256": "e4782470e697e6dc4e27819dbb6a4e13c33a46ba077dbc54a2b66104ec2adbfc",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/esp32_tray.csg",
+      "bytes": 1580,
+      "sha256": "0e72fee0d7650a2808f75be890e9c931d05fecc3a866a6783981307cb6031684",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/esp32_tray.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/esp32_tray.stl",
+      "bytes": 33719,
+      "sha256": "72876298c5a837be24f9a72af5c91006dcb80dab13f0da649ea8f9eb7e130f5c",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/esp32_tray.summary.json",
+      "bytes": 549,
+      "sha256": "e13824cca068d08de6478e91d8cb5c7fc5091a83b3a8fdb8b2da4d06dd9b8b45",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/base_wrapper_fn48.csg",
+      "bytes": 4062,
+      "sha256": "dc3f6827967af91b88f2e5221f34d298e609e4e46c7d9d49e61c200af3523837",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/base_wrapper_fn48.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/base_wrapper_fn48.stl",
+      "bytes": 687656,
+      "sha256": "5cfbcde7496c9eaedfae31ab3611a8cc5a82671868e07a86a6149312b34c9c78",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/base_wrapper_fn48.summary.json",
+      "bytes": 491,
+      "sha256": "d05f3b36237bc1c6e1a6868bbbfe78b0928ad68391ec794ca4ebb564e9f1b838",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/master_assembly_fn48.csg",
+      "bytes": 43585,
+      "sha256": "e56b832b1f7a93dc0576d406382cff69a29e801e0982ad5af3732048d54378ee",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/master_assembly_fn48.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/master_assembly_fn48.stl",
+      "bytes": 4328030,
+      "sha256": "fd62a314e1b2964029d5328576dac4bde1b5340c2012e78effc167bfcda4e3ea",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/master_assembly_fn48.summary.json",
+      "bytes": 499,
+      "sha256": "771a593300b43d7542e6d21cbc993c7edd1b8c4116efdfc7b28a0b26fc4ee627",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/wheel_wrapper_fn48.csg",
+      "bytes": 2982,
+      "sha256": "2b1a89101d5fbeeba2cebeb61d89cf2be891b4dd252227c4d5e959c1a4c5e3e7",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/wheel_wrapper_fn48.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/wheel_wrapper_fn48.stl",
+      "bytes": 205606,
+      "sha256": "846aee6a2827b82f15c3dcf2896d734e772240caba0ae55577ab21a5a39aecae",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/fn_comparison/wheel_wrapper_fn48.summary.json",
+      "bytes": 566,
+      "sha256": "996379524e365e9f6d22902cf476168616749fb758540d1855cbd5fe55a08141",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/front_bumper.csg",
+      "bytes": 2205,
+      "sha256": "6ffa7fb07c5a15648b61d5a31d9dd7a25517ee3683d5775bb2d87902b0db7cf0",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/front_bumper.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/front_bumper.stl",
+      "bytes": 49478,
+      "sha256": "1fb182e067ed67413b521db705312559be313610ef7815c44741b0dba10705cd",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/front_bumper.summary.json",
+      "bytes": 552,
+      "sha256": "7572d1f01c429dfe4bc5a60c74adefdd846e26cbf572244e0062350c50bcd0ed",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/n20_motor_mount.csg",
+      "bytes": 1857,
+      "sha256": "7f783e1d61bc321611d058486d90709ef4f03dc03092e5a438e4d8b7bb060285",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/n20_motor_mount.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/n20_motor_mount.stl",
+      "bytes": 40001,
+      "sha256": "ffdc7914567d7632cc6948e87ebb90dc79a1b317e4e0d55a3e7a2c08d22789a9",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/n20_motor_mount.summary.json",
+      "bytes": 522,
+      "sha256": "9531df114cfbbbcd9924648b6b49fec721b5b49a52d2f0ef2881d9c5275035af",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/standoffs.csg",
+      "bytes": 1443,
+      "sha256": "9aa6877590c58537aa051a229582e50aa1468dcdd5cc462d6dd70de7fb0326b2",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/standoffs.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/standoffs.stl",
+      "bytes": 65843,
+      "sha256": "d57790f363c9467d323495b5319af07ddccd4171a9ea658f0fae1f266ed8cffb",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/standoffs.summary.json",
+      "bytes": 548,
+      "sha256": "8cbf41346fbed0de03d87e795c391c1ab98fa7341792af2475ff6c406141fb5d",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/tof_sensor_bar.csg",
+      "bytes": 1743,
+      "sha256": "f431c14c73902d5c378665f9c8eb779f8e2b744e04bcf390d609c104599a6f86",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/tof_sensor_bar.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/tof_sensor_bar.stl",
+      "bytes": 57040,
+      "sha256": "c84b28b45bbfeb1067205bb60eb60bb50d6f500a7eeed869b3cbbb4d0aea9164",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/tof_sensor_bar.summary.json",
+      "bytes": 522,
+      "sha256": "88a6bef988f2dcc34d2a103b8bcd40779b2504eccb40dfdd9d17e4ba41a20128",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/top_cover.csg",
+      "bytes": 1857,
+      "sha256": "9a45d159f2e05f8f3b833f4e713644046ada46b432fadd8c9d02c0acae5d35da",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/top_cover.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/top_cover.stl",
+      "bytes": 37450,
+      "sha256": "8446f94dc6ae4da1940457235c8499af54629682aae18eba1ec59807aff2cbe1",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/top_cover.summary.json",
+      "bytes": 485,
+      "sha256": "8514946afa230f053cfa69437f7e1ffa67646a7cb8627f366f24af973a10a995",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel.csg",
+      "bytes": 2979,
+      "sha256": "789b1788bae50e37bacef350f9f81d97c8e6afad0245f09edd065e16bc45b1c3",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel.stl",
+      "bytes": 122971,
+      "sha256": "2ed2e0e58dfc18a7e2a8ace8ff0bf1cc0ff4679606cca4dc7a0473efb8d44f2f",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel.summary.json",
+      "bytes": 563,
+      "sha256": "f8a9fd8dc1f380aa54b50fc53b01f7d7f0ac6e814df45f48891bcd47c01d4143",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel_hub_adapter.csg",
+      "bytes": 833,
+      "sha256": "e45b4f0f5a1b20c2c3c604cdec5cebff016338bf7f2f40c6df0961c5d19d60c7",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel_hub_adapter.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel_hub_adapter.stl",
+      "bytes": 39122,
+      "sha256": "1f9ec29b6baee043d5caff6d8e4aeb6a05875f98b658fdabe17c869e781e6ef6",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/baseline_meshes/wheel_hub_adapter.summary.json",
+      "bytes": 519,
+      "sha256": "a5887dd90f840b304a97acde71d66da122483829e66a02fe9a4e97165aa0852d",
+      "role": "Historical diagnostic export; not production release"
+    },
+    {
+      "path": "audit/components/component_00.scad",
+      "bytes": 197,
+      "sha256": "9829d322c6e52633c618214cea270f58cab0d65ef4c0621ead4a8d7937614042",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_00.stl",
+      "bytes": 2395133,
+      "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_01.scad",
+      "bytes": 197,
+      "sha256": "4cf4c0619e6d43f63278b88904d664d09dbf15941e779f87a25b7b6675e99ed3",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_01.stl",
+      "bytes": 329067,
+      "sha256": "36d7a33bfba342c5f9b97dfa154ba3ef9ba871c4201de512073d7bc0dcd9ff13",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_02.scad",
+      "bytes": 197,
+      "sha256": "9a6956b61914e78f24753d985d78febaddc454777ee7fa4362dc03e0813404ea",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_02.stl",
+      "bytes": 324542,
+      "sha256": "d96d499f971f131e55b3dd2cd5eee0e6423663e3a0772c63fa42b83ea9d905cd",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_03.scad",
+      "bytes": 197,
+      "sha256": "6fdce5b879a2f6c8d5b329cb36b8c59854d9ee5615474f14c5e75c7041ef9267",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_03.stl",
+      "bytes": 324574,
+      "sha256": "164b37c1635b3b04124e6e0c219c2d4c47b609ef62f441dda282cf55b56e13d8",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_04.scad",
+      "bytes": 197,
+      "sha256": "ff74e28a22019513696be364a3d77e318143c50d7a2422a02ea48826a38d4345",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_04.stl",
+      "bytes": 320056,
+      "sha256": "714f9c379bbf242b79073d27976b529e00bf779c83e3b87b4607a26718d6fab7",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_05.scad",
+      "bytes": 197,
+      "sha256": "34f25b6d147c9f83d16399b9abbb152bbebeb18cb2e7d7e5993c32c85db8b269",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_05.stl",
+      "bytes": 95104,
+      "sha256": "3cb1e0f9b9388bbcbe52913f4d16a7245181971d9e6ebe759273eff19bf1a762",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_06.scad",
+      "bytes": 197,
+      "sha256": "6b36d9a8c577785ccfeb2964efd2b7e2bf5faa43793afb3c67891fd55637ff5e",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_06.stl",
+      "bytes": 93868,
+      "sha256": "1b001ce99526b9950b2f6383725a4b209ac4863d21c1da528479a21fae96ea46",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_07.scad",
+      "bytes": 197,
+      "sha256": "c02a4dcf37513aac39902adbe19c5221fcd93d712c01b14c0080db2a87e607c9",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_07.stl",
+      "bytes": 93680,
+      "sha256": "7996f7fc22cbcfcfc31fc697179bf955cd23581c6230e276759636b1490684c0",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_08.scad",
+      "bytes": 197,
+      "sha256": "8badf5e1da172101e3d784a514fba4ac4ee591b7e2a7189e3eee0dc761f7de9b",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_08.stl",
+      "bytes": 92444,
+      "sha256": "08efbaa48fc8a4e82985b439df31564941fbb176dc262e6d88da355e214c8b45",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_09.scad",
+      "bytes": 197,
+      "sha256": "4fe9f037d56e16b16c1a8780133febbbce82e0790276eba3e58f98a44130fe56",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_09.stl",
+      "bytes": 799054,
+      "sha256": "f5efa58a3cfa7304159682143cafd20bf876a3084cd759a9c150faf1f975d709",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_10.scad",
+      "bytes": 198,
+      "sha256": "a3373f1b6aff9951e0e3fc4ce6ae5c3dc0b83c068850e90c1c58305b3ff05503",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_10.stl",
+      "bytes": 789051,
+      "sha256": "e3cff2fce97d3e00f9151830f2fde74030a2765ba950a07fb241e5eed853fb09",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_11.scad",
+      "bytes": 198,
+      "sha256": "dd59c5c65c48503b2e2b315980b2a943139084d9dd5eee3a0e9681a5f1d10f03",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_11.stl",
+      "bytes": 788592,
+      "sha256": "efcbc7d523b462833a83e07b98424861b7ee2f1a11ea67dfeea771015407680f",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_12.scad",
+      "bytes": 198,
+      "sha256": "fbd6a4b75f5ad89c637c667290ac09a991537526d9df5f95ef719fa85ce91921",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_12.stl",
+      "bytes": 778591,
+      "sha256": "ce7795ec03fcbf82279f04d66ac27e9a9d5fe030bc9256c975eea39265279e73",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_13.scad",
+      "bytes": 198,
+      "sha256": "6c4f5398243558865844c86cf9df723cd351fdf525ea0b8e69f7a252906f47b9",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_13.stl",
+      "bytes": 896428,
+      "sha256": "a67b7ee93e823170dd8b88c8acc7960958b5fa2ce648929c54a9d908cbff605c",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_14.scad",
+      "bytes": 198,
+      "sha256": "bc4d6deb81f61bd02b58867aa1552ef9de653726bde78d6adddf27a9e735f021",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_14.stl",
+      "bytes": 885891,
+      "sha256": "18ac2670698e172d68b8ccbcdab3863c918b16653f2e96e673adede511c76ad4",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_15.scad",
+      "bytes": 198,
+      "sha256": "b6eb25aac65cef77c73917404d83424d268a27048e55787e22bce8d752e90c47",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_15.stl",
+      "bytes": 885896,
+      "sha256": "fab7ea889bda683429634c7602a8aff665edb5cdb3559925e87831624b5ee5ae",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_16.scad",
+      "bytes": 198,
+      "sha256": "66a0bfaa2b682b3df6b747ab24883c8fd888e6aaaab5df9b3d2e31208a5abc86",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_16.stl",
+      "bytes": 875352,
+      "sha256": "aa4e22dd707cbc912d5b4198644383535184a9464d562729ea4a2f02e5def054",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_17.scad",
+      "bytes": 198,
+      "sha256": "c50dea04356004e08e32d54c1cb0aa3cf0699cf670b40ff7742adf1c3bb9a861",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_17.stl",
+      "bytes": 769409,
+      "sha256": "86789a763dee43cb752d49746dacb754f0e85c089c99e7c65acbc75cff49431a",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_18.scad",
+      "bytes": 198,
+      "sha256": "e6fe08ee2a9be93a6c3886e3aae19dee6a64a74e2c52537638fd4f2c9a0413ad",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_18.stl",
+      "bytes": 995777,
+      "sha256": "6c5fd6509968be8ae90b37b6643f8dbe1bf54badf1b4d0e37382fdbdc7f99a53",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_19.scad",
+      "bytes": 198,
+      "sha256": "ddcb82b07e5f584d0fa42371623a81646be31c4597287cb94683803a310525b0",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_19.stl",
+      "bytes": 182167,
+      "sha256": "ef4b212920ea499dce3d8931315361e873809da1005e596c652dcfb91dd8131d",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_20.scad",
+      "bytes": 198,
+      "sha256": "3e1e65b00e196f736232749d793143a1ffdae7ac27a1df87c5655dc3a183eecc",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_20.stl",
+      "bytes": 179858,
+      "sha256": "3146db27bdbcfe12967361919af6a8b750407ca1c8c7de13d8e295cab9a89464",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_21.scad",
+      "bytes": 198,
+      "sha256": "0023b97aece5464879f3a36376c223f84706af24c5c279f1a94d6aa9a9e1347f",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_21.stl",
+      "bytes": 179863,
+      "sha256": "e391ccfa167f3d43f8a6e9ff9c15d2a1816c981f84bc0bef8c5796b2709cd94a",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_22.scad",
+      "bytes": 198,
+      "sha256": "fe8d3c513afe4d4aaf5d33d106326e67b00a6b8ad302e538a7931185c0cb3916",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_22.stl",
+      "bytes": 177554,
+      "sha256": "f0e4f1db7fd2c1695a2bf9abec2b56dc05246dd832d01b4311992943ba82b646",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_23.scad",
+      "bytes": 198,
+      "sha256": "5b9d08c86e250275dedfd028ad23b97f8ceca6e8db32ee98f14731699efcffbd",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_23.stl",
+      "bytes": 452259,
+      "sha256": "3dae81980c13da1ce9c8f24b6882c7587fe89206cfaa2806e787397b31bf4d39",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_24.scad",
+      "bytes": 198,
+      "sha256": "dde211b2ec2a3521073c1d9dadc1d044082a2e9b7255a1c61d2a9e3565bd678e",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_24.stl",
+      "bytes": 416647,
+      "sha256": "1ee0120626436e61ccc0d06eaaf8e9d481da23f559192b1fe83e26ebb9815389",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_25.scad",
+      "bytes": 198,
+      "sha256": "b2b167d52bde77ae0bc512021340b57e3f33bbae2b46254a89fe73b785d4ba82",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_25.stl",
+      "bytes": 537673,
+      "sha256": "9b6d577613f7a3a743983ae96968691733c0e32e7729958731b464b62a2861b4",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_26.scad",
+      "bytes": 198,
+      "sha256": "a0e2f9fcc44f214381921693968398e45801f961af6178d8a519e41275f0545f",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/components/component_26.stl",
+      "bytes": 263275,
+      "sha256": "7d7e597005eed98139ffda74788a2d35968a05f86c058347d64e781a3381a62a",
+      "role": "Placed assembly/interference input; not a print orientation"
+    },
+    {
+      "path": "audit/export_manifest.json",
+      "bytes": 128794,
+      "sha256": "b917197b28548c8501e14f93ab57c12c8d7bd36bc887a76088dce4cb01a6e7cd",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/hardware_checks/bumper_heads_tools.log",
+      "bytes": 291,
+      "sha256": "3e70ba41652a4935c9428897ab58fe767b603508bcbc6a90cdf30fd0aa134511",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/bumper_heads_tools.scad",
+      "bytes": 1127,
+      "sha256": "3a0c620d972d64b7688b168113f8b2299eb090f54c01577dddf42f28aafb12d6",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/bumper_heads_tools.stl",
+      "bytes": 163350,
+      "sha256": "1b65de2e471f237723b67a200c3a3a519480f4748a92818242567905c32777d6",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/camera_heads_tools.log",
+      "bytes": 292,
+      "sha256": "6f85312cccd935ef2ceb0068478ba6df7376c5b32c608a5619662d482abde254",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/camera_heads_tools.scad",
+      "bytes": 1145,
+      "sha256": "18f9161b8f44b99ede1e23e68f7ebfe97000efb5e668f92aed4196f27159c81c",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/camera_heads_tools.stl",
+      "bytes": 327537,
+      "sha256": "725cffd5e3f78f8dba67c926314aaa95370528cf08f1721fdfc2da5daa92219b",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_bad_radial_angle_zero.log",
+      "bytes": 290,
+      "sha256": "f44d79e714a3d92fe32d15f29f97ae83c646658531cdb439c07c2532596783da",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_bad_radial_angle_zero.scad",
+      "bytes": 1111,
+      "sha256": "cef6fb9eaf6882bbd4858b01d8543e345facbc53084ab5c37048d64e521ddebf",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_bad_radial_angle_zero.stl",
+      "bytes": 7369,
+      "sha256": "04d5b960229a67378ec9b61bdfeda571f1cb1e9bb703ef934d7c9dea811c2b00",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_unspaced_m3x16_vs_saddles.log",
+      "bytes": 292,
+      "sha256": "54189e74af1bdce97879b46dac2bfc0dbe1ab07ab4607a3b634cb23733479a82",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_unspaced_m3x16_vs_saddles.scad",
+      "bytes": 1142,
+      "sha256": "ec2d3e0fadd14be5b1626685909f7b14b7d6722d66e5cd58205ea08950d7463f",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/control_unspaced_m3x16_vs_saddles.stl",
+      "bytes": 555795,
+      "sha256": "6cf54c0b4ee61a8abe3190aeebfb597941874fa43c30322f591df3a3eef9f8d5",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/flush_hub_bolts_vs_saddles.log",
+      "bytes": 35,
+      "sha256": "af43e3c6c1d7b2206057815e662e536a3a0498eb0c6b715fdc2689ab69c8437b",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/flush_hub_bolts_vs_saddles.scad",
+      "bytes": 1142,
+      "sha256": "f18a6c86479ff9a4cfb69a41a95da732a7eba28e01db94ac6b0e3bdf0f235d81",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/hub_hardware_printed_material.log",
+      "bytes": 292,
+      "sha256": "1d5fab1852105e5edcbafa77ef3f78c5c855abc755e85fe0e7cd3a286530171c",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/hub_hardware_printed_material.scad",
+      "bytes": 1166,
+      "sha256": "593c910ee26310da6a903523b082b76c75ada37d68ea06eb1a1779148927d2fb",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/hub_hardware_printed_material.stl",
+      "bytes": 176572,
+      "sha256": "06e16f09e7965d819fda47518ead8046d4aa47d1087188ec192136aebbddd4a2",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/hub_radial_vs_axial_hardware.log",
+      "bytes": 35,
+      "sha256": "af43e3c6c1d7b2206057815e662e536a3a0498eb0c6b715fdc2689ab69c8437b",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/hub_radial_vs_axial_hardware.scad",
+      "bytes": 1112,
+      "sha256": "39132bd41c37ffb78fb08c2f8921d56b87136e3420c1b99df765985a90bfa918",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/mechanical_source_snapshot.scad",
+      "bytes": 12757,
+      "sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/motor_heads_allen_tools.log",
+      "bytes": 292,
+      "sha256": "6937bfaae6d5ec6fda79bbef79c910855fa22816028b48b7d88a0ea42011327f",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/motor_heads_allen_tools.scad",
+      "bytes": 1241,
+      "sha256": "06bb7ab784788661902252c448369942580872a2d3082ae59f42126942f144ce",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/motor_heads_allen_tools.stl",
+      "bytes": 125802,
+      "sha256": "10ee19888e4d9c3f522b02214a71caaaba0bf831989bed13e9ceb457c31ad509",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/nominal_hardware_results.json",
+      "bytes": 11752,
+      "sha256": "729733323b90870a854f97830a811ad63dd56a930435d37b28bdedbed525d393",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/tof_heads_tools.log",
+      "bytes": 291,
+      "sha256": "f8657ca478d1614acb4a75ebceecfa880ee31c14e7d76fa57f0acf467556f9c1",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/tof_heads_tools.scad",
+      "bytes": 1132,
+      "sha256": "128e78b12d9c422505678195564c1ecaa4c422d2edcd49dd2b63414ac9f80e01",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_checks/tof_heads_tools.stl",
+      "bytes": 154176,
+      "sha256": "3a5698239309c504c6ec3480b1a2120bc7b7e5eaaab3bcab75528301ed7b24d3",
+      "role": "Diagnostic intersection probe/source snapshot; zero-volume contacts and intentional bad controls are not printable"
+    },
+    {
+      "path": "audit/hardware_requirements.csv",
+      "bytes": 1790,
+      "sha256": "0fe60dad4c82f451fba6a8b36d549ba97628f42df39ce48fa8f927d7dede3501",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/parts_preview.png",
+      "bytes": 294988,
+      "sha256": "7efdc1b430ae8a12a773e6a8f5b40d147496bf454552f89d154de9660c727ad5",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/printable_parts.csv",
+      "bytes": 2853,
+      "sha256": "f22f3b1a44adac42b87dd4064a91f73216990278be36d44864d2697676a1b8e5",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/printable_self_intersections.json",
+      "bytes": 48098,
+      "sha256": "22d21fae0286199d2a0681a1879a0165b2d139ba2b487189acad9feb5cda3f2e",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/base_plate.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/base_plate.summary.json",
+      "bytes": 533,
+      "sha256": "b6ffe8cf0bdae8614dcb71405f7930d8d4f2df733a19776dc01cd44e0ac82f34",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/battery_tray.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/battery_tray.summary.json",
+      "bytes": 529,
+      "sha256": "550c557d98ebdd271808b9dfddee5f1c40c13cec8ef7280e49537bc5abc62cf1",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/camera_mount.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/camera_mount.summary.json",
+      "bytes": 532,
+      "sha256": "18857ab3787d4cfb9834162eb8b266236759df5bed3071d2f4f6a824155b9549",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_00.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_00.summary.json",
+      "bytes": 492,
+      "sha256": "870bbc550a4e92654dd4e7519f93eff98d8500358754e285e77f4ef89aa0833e",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_01.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_01.summary.json",
+      "bytes": 492,
+      "sha256": "f68ab10113cbbb8c5217a10e1f818fa6b3b544f0712f8384878cc3de26885c40",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_02.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_02.summary.json",
+      "bytes": 490,
+      "sha256": "3b02505ac6d322ea99f508c337f50bf688a244cf8ed37b0f641d46f5edf7f569",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_03.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_03.summary.json",
+      "bytes": 490,
+      "sha256": "c7a1e41c5c9646596368350b3bd32a11a61e19a59492479070344a9159c926fe",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_04.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_04.summary.json",
+      "bytes": 488,
+      "sha256": "765398bea70d9cb452eac591db7606916c0b2b4e163e5b063ff89b4e003780df",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_05.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_05.summary.json",
+      "bytes": 487,
+      "sha256": "c8636329835fe58ae99665adde8421581a4312268eea328ecfd968b0d5020f87",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_06.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_06.summary.json",
+      "bytes": 485,
+      "sha256": "1dee9e2382dc46bbe4becd7c4394ee2e8ae2c63a4f2d37063133eb34ce2851b0",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_07.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_07.summary.json",
+      "bytes": 484,
+      "sha256": "b2009cb142dcff05226f919281c6741b21c54d30d59340575f7705fe36743c7d",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_08.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_08.summary.json",
+      "bytes": 482,
+      "sha256": "797656d6b8c327a6edd76a00f316e1c0ce9ec891dd57ee79e39278cced4b9c29",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_09.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_09.summary.json",
+      "bytes": 574,
+      "sha256": "e0cc193da3c7f109df318bb11efb42b197055ba8a64e622b6d1b89cd3f69d9ce",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_10.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_10.summary.json",
+      "bytes": 572,
+      "sha256": "980daa22a939df1357f478d85352fa1e645245f037ff926381cfbc74578d1e92",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_11.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_11.summary.json",
+      "bytes": 572,
+      "sha256": "e43f3bcb5c523b1e1dc3debe11e9b3560bbcb052b2c9fee0ae028890d81be93d",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_12.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_12.summary.json",
+      "bytes": 570,
+      "sha256": "e56a7ce23b65f9974499eef8df57fc5475aab12dfd7bc13433559353327b5ea4",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_13.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_13.summary.json",
+      "bytes": 493,
+      "sha256": "892b8a47a661b59cf47b4ee21f40087bba4b9d1d1cdfae43252dc62d10b76719",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_14.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_14.summary.json",
+      "bytes": 491,
+      "sha256": "da640852bdb576b1b3ce2f83a6372d121bd57a8d9e365f5c08445a6cc1055d8b",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_15.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_15.summary.json",
+      "bytes": 491,
+      "sha256": "42725d3e5e50dcf2efcda4183f2c54bc224f7c2395df9300cd10e63ff0864c62",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_16.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_16.summary.json",
+      "bytes": 489,
+      "sha256": "756d968bdb98c1480548770314c67fc1803d9d236cd9cabc243a7dc3c78b9e04",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_17.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_17.summary.json",
+      "bytes": 490,
+      "sha256": "e1547eaed62c48282a95024accc9420749c0c8b4e18e91de988723cea8f1eddb",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_18.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_18.summary.json",
+      "bytes": 492,
+      "sha256": "573f4806d197f7fab170459eb45f7d247b470ff1f1341339d0018dac08751d98",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_19.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_19.summary.json",
+      "bytes": 485,
+      "sha256": "38fa2ca291d67f082d8f3c7b84ebb374d13536ea6f53481de072a41b660f6708",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_20.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_20.summary.json",
+      "bytes": 483,
+      "sha256": "dbe1c84eed5231743b2449140112637e56f6f5395598a2034f80c4e95a751ae3",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_21.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_21.summary.json",
+      "bytes": 483,
+      "sha256": "d51751e0931ff5e4acce9ab66fe9dd437c505ba9b6cb0b58f3539ccd61ad654d",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_22.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_22.summary.json",
+      "bytes": 481,
+      "sha256": "17c3b48593fdddeba4b1a83570699fab85a4551425a049540a625b44f6cce677",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_23.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_23.summary.json",
+      "bytes": 490,
+      "sha256": "60efb5968222380e00098e76e095ca2f4ef329b0de56abe206daa767fe6e5417",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_24.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_24.summary.json",
+      "bytes": 492,
+      "sha256": "248bdc7baf27d5dd4d09d581b017ca2706a3b7d8fda41b45ee34ca3ffaf93b94",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_25.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_25.summary.json",
+      "bytes": 492,
+      "sha256": "8af2302a83d2d61a805b1967c80afc4e80dd37c54d3e3eedbfacbcffa1832081",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_26.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/component_26.summary.json",
+      "bytes": 492,
+      "sha256": "6e994a39dce514f39385ca6baabf012d1b24dfc901f12c9ccdbf4c19d9ce7bce",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/esp32_tray.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/esp32_tray.summary.json",
+      "bytes": 528,
+      "sha256": "41ef308504c93f7eaf264f8ba9b7f87ac5567349683ad61958ad8eeadcbd95df",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/fit_coupon.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/fit_coupon.summary.json",
+      "bytes": 529,
+      "sha256": "3229303f1a59d2dc9f2eba1d27fd64da4ea386aa8b2476aa362f2f6a20f23a7f",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/front_bumper.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/front_bumper.summary.json",
+      "bytes": 530,
+      "sha256": "6b72de4ccc7a2d53c6fb3b31fabf1e2d51123a395f6dd34e461a94389a9aa962",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/n20_motor_mount.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/n20_motor_mount.summary.json",
+      "bytes": 534,
+      "sha256": "4b5ea289a3dc8886775298fc57557666e1aa37a59372812aa2664125bb7f0040",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/standoffs.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/standoffs.summary.json",
+      "bytes": 530,
+      "sha256": "2ee0c09746abad7dee62718b211bf11af3275422fb9e58bea662fdc647606e23",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/tof_sensor_bar.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/tof_sensor_bar.summary.json",
+      "bytes": 533,
+      "sha256": "71988c6afba140a39039e78cb61e8a963994a5f9aa22f0cee3ce4b37b2ec7656",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/top_cover.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/top_cover.summary.json",
+      "bytes": 530,
+      "sha256": "bd2e2eee9a28d0689cc53bdfefdc50bb5941e088510849fc285a10fa298cfa75",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/visual_assembly.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/visual_assembly.summary.json",
+      "bytes": 583,
+      "sha256": "dcebda4bbaa9c0cba14907b53ca1d8330cfd3a743d0f338306e9e75b87cc7985",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/wheel.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/wheel.summary.json",
+      "bytes": 612,
+      "sha256": "f11fbc4fe7579bf19f62c2726cc00c5c6f530c49fdf02bf0e3923ea7673b261a",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/wheel_hub_adapter.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/render_logs/wheel_hub_adapter.summary.json",
+      "bytes": 531,
+      "sha256": "dbf034cd887e5b3e4fc79eccefd30ea5cf20ee93f3118b1936c67c855547e0e2",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "audit/tooling/TOOLCHAIN.md",
+      "bytes": 4767,
+      "sha256": "aebc7ea8bd8e786bd303679b9631f7858d64c2d8ad931c9d251dcbb84315e131",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/check_hardware_access.py",
+      "bytes": 7352,
+      "sha256": "8e284ad920d159a69d8a9f04352e5d78feb13d940ad68c130fce2a6a13ba12fe",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/check_self_intersections.py",
+      "bytes": 13077,
+      "sha256": "bc0a3adfa12d163e0d51082baa6b5b76a3f55d0aee3e5bf5528725e723571c63",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/export_cad.py",
+      "bytes": 9126,
+      "sha256": "7d25325de7711216ad8f81814daf4d556e1745c5ea1dae45675649318c736443",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/mesh_metrics.py",
+      "bytes": 5177,
+      "sha256": "7a3c6b0a1fc692588100f3a175c0bdbd4f46d3ceed0823304a5b8c0e3a15c9c4",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/render_audit_views.py",
+      "bytes": 2858,
+      "sha256": "aaf0d418bd0bb6f5c370a0719a70215f7079f3837e5e05677fdfc9ed4855c4a4",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/requirements.txt",
+      "bytes": 94,
+      "sha256": "08b2fe159f6e46b2385c8f329e51e28992af900b2094bc887711663f6515831b",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/tooling/validate_cad.py",
+      "bytes": 11829,
+      "sha256": "79425c903b18185654bb0b117784141375409b6679e5a038cf8470e366f8e3f1",
+      "role": "Reproduction tooling/dependencies"
+    },
+    {
+      "path": "audit/validation_results.json",
+      "bytes": 90650,
+      "sha256": "f7e6802554ea3a5d71ed26e998da2c624d0bebc0b2b3ecdaa2d5dd5e6e462e95",
+      "role": "Audit evidence/documentation"
+    },
+    {
+      "path": "cute_rover_assembled_preview.png",
+      "bytes": 91314,
+      "sha256": "b742de3ba6cbba016b22764f6801c4949980e89eb7ab08b26dce7a8a4b5cd9fb",
+      "role": "Generated current assembly preview"
+    },
+    {
+      "path": "cute_rover_complete.csg",
+      "bytes": 95467,
+      "sha256": "10f43e8df25b1d8299901b2ff99c8b0db2edd99c787df7a547ae897df0af3ade",
+      "role": "Generated visual-only assembly; not printable"
+    },
+    {
+      "path": "cute_rover_complete.scad",
+      "bytes": 12757,
+      "sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+      "role": "Authoritative parametric CAD"
+    },
+    {
+      "path": "cute_rover_complete.stl",
+      "bytes": 13091064,
+      "sha256": "9e6df2c52fc28eedc1dde0e6dbd8d8732b24cb6b56b08858ac7b3afaebeea5d0",
+      "role": "Generated visual-only assembly; not printable"
+    },
+    {
+      "path": "exports/base_plate.csg",
+      "bytes": 7025,
+      "sha256": "72f441ad3d49c25555699339ff95d7bf7921eb662ed9f3638591394763b08662",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/base_plate.png",
+      "bytes": 55143,
+      "sha256": "3a3f3b2627b55b7ced289956cc5d977232f07ae4e274a740a9aac0f65ab04575",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/base_plate.stl",
+      "bytes": 2395133,
+      "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/battery_tray.csg",
+      "bytes": 3061,
+      "sha256": "e8de99261153971103101c3525cd06f40a6b4e529d49ecc98c4abc68f76720ad",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/battery_tray.png",
+      "bytes": 54180,
+      "sha256": "6c204937e236824aec79bc1d4525136ac096a01191fec09f86ad56ef557d23cb",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/battery_tray.stl",
+      "bytes": 768798,
+      "sha256": "d37721caf9c1afae2646287953bf7077f2dee04767e7be4d6774fe5e408052a2",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/camera_mount.csg",
+      "bytes": 3282,
+      "sha256": "5049d92c789efcfc0019c551c5fa5bb2bd8a99388ecd35db08d092391d243c56",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/camera_mount.png",
+      "bytes": 69049,
+      "sha256": "89f62ca6fc4fc1b063cf042ffde93247b677a00b9d49a08465041ce55b8cafca",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/camera_mount.stl",
+      "bytes": 408874,
+      "sha256": "1e1a4e2abe7e0354c55d4a08c9d17f2b89eba5d9c974e9a57da242e8a152d529",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/esp32_tray.csg",
+      "bytes": 1935,
+      "sha256": "1891b01197ca57cbf156542835f1b2051bf98e4fce41cfb302551058efd2587d",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/esp32_tray.png",
+      "bytes": 50313,
+      "sha256": "41cbafddd40bab1bde5bde0cbd2f808b41057c0fdd9702c019b2818af857bcd5",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/esp32_tray.stl",
+      "bytes": 446942,
+      "sha256": "9cbc459d14b4919b41e37daed4d5612bfbf2cd23d6fee949bda27f697ad230b7",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/fit_coupon.csg",
+      "bytes": 1743,
+      "sha256": "bd3129da18064c2d49e166a84a40f0958690dd6d45267990ad54b5640d0c6c8c",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/fit_coupon.png",
+      "bytes": 48733,
+      "sha256": "d5f86d6c83051fcbfc190c5f627d50046bd5847023240976b390c44f66a46bb5",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/fit_coupon.stl",
+      "bytes": 538852,
+      "sha256": "27b20971d6a98c902e53de9b3bfbb9bfae5a753560963efb05df819edde1e7aa",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/front_bumper.csg",
+      "bytes": 1524,
+      "sha256": "6bd07c28f9d8154299ac56adbeb193054d6834298e083175dc464739de0d1284",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/front_bumper.png",
+      "bytes": 44061,
+      "sha256": "459c392622a9504bb3aea5cdc3a3fb402b38c9a982bd17118078ad126048fa82",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/front_bumper.stl",
+      "bytes": 262518,
+      "sha256": "9a759d4ccb3333d561ebff9bb94ae9d06cba24f32166a189232b5250f9afa2c8",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/n20_motor_mount.csg",
+      "bytes": 2587,
+      "sha256": "a40a3ad73d787ceb19d414d0bbcf6228e26e07131431327b10f2687a6f81b9c7",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/n20_motor_mount.png",
+      "bytes": 55761,
+      "sha256": "4f80a9c80bfa474ef585f864e38c85d9c3938270bfeba88ed8ba3e20b63620ad",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/n20_motor_mount.stl",
+      "bytes": 327903,
+      "sha256": "10f20064415ef2aac7b03eb60c057f9c216a5fbb0765f355fe3c1bc3bcd374d2",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/standoffs.csg",
+      "bytes": 1663,
+      "sha256": "925a2810e1dd9a8ae63d91b25ab604ceb330fa6d7d9d48e7a94bd3e0f6a9e395",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/standoffs.png",
+      "bytes": 48736,
+      "sha256": "47cee6763f24702b54580a1fac64f9b5d9d5caf93cf0996a9db7bac04baa493b",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/standoffs.stl",
+      "bytes": 710767,
+      "sha256": "d08115f09de939dfcf14b0b2b34e5f89b7e5ebf9088b8cd13b84d6de02d885c8",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/tof_sensor_bar.csg",
+      "bytes": 3659,
+      "sha256": "4e602443e96d50cd128fb75923fe4b53b63864aab89447d8bfe175979ec2abcf",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/tof_sensor_bar.png",
+      "bytes": 62500,
+      "sha256": "181adfee68b49816211d9f5ea667fff3cd3ea7ca026b81a807de47fa1c14cd36",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/tof_sensor_bar.stl",
+      "bytes": 535226,
+      "sha256": "040ccf74e824955563df6ba4cc0c21badd4356dcfc386a538b545460dc760905",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/top_cover.csg",
+      "bytes": 3491,
+      "sha256": "385d34dbe20fe7151a659615267e820fb8d479466a74f98d784e4b6dd8f0101e",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/top_cover.png",
+      "bytes": 50179,
+      "sha256": "9b620f80a9f03a218458aba998d2c38fcca662fec7c8be77b938830b53ae4279",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/top_cover.stl",
+      "bytes": 982721,
+      "sha256": "2da6565e75371d8369fdb3c2948789e997c2a9c6e7db81419ec23a0d82b9aa02",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/wheel.csg",
+      "bytes": 4758,
+      "sha256": "b21447ea61c4df4307f68421b76039efea68be7e0146289dc5d4ede7bad34f38",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/wheel.png",
+      "bytes": 52480,
+      "sha256": "3eaf5cb863580bb683651373e5256eca881966afae0f7b2734f115925f5fd582",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/wheel.stl",
+      "bytes": 783347,
+      "sha256": "9a74b145dc0fe445edaf7130ad3ae4c63616474ab1a4324ba9500147d3338d32",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/wheel_hub_adapter.csg",
+      "bytes": 2491,
+      "sha256": "6d89846d7d35b63ca29b67c5e11363a2720a1aff879a9224be2ef40be2d31dac",
+      "role": "Validated print export"
+    },
+    {
+      "path": "exports/wheel_hub_adapter.png",
+      "bytes": 51064,
+      "sha256": "54152f0c105505b0c4f346e90761e2d54fc757f409572bcd0f3f3fe4d8b71311",
+      "role": "Generated part preview"
+    },
+    {
+      "path": "exports/wheel_hub_adapter.stl",
+      "bytes": 864766,
+      "sha256": "072ddd3b5fe89b40b628eab898dfeb519f6d4e235d632ac9f031c90e070f792b",
+      "role": "Validated print export"
+    },
+    {
+      "path": "goal.md",
+      "bytes": 4699,
+      "sha256": "f7e2ce5d875985f08fff92e241dc1a1c6be265a61da012071bdd762d85e45e75",
+      "role": "Project documentation/task instructions"
+    },
+    {
+      "path": "parts/assembly.scad",
+      "bytes": 116,
+      "sha256": "7e68abb7b991ee7804a5229dbc2ee837f07986ef1b9098ed4d72bc0a077f894f",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/base_plate.scad",
+      "bytes": 118,
+      "sha256": "3a8cf7fc00475fc88f2423794b3e395dcc6b9601e2e651b03bba3beb02aed7bc",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/battery_tray.scad",
+      "bytes": 120,
+      "sha256": "a1db4649ac2dc152e903e1dba9c7e4d02fc842dce8063a953eb87d59c7487817",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/camera_mount.scad",
+      "bytes": 126,
+      "sha256": "ea96308388b60342f7079bf4f57a5ad8f806816d096f5f4065d976d6a8469bd2",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/esp32_tray.scad",
+      "bytes": 118,
+      "sha256": "a832708c0a69bbed834f02696380c8ea5679fce2f40ebebb0f3669a194e1af82",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/fit_coupon.scad",
+      "bytes": 57,
+      "sha256": "03486d4ff962acf5be4be7966d42381a533c137bf376b1933e43981c6769d758",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/front_bumper.scad",
+      "bytes": 120,
+      "sha256": "0e52815bc4c21d7f9dc015d86f9fe478b0f0165c55144c37b8029ae291b3b110",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/n20_motor_mount.scad",
+      "bytes": 123,
+      "sha256": "d5522a0b38fe4bed27a7e5096b15364a06d2b7730bbe088d494d7f89c9c30096",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/standoffs.scad",
+      "bytes": 117,
+      "sha256": "4cf75b77d956d567364d26fc1e6870b6823648cffe52d65fa6917a9aa6ecee47",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/tof_sensor_bar.scad",
+      "bytes": 128,
+      "sha256": "c679a7a4611fbb76f9d550bc24b8e1874f74f0aa7a51b85ed5c1b2e86f9ecea5",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/top_cover.scad",
+      "bytes": 117,
+      "sha256": "b7a4e158442b2476d8bead701a17f03a33c6ff53f053a27a847e95ccc720ad16",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/wheel.scad",
+      "bytes": 119,
+      "sha256": "2b29c96cbfd372318f2fac61024d8d0c5cc87b56c32dde208d356d0c4b3acded",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "parts/wheel_hub_adapter.scad",
+      "bytes": 125,
+      "sha256": "655f9c6d797cfe49c40567f0576d0b6126c99d991ff73fb13ed5baa02ecebebe",
+      "role": "Source wrapper; assembly is visual-only, others printable"
+    },
+    {
+      "path": "cute_rover_prototype_print_pack.zip",
+      "bytes": 1562681,
+      "sha256": "8e636b6bd49e2937dc03b7bbc8a708c90581e33d0f67f3c705e85fb73c931fdc",
+      "role": "Derived prototype print distribution; production fit unverified"
+    }
+  ],
+  "inspected_root_images": [
+    {
+      "path": "images/Cute 4WD Robot Car Orthographic Sheet.png",
+      "sha256": "731dde54691201240b47e7b580fea143e0dc1809283cdb0e1b061410510ff013"
+    },
+    {
+      "path": "images/DIY Robot Rover Orthographic View Sheet.png",
+      "sha256": "0a759e4375c7814887820e581e1c780e42d24841e4a29f203b84125fefb32724"
+    },
+    {
+      "path": "images/Dual Rover Design Breakdown Infographic.png",
+      "sha256": "9cccea6e99bc719c332aa5d83e4a2ac90b3c4a4c86363609c632e56fc38a0fed"
+    },
+    {
+      "path": "images/Dual Rover Technical Comparison Infographic.png",
+      "sha256": "d6a4cb76b580189e4d4b97e2798cb077f48ea9530bd02376946071135392ac2f"
+    },
+    {
+      "path": "images/Six-View Colorful Robot Rover Assembly Sheet.png",
+      "sha256": "e6e63b084542bcffac9babe4845a4ecf3025eb0d060b07a17489a2883d02e55d"
+    },
+    {
+      "path": "images/Yellow 4WD Robot Rover Assembly Guide.png",
+      "sha256": "05ce1ff4aa86c400e31df01f4237ca2bb1faeb296fa74909d13306999390fd0c"
+    }
+  ]
+}

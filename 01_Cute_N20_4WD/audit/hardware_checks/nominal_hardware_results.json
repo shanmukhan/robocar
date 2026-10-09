@@ -1,0 +1,290 @@
+{
+  "generated_at_utc": "2026-10-09T17:53:58.025583+00:00",
+  "source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+  "source_changed_during_checks": false,
+  "method": "OpenSCAD Manifold solid intersections against an untouched source snapshot.",
+  "assumptions": [
+    "M3 nut AF5.5, thickness2.4 in CAD pockets AF5.7/thickness2.7.",
+    "Conservative head diameter6.6, height3; socket access cylinder diameter8 for front carriers.",
+    "Motor heads use diameter3 Allen-tool envelope above the head; nuts must be below the base.",
+    "Radial hub fastener must be a headless M3 grub screw; diameter3, nominal10mm length.",
+    "Axial hub bolts have14mm effective under-head length and flush inboard tips; M3x16 requires2mm head-side spacers.",
+    "Radial Allen-tool envelope diameter3; wheel/hub assembled at matching angle30 degrees.",
+    "No purchased component dimensional certification, physical wrench fit, thread strength or optical FOV certification."
+  ],
+  "expected": "No positive-volume intersections above1e-8mm3 except intentional bad-angle and unspaced-M3x16 controls. Face contacts at intended seating planes can produce zero-volume sheets; these are probe artefacts, not printable solids.",
+  "results": [
+    {
+      "name": "camera_heads_tools",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/camera_heads_tools.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/camera_heads_tools.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/camera_heads_tools.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/camera_heads_tools.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "bounds_mm": [
+        [
+          -5.1875552267539256,
+          -16.386981401023103,
+          3.0
+        ],
+        [
+          11.204611866704173,
+          16.472116199150506,
+          3.0
+        ]
+      ],
+      "watertight": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "tof_heads_tools",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/tof_heads_tools.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/tof_heads_tools.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/tof_heads_tools.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/tof_heads_tools.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "bounds_mm": [
+        [
+          7.76340857466934,
+          -15.004264177065306,
+          4.0
+        ],
+        [
+          13.678032183153087,
+          15.033554449299137,
+          4.0
+        ]
+      ],
+      "watertight": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "bumper_heads_tools",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/bumper_heads_tools.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/bumper_heads_tools.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/bumper_heads_tools.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/bumper_heads_tools.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "bounds_mm": [
+        [
+          12.76340857466934,
+          -3.071524855340003,
+          3.0
+        ],
+        [
+          26.51719797067326,
+          3.1071511700641596,
+          3.0
+        ]
+      ],
+      "watertight": true,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "motor_heads_allen_tools",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/motor_heads_allen_tools.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/motor_heads_allen_tools.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/motor_heads_allen_tools.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/motor_heads_allen_tools.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 3.789561257387201e-14,
+      "positive_volume_collision": false,
+      "bounds_mm": [
+        [
+          -15.27443693427675,
+          -18.797778552979533,
+          3.0
+        ],
+        [
+          15.269766217193617,
+          -13.605426016809181,
+          6.0
+        ]
+      ],
+      "watertight": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "hub_hardware_printed_material",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_hardware_printed_material.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_hardware_printed_material.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_hardware_printed_material.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_hardware_printed_material.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "bounds_mm": [
+        [
+          -9.847763290579744,
+          -7.796998100214277,
+          14.0
+        ],
+        [
+          9.970069823890174,
+          12.273578406351213,
+          14.0
+        ]
+      ],
+      "watertight": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "hub_radial_vs_axial_hardware",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_radial_vs_axial_hardware.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_radial_vs_axial_hardware.scad"
+      ],
+      "returncode": 1,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_radial_vs_axial_hardware.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/hub_radial_vs_axial_hardware.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": true,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "flush_hub_bolts_vs_saddles",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/flush_hub_bolts_vs_saddles.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/flush_hub_bolts_vs_saddles.scad"
+      ],
+      "returncode": 1,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/flush_hub_bolts_vs_saddles.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/flush_hub_bolts_vs_saddles.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": true,
+      "intersection_volume_mm3": 0.0,
+      "positive_volume_collision": false,
+      "expected_positive_collision": false,
+      "passed": true
+    },
+    {
+      "name": "control_bad_radial_angle_zero",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_bad_radial_angle_zero.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_bad_radial_angle_zero.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_bad_radial_angle_zero.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_bad_radial_angle_zero.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 0.0905123747385607,
+      "positive_volume_collision": true,
+      "bounds_mm": [
+        [
+          8.1,
+          -3.1754264805429417,
+          2.0310889132455356
+        ],
+        [
+          9.538245569916239,
+          -1.75,
+          4.748621245182458
+        ]
+      ],
+      "watertight": true,
+      "expected_positive_collision": true,
+      "passed": true
+    },
+    {
+      "name": "control_unspaced_m3x16_vs_saddles",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_unspaced_m3x16_vs_saddles.stl",
+        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_unspaced_m3x16_vs_saddles.scad"
+      ],
+      "returncode": 0,
+      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_unspaced_m3x16_vs_saddles.log",
+      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/hardware_checks/control_unspaced_m3x16_vs_saddles.scad",
+      "diagnostics": [],
+      "renderer_ok": true,
+      "empty": false,
+      "intersection_volume_mm3": 63.5717709038174,
+      "positive_volume_collision": true,
+      "bounds_mm": [
+        [
+          -61.29422863405995,
+          -54.0,
+          7.0
+        ],
+        [
+          61.29422863405995,
+          54.0,
+          14.5
+        ]
+      ],
+      "watertight": true,
+      "expected_positive_collision": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

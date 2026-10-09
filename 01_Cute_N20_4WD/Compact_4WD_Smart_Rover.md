@@ -1,13 +1,15 @@
 # Compact 4WD Smart Rover
 
-**Project status:** Design/BOM planning; not physically built yet  
-**Document date:** 2026-10-03
+**Project status:** CAD geometry audited; hardware fit, electronics integration and physical printing remain unverified  
+**Document date:** 2026-10-09
 
 ## 1. Purpose
 
 A compact, cute 4WD rover around **150 × 105 mm**, intended for indoor/tile and relatively smooth surfaces. The baseline uses four N20 geared motors, an ESP32-S3 camera/controller, three ToF sensors and phone control.
 
-![Compact rover concept](compact_rover_top.svg)
+![Current CAD with generic motor envelopes](cute_rover_assembled_preview.png)
+
+See the [CAD audit](audit/CAD_AUDIT.md) and [printing guide](audit/PRINT_GUIDE.md) for measured exports, corrections and release conditions. Root infographics are concept artwork, not manufacturing drawings.
 
 ## 2. Mechanical baseline
 
@@ -16,15 +18,15 @@ A compact, cute 4WD rover around **150 × 105 mm**, intended for indoor/tile and
 | Chassis | 150 × 105 mm |
 | Base thickness | 4 mm |
 | Approx. chassis underside clearance | 5 mm |
-| Wheels | 45 mm diameter × 12 mm wide |
-| Wheel hub | ~18 mm |
-| Wheel bore | ~3.2 mm |
-| Wheel centre Z | ~22.5 mm |
+| Wheels | 45 mm nominal diameter × 14 mm wide |
+| Wheel adapter | 30 mm flange / 14 mm locating sleeve |
+| Wheel/adapter bore | 3.4 mm / generic 3.25 mm, with headless radial M3 locking screw |
+| Wheel centre Z | 17.5 mm above chassis underside; nominal ground Z=−5 |
 | Upper deck | 120 × 76 × 3 mm |
-| Deck Z | ~42–45 mm |
-| Standoffs | ~33 mm |
+| Deck Z | 38 mm underside / 41 mm top |
+| Standoffs | 34 mm; shared (±50, ±14) mounting positions |
 
-These are the latest discussed CAD baseline dimensions. **Exact N20 motor dimensions must be frozen before final motor brackets are released.**
+These match the audited default CAD. Overall modeled assembly is 164 × 137 × 71.949 mm; fasteners, actual PCBs, pack and wiring are omitted. **Exact N20 motor dimensions must be frozen before final motor brackets are released.**
 
 ## 3. Motors
 
@@ -95,7 +97,7 @@ Earlier conceptual CAD had wheel-placement/assembly problems. The corrected proc
 8. Print a motor/bracket fit test.
 9. Then release final STL.
 
-**Do not treat the earlier conceptual SCAD as final manufacturing CAD.**
+**Current individual meshes pass geometric checks; final manufacturing fit still requires the selected hardware and printer tests.**
 
 ## 9. Printable parts
 
@@ -105,10 +107,10 @@ Earlier conceptual CAD had wheel-placement/assembly problems. The corrected proc
 - upper deck
 - standoffs
 - camera mount
-- three ToF mounts
+- one generic three-position ToF carrier
 - battery tray
-- power switch mount
-- bumper/side covers
+- power switch mount — unverified and not supplied in current CAD
+- front bumper; decorative side covers are not supplied
 
 PETG is the preferred general-purpose prototype material; PLA is acceptable for indoor prototypes and TPU can be used for bumpers/tyres.
 

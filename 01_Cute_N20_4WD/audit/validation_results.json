@@ -1,0 +1,3464 @@
+{
+  "method": "OpenSCAD F6 source exports; exact-coordinate topology without repair; manifold3d solid Boolean differences/intersections of all 27 independently exported assembly components. Mating surface contact is intentional. Small numeric volume threshold 0.001 mm3. Placement expectations are an independent record of the audited DEFAULT configuration; updating parameters requires updating these expectations.",
+  "scope_limitations": [
+    "No purchased hardware dimensions or physical prints are available. Motors are only conservative generic envelopes, not selected component meshes.",
+    "No screw/nut/PCB/battery/cable physical envelopes are certified; tolerance, loads, torque and retention need measured fit tests.",
+    "Closed topology and Boolean import do not independently prove absence of every triangle self-intersection; OpenSCAD full solid evaluation and independent Boolean operations provide further evidence.",
+    "Slicer/G-code and real printer support/bridging/warping results are not certified."
+  ],
+  "versions": {
+    "trimesh": "5.1.1",
+    "manifold3d": "3.5.4",
+    "numpy": "2.5.3"
+  },
+  "master_source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+  "printable_parts": [
+    {
+      "path": "exports/base_plate.stl",
+      "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
+      "bytes": 2395133,
+      "triangles": 10624,
+      "raw_vertices": 31872,
+      "exact_welded_vertices": 5248,
+      "bounds_mm": [
+        [
+          -75.0,
+          -52.5,
+          0.0
+        ],
+        [
+          75.0,
+          52.5,
+          4.0
+        ]
+      ],
+      "extents_mm": [
+        150.0,
+        105.0,
+        4.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 59103.17192327692,
+      "positive_volume": true,
+      "surface_area_mm2": 33832.69613750897,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 10624,
+          "bounds_mm": [
+            [
+              -75.0,
+              -52.5,
+              0.0
+            ],
+            [
+              75.0,
+              52.5,
+              4.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 59103.17192327691
+        }
+      ],
+      "exact_welded_edges": 15936,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 10624,
+      "manifold3d_import_volume_mm3": 59103.171923276925,
+      "csg_sha256": "72f441ad3d49c25555699339ff95d7bf7921eb662ed9f3638591394763b08662",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/battery_tray.stl",
+      "sha256": "d37721caf9c1afae2646287953bf7077f2dee04767e7be4d6774fe5e408052a2",
+      "bytes": 768798,
+      "triangles": 3360,
+      "raw_vertices": 10080,
+      "exact_welded_vertices": 1666,
+      "bounds_mm": [
+        [
+          -45.0,
+          -21.0,
+          0.0
+        ],
+        [
+          45.0,
+          21.0,
+          7.0
+        ]
+      ],
+      "extents_mm": [
+        90.0,
+        42.0,
+        7.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 11763.464122764295,
+      "positive_volume": true,
+      "surface_area_mm2": 9314.86425550896,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3360,
+          "bounds_mm": [
+            [
+              -45.0,
+              -21.0,
+              0.0
+            ],
+            [
+              45.0,
+              21.0,
+              7.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 11763.464122764291
+        }
+      ],
+      "exact_welded_edges": 5040,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3360,
+      "manifold3d_import_volume_mm3": 11763.464122764295,
+      "csg_sha256": "e8de99261153971103101c3525cd06f40a6b4e529d49ecc98c4abc68f76720ad",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/camera_mount.stl",
+      "sha256": "1e1a4e2abe7e0354c55d4a08c9d17f2b89eba5d9c974e9a57da242e8a152d529",
+      "bytes": 408874,
+      "triangles": 1864,
+      "raw_vertices": 5592,
+      "exact_welded_vertices": 920,
+      "bounds_mm": [
+        [
+          -26.0,
+          -18.0,
+          0.0
+        ],
+        [
+          0.0,
+          18.0,
+          24.0
+        ]
+      ],
+      "extents_mm": [
+        26.0,
+        36.0,
+        24.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 4170.563436176616,
+      "positive_volume": true,
+      "surface_area_mm2": 3767.9728890390893,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1864,
+          "bounds_mm": [
+            [
+              -26.0,
+              -18.0,
+              0.0
+            ],
+            [
+              0.0,
+              18.0,
+              24.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 4170.563436176616
+        }
+      ],
+      "exact_welded_edges": 2796,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1864,
+      "manifold3d_import_volume_mm3": 4170.563436176616,
+      "csg_sha256": "5049d92c789efcfc0019c551c5fa5bb2bd8a99388ecd35db08d092391d243c56",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/esp32_tray.stl",
+      "sha256": "9cbc459d14b4919b41e37daed4d5612bfbf2cd23d6fee949bda27f697ad230b7",
+      "bytes": 446942,
+      "triangles": 1988,
+      "raw_vertices": 5964,
+      "exact_welded_vertices": 984,
+      "bounds_mm": [
+        [
+          -29.0,
+          -16.0,
+          0.0
+        ],
+        [
+          29.0,
+          16.0,
+          3.0
+        ]
+      ],
+      "extents_mm": [
+        58.0,
+        32.0,
+        3.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5137.016144704584,
+      "positive_volume": true,
+      "surface_area_mm2": 4319.4163002207615,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1988,
+          "bounds_mm": [
+            [
+              -29.0,
+              -16.0,
+              0.0
+            ],
+            [
+              29.0,
+              16.0,
+              3.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5137.016144704584
+        }
+      ],
+      "exact_welded_edges": 2982,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1988,
+      "manifold3d_import_volume_mm3": 5137.016144704584,
+      "csg_sha256": "1891b01197ca57cbf156542835f1b2051bf98e4fce41cfb302551058efd2587d",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/fit_coupon.stl",
+      "sha256": "27b20971d6a98c902e53de9b3bfbb9bfae5a753560963efb05df819edde1e7aa",
+      "bytes": 538852,
+      "triangles": 2336,
+      "raw_vertices": 7008,
+      "exact_welded_vertices": 1160,
+      "bounds_mm": [
+        [
+          -30.0,
+          -10.0,
+          0.0
+        ],
+        [
+          30.0,
+          10.0,
+          5.0
+        ]
+      ],
+      "extents_mm": [
+        60.0,
+        20.0,
+        5.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5775.344628925231,
+      "positive_volume": true,
+      "surface_area_mm2": 3348.1673365977567,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 2336,
+          "bounds_mm": [
+            [
+              -30.0,
+              -10.0,
+              0.0
+            ],
+            [
+              30.0,
+              10.0,
+              5.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5775.3446289252315
+        }
+      ],
+      "exact_welded_edges": 3504,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 2336,
+      "manifold3d_import_volume_mm3": 5775.3446289252315,
+      "csg_sha256": "bd3129da18064c2d49e166a84a40f0958690dd6d45267990ad54b5640d0c6c8c",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/front_bumper.stl",
+      "sha256": "9a759d4ccb3333d561ebff9bb94ae9d06cba24f32166a189232b5250f9afa2c8",
+      "bytes": 262518,
+      "triangles": 1184,
+      "raw_vertices": 3552,
+      "exact_welded_vertices": 590,
+      "bounds_mm": [
+        [
+          -2.0,
+          -55.0,
+          0.0
+        ],
+        [
+          28.0,
+          55.0,
+          16.0
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        110.0,
+        16.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7866.482080474166,
+      "positive_volume": true,
+      "surface_area_mm2": 5273.927009932312,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1184,
+          "bounds_mm": [
+            [
+              -2.0,
+              -55.0,
+              0.0
+            ],
+            [
+              28.0,
+              55.0,
+              16.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7866.482080474168
+        }
+      ],
+      "exact_welded_edges": 1776,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1184,
+      "manifold3d_import_volume_mm3": 7866.482080474167,
+      "csg_sha256": "6bd07c28f9d8154299ac56adbeb193054d6834298e083175dc464739de0d1284",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/n20_motor_mount.stl",
+      "sha256": "10f20064415ef2aac7b03eb60c057f9c216a5fbb0765f355fe3c1bc3bcd374d2",
+      "bytes": 327903,
+      "triangles": 1498,
+      "raw_vertices": 4494,
+      "exact_welded_vertices": 743,
+      "bounds_mm": [
+        [
+          -16.0,
+          -32.0,
+          0.0
+        ],
+        [
+          16.0,
+          1.5,
+          16.5
+        ]
+      ],
+      "extents_mm": [
+        32.0,
+        33.5,
+        16.5
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7834.449100546403,
+      "positive_volume": true,
+      "surface_area_mm2": 4936.589158213537,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1498,
+          "bounds_mm": [
+            [
+              -16.0,
+              -32.0,
+              0.0
+            ],
+            [
+              16.0,
+              1.5,
+              16.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7834.449100546404
+        }
+      ],
+      "exact_welded_edges": 2247,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1498,
+      "manifold3d_import_volume_mm3": 7834.449100546403,
+      "csg_sha256": "a40a3ad73d787ceb19d414d0bbcf6228e26e07131431327b10f2687a6f81b9c7",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/standoffs.stl",
+      "sha256": "d08115f09de939dfcf14b0b2b34e5f89b7e5ebf9088b8cd13b84d6de02d885c8",
+      "bytes": 710767,
+      "triangles": 3072,
+      "raw_vertices": 9216,
+      "exact_welded_vertices": 1536,
+      "bounds_mm": [
+        [
+          -12.0,
+          -12.0,
+          0.0
+        ],
+        [
+          12.0,
+          12.0,
+          34.0
+        ]
+      ],
+      "extents_mm": [
+        24.0,
+        24.0,
+        34.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5597.335838024442,
+      "positive_volume": true,
+      "surface_area_mm2": 5199.110985956202,
+      "connected_face_components": 4,
+      "connected_closed_positive_solids": 4,
+      "components": [
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              4.0,
+              4.0,
+              0.0
+            ],
+            [
+              12.0,
+              12.0,
+              34.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061107
+        },
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              4.0,
+              -12.0,
+              0.0
+            ],
+            [
+              12.0,
+              -4.0,
+              34.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061107
+        },
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              -12.0,
+              -12.0,
+              0.0
+            ],
+            [
+              -4.0,
+              -4.0,
+              34.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061104
+        },
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              -12.0,
+              4.0,
+              0.0
+            ],
+            [
+              -4.0,
+              12.0,
+              34.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.333959506111
+        }
+      ],
+      "exact_welded_edges": 4608,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3072,
+      "manifold3d_import_volume_mm3": 5597.335838024443,
+      "csg_sha256": "925a2810e1dd9a8ae63d91b25ab604ceb330fa6d7d9d48e7a94bd3e0f6a9e395",
+      "expected_solids": 4,
+      "pass": true
+    },
+    {
+      "path": "exports/tof_sensor_bar.stl",
+      "sha256": "040ccf74e824955563df6ba4cc0c21badd4356dcfc386a538b545460dc760905",
+      "bytes": 535226,
+      "triangles": 2488,
+      "raw_vertices": 7464,
+      "exact_welded_vertices": 1224,
+      "bounds_mm": [
+        [
+          -30.0,
+          -45.0,
+          0.0
+        ],
+        [
+          0.0,
+          45.0,
+          17.0
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        90.0,
+        17.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 9206.355405437433,
+      "positive_volume": true,
+      "surface_area_mm2": 6839.488753026977,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 2488,
+          "bounds_mm": [
+            [
+              -30.0,
+              -45.0,
+              0.0
+            ],
+            [
+              0.0,
+              45.0,
+              17.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 9206.35540543743
+        }
+      ],
+      "exact_welded_edges": 3732,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 2488,
+      "manifold3d_import_volume_mm3": 9206.355405437433,
+      "csg_sha256": "4e602443e96d50cd128fb75923fe4b53b63864aab89447d8bfe175979ec2abcf",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/top_cover.stl",
+      "sha256": "2da6565e75371d8369fdb3c2948789e997c2a9c6e7db81419ec23a0d82b9aa02",
+      "bytes": 982721,
+      "triangles": 4352,
+      "raw_vertices": 13056,
+      "exact_welded_vertices": 2156,
+      "bounds_mm": [
+        [
+          -60.0,
+          -38.0,
+          0.0
+        ],
+        [
+          60.0,
+          38.0,
+          3.0
+        ]
+      ],
+      "extents_mm": [
+        120.0,
+        76.0,
+        3.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 26015.269602624354,
+      "positive_volume": true,
+      "surface_area_mm2": 19042.12928593378,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 4352,
+          "bounds_mm": [
+            [
+              -60.0,
+              -38.0,
+              0.0
+            ],
+            [
+              60.0,
+              38.0,
+              3.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 26015.26960262435
+        }
+      ],
+      "exact_welded_edges": 6528,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 4352,
+      "manifold3d_import_volume_mm3": 26015.26960262435,
+      "csg_sha256": "385d34dbe20fe7151a659615267e820fb8d479466a74f98d784e4b6dd8f0101e",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/wheel.stl",
+      "sha256": "9a74b145dc0fe445edaf7130ad3ae4c63616474ab1a4324ba9500147d3338d32",
+      "bytes": 783347,
+      "triangles": 3168,
+      "raw_vertices": 9504,
+      "exact_welded_vertices": 1576,
+      "bounds_mm": [
+        [
+          -22.449025702423935,
+          -22.449025702423935,
+          0.0
+        ],
+        [
+          22.449025702423935,
+          22.449025702423935,
+          14.0
+        ]
+      ],
+      "extents_mm": [
+        44.89805140484787,
+        44.89805140484787,
+        14.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 13781.72283719302,
+      "positive_volume": true,
+      "surface_area_mm2": 7007.7687381152455,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3168,
+          "bounds_mm": [
+            [
+              -22.449025702423935,
+              -22.449025702423935,
+              0.0
+            ],
+            [
+              22.449025702423935,
+              22.449025702423935,
+              14.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 13781.722837193023
+        }
+      ],
+      "exact_welded_edges": 4752,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3168,
+      "manifold3d_import_volume_mm3": 13781.722837193021,
+      "csg_sha256": "b21447ea61c4df4307f68421b76039efea68be7e0146289dc5d4ede7bad34f38",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/wheel_hub_adapter.stl",
+      "sha256": "072ddd3b5fe89b40b628eab898dfeb519f6d4e235d632ac9f031c90e070f792b",
+      "bytes": 864766,
+      "triangles": 3434,
+      "raw_vertices": 10302,
+      "exact_welded_vertices": 1707,
+      "bounds_mm": [
+        [
+          -15.0,
+          -15.0,
+          0.0
+        ],
+        [
+          15.0,
+          15.0,
+          10.0
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        30.0,
+        10.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5811.64456036791,
+      "positive_volume": true,
+      "surface_area_mm2": 2899.742140775006,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3434,
+          "bounds_mm": [
+            [
+              -15.0,
+              -15.0,
+              0.0
+            ],
+            [
+              15.0,
+              15.0,
+              10.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5811.64456036791
+        }
+      ],
+      "exact_welded_edges": 5151,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3434,
+      "manifold3d_import_volume_mm3": 5811.64456036791,
+      "csg_sha256": "6d89846d7d35b63ca29b67c5e11363a2720a1aff879a9224be2ef40be2d31dac",
+      "expected_solids": 1,
+      "pass": true
+    }
+  ],
+  "placed_components": [
+    {
+      "path": "audit/components/component_00.stl",
+      "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
+      "bytes": 2395133,
+      "triangles": 10624,
+      "raw_vertices": 31872,
+      "exact_welded_vertices": 5248,
+      "bounds_mm": [
+        [
+          -75.0,
+          -52.5,
+          0.0
+        ],
+        [
+          75.0,
+          52.5,
+          4.0
+        ]
+      ],
+      "extents_mm": [
+        150.0,
+        105.0,
+        4.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 59103.17192327692,
+      "positive_volume": true,
+      "surface_area_mm2": 33832.69613750897,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 10624,
+          "bounds_mm": [
+            [
+              -75.0,
+              -52.5,
+              0.0
+            ],
+            [
+              75.0,
+              52.5,
+              4.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 59103.17192327691
+        }
+      ],
+      "exact_welded_edges": 15936,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 10624,
+      "manifold3d_import_volume_mm3": 59103.171923276925,
+      "name": "base"
+    },
+    {
+      "path": "audit/components/component_01.stl",
+      "sha256": "36d7a33bfba342c5f9b97dfa154ba3ef9ba871c4201de512073d7bc0dcd9ff13",
+      "bytes": 329067,
+      "triangles": 1498,
+      "raw_vertices": 4494,
+      "exact_welded_vertices": 743,
+      "bounds_mm": [
+        [
+          -68.0,
+          -54.0,
+          4.0
+        ],
+        [
+          -36.0,
+          -20.5,
+          20.5
+        ]
+      ],
+      "extents_mm": [
+        32.0,
+        33.5,
+        16.5
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7834.449100546401,
+      "positive_volume": true,
+      "surface_area_mm2": 4936.589158213537,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1498,
+          "bounds_mm": [
+            [
+              -68.0,
+              -54.0,
+              4.0
+            ],
+            [
+              -36.0,
+              -20.5,
+              20.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7834.4491005464
+        }
+      ],
+      "exact_welded_edges": 2247,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1498,
+      "manifold3d_import_volume_mm3": 7834.449100546402,
+      "name": "mount_0"
+    },
+    {
+      "path": "audit/components/component_02.stl",
+      "sha256": "d96d499f971f131e55b3dd2cd5eee0e6423663e3a0772c63fa42b83ea9d905cd",
+      "bytes": 324542,
+      "triangles": 1498,
+      "raw_vertices": 4494,
+      "exact_welded_vertices": 743,
+      "bounds_mm": [
+        [
+          36.0,
+          -54.0,
+          4.0
+        ],
+        [
+          68.0,
+          -20.5,
+          20.5
+        ]
+      ],
+      "extents_mm": [
+        32.0,
+        33.5,
+        16.5
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7834.449100546401,
+      "positive_volume": true,
+      "surface_area_mm2": 4936.589158213537,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1498,
+          "bounds_mm": [
+            [
+              36.0,
+              -54.0,
+              4.0
+            ],
+            [
+              68.0,
+              -20.5,
+              20.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7834.449100546401
+        }
+      ],
+      "exact_welded_edges": 2247,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1498,
+      "manifold3d_import_volume_mm3": 7834.449100546402,
+      "name": "mount_1"
+    },
+    {
+      "path": "audit/components/component_03.stl",
+      "sha256": "164b37c1635b3b04124e6e0c219c2d4c47b609ef62f441dda282cf55b56e13d8",
+      "bytes": 324574,
+      "triangles": 1498,
+      "raw_vertices": 4494,
+      "exact_welded_vertices": 743,
+      "bounds_mm": [
+        [
+          -68.0,
+          20.5,
+          4.0
+        ],
+        [
+          -36.0,
+          54.0,
+          20.5
+        ]
+      ],
+      "extents_mm": [
+        32.0,
+        33.5,
+        16.5
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7834.449100546401,
+      "positive_volume": true,
+      "surface_area_mm2": 4936.589158213537,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1498,
+          "bounds_mm": [
+            [
+              -68.0,
+              20.5,
+              4.0
+            ],
+            [
+              -36.0,
+              54.0,
+              20.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7834.4491005464015
+        }
+      ],
+      "exact_welded_edges": 2247,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1498,
+      "manifold3d_import_volume_mm3": 7834.449100546402,
+      "name": "mount_2"
+    },
+    {
+      "path": "audit/components/component_04.stl",
+      "sha256": "714f9c379bbf242b79073d27976b529e00bf779c83e3b87b4607a26718d6fab7",
+      "bytes": 320056,
+      "triangles": 1498,
+      "raw_vertices": 4494,
+      "exact_welded_vertices": 743,
+      "bounds_mm": [
+        [
+          36.0,
+          20.5,
+          4.0
+        ],
+        [
+          68.0,
+          54.0,
+          20.5
+        ]
+      ],
+      "extents_mm": [
+        32.0,
+        33.5,
+        16.5
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7834.449100546401,
+      "positive_volume": true,
+      "surface_area_mm2": 4936.589158213537,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1498,
+          "bounds_mm": [
+            [
+              36.0,
+              20.5,
+              4.0
+            ],
+            [
+              68.0,
+              54.0,
+              20.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7834.449100546401
+        }
+      ],
+      "exact_welded_edges": 2247,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1498,
+      "manifold3d_import_volume_mm3": 7834.449100546402,
+      "name": "mount_3"
+    },
+    {
+      "path": "audit/components/component_05.stl",
+      "sha256": "3cb1e0f9b9388bbcbe52913f4d16a7245181971d9e6ebe759273eff19bf1a762",
+      "bytes": 95104,
+      "triangles": 412,
+      "raw_vertices": 1236,
+      "exact_welded_vertices": 208,
+      "bounds_mm": [
+        [
+          -58.0,
+          -60.5,
+          11.5
+        ],
+        [
+          -46.0,
+          -21.5,
+          23.5
+        ]
+      ],
+      "extents_mm": [
+        12.0,
+        39.0,
+        12.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 3920.5083036548435,
+      "positive_volume": true,
+      "surface_area_mm2": 1751.3847668213718,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 412,
+          "bounds_mm": [
+            [
+              -58.0,
+              -60.5,
+              11.5
+            ],
+            [
+              -46.0,
+              -21.5,
+              23.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 3920.508303654844
+        }
+      ],
+      "exact_welded_edges": 618,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 412,
+      "manifold3d_import_volume_mm3": 3920.5083036548426,
+      "name": "motor_envelope_0"
+    },
+    {
+      "path": "audit/components/component_06.stl",
+      "sha256": "1b001ce99526b9950b2f6383725a4b209ac4863d21c1da528479a21fae96ea46",
+      "bytes": 93868,
+      "triangles": 412,
+      "raw_vertices": 1236,
+      "exact_welded_vertices": 208,
+      "bounds_mm": [
+        [
+          46.0,
+          -60.5,
+          11.5
+        ],
+        [
+          58.0,
+          -21.5,
+          23.5
+        ]
+      ],
+      "extents_mm": [
+        12.0,
+        39.0,
+        12.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 3920.5083036548435,
+      "positive_volume": true,
+      "surface_area_mm2": 1751.3847668213718,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 412,
+          "bounds_mm": [
+            [
+              46.0,
+              -60.5,
+              11.5
+            ],
+            [
+              58.0,
+              -21.5,
+              23.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 3920.508303654842
+        }
+      ],
+      "exact_welded_edges": 618,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 412,
+      "manifold3d_import_volume_mm3": 3920.5083036548426,
+      "name": "motor_envelope_1"
+    },
+    {
+      "path": "audit/components/component_07.stl",
+      "sha256": "7996f7fc22cbcfcfc31fc697179bf955cd23581c6230e276759636b1490684c0",
+      "bytes": 93680,
+      "triangles": 412,
+      "raw_vertices": 1236,
+      "exact_welded_vertices": 208,
+      "bounds_mm": [
+        [
+          -58.0,
+          21.5,
+          11.5
+        ],
+        [
+          -46.0,
+          60.5,
+          23.5
+        ]
+      ],
+      "extents_mm": [
+        12.0,
+        39.0,
+        12.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 3920.5083036548435,
+      "positive_volume": true,
+      "surface_area_mm2": 1751.3847668213718,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 412,
+          "bounds_mm": [
+            [
+              -58.0,
+              21.5,
+              11.5
+            ],
+            [
+              -46.0,
+              60.5,
+              23.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 3920.508303654844
+        }
+      ],
+      "exact_welded_edges": 618,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 412,
+      "manifold3d_import_volume_mm3": 3920.5083036548426,
+      "name": "motor_envelope_2"
+    },
+    {
+      "path": "audit/components/component_08.stl",
+      "sha256": "08efbaa48fc8a4e82985b439df31564941fbb176dc262e6d88da355e214c8b45",
+      "bytes": 92444,
+      "triangles": 412,
+      "raw_vertices": 1236,
+      "exact_welded_vertices": 208,
+      "bounds_mm": [
+        [
+          46.0,
+          21.5,
+          11.5
+        ],
+        [
+          58.0,
+          60.5,
+          23.5
+        ]
+      ],
+      "extents_mm": [
+        12.0,
+        39.0,
+        12.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 3920.5083036548435,
+      "positive_volume": true,
+      "surface_area_mm2": 1751.3847668213718,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 412,
+          "bounds_mm": [
+            [
+              46.0,
+              21.5,
+              11.5
+            ],
+            [
+              58.0,
+              60.5,
+              23.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 3920.508303654842
+        }
+      ],
+      "exact_welded_edges": 618,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 412,
+      "manifold3d_import_volume_mm3": 3920.5083036548426,
+      "name": "motor_envelope_3"
+    },
+    {
+      "path": "audit/components/component_09.stl",
+      "sha256": "f5efa58a3cfa7304159682143cafd20bf876a3084cd759a9c150faf1f975d709",
+      "bytes": 799054,
+      "triangles": 3168,
+      "raw_vertices": 9504,
+      "exact_welded_vertices": 1576,
+      "bounds_mm": [
+        [
+          -74.44902570242394,
+          -68.5,
+          -4.949025702423935
+        ],
+        [
+          -29.550974297576065,
+          -54.5,
+          39.94902570242394
+        ]
+      ],
+      "extents_mm": [
+        44.89805140484788,
+        14.0,
+        44.89805140484788
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 13781.722837193023,
+      "positive_volume": true,
+      "surface_area_mm2": 7007.7687381152455,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3168,
+          "bounds_mm": [
+            [
+              -74.44902570242394,
+              -68.5,
+              -4.949025702423935
+            ],
+            [
+              -29.550974297576065,
+              -54.5,
+              39.94902570242394
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 13781.72283719302
+        }
+      ],
+      "exact_welded_edges": 4752,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3168,
+      "manifold3d_import_volume_mm3": 13781.72283719302,
+      "name": "wheel_0"
+    },
+    {
+      "path": "audit/components/component_10.stl",
+      "sha256": "e3cff2fce97d3e00f9151830f2fde74030a2765ba950a07fb241e5eed853fb09",
+      "bytes": 789051,
+      "triangles": 3168,
+      "raw_vertices": 9504,
+      "exact_welded_vertices": 1576,
+      "bounds_mm": [
+        [
+          29.550974297576065,
+          -68.5,
+          -4.949025702423935
+        ],
+        [
+          74.44902570242394,
+          -54.5,
+          39.94902570242394
+        ]
+      ],
+      "extents_mm": [
+        44.89805140484788,
+        14.0,
+        44.89805140484788
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 13781.72283719302,
+      "positive_volume": true,
+      "surface_area_mm2": 7007.7687381152455,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3168,
+          "bounds_mm": [
+            [
+              29.550974297576065,
+              -68.5,
+              -4.949025702423935
+            ],
+            [
+              74.44902570242394,
+              -54.5,
+              39.94902570242394
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 13781.722837193025
+        }
+      ],
+      "exact_welded_edges": 4752,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3168,
+      "manifold3d_import_volume_mm3": 13781.72283719302,
+      "name": "wheel_1"
+    },
+    {
+      "path": "audit/components/component_11.stl",
+      "sha256": "efcbc7d523b462833a83e07b98424861b7ee2f1a11ea67dfeea771015407680f",
+      "bytes": 788592,
+      "triangles": 3168,
+      "raw_vertices": 9504,
+      "exact_welded_vertices": 1576,
+      "bounds_mm": [
+        [
+          -74.44902570242394,
+          54.5,
+          -4.949025702423935
+        ],
+        [
+          -29.550974297576065,
+          68.5,
+          39.94902570242394
+        ]
+      ],
+      "extents_mm": [
+        44.89805140484788,
+        14.0,
+        44.89805140484788
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 13781.72283719301,
+      "positive_volume": true,
+      "surface_area_mm2": 7007.7687381152455,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3168,
+          "bounds_mm": [
+            [
+              -74.44902570242394,
+              54.5,
+              -4.949025702423935
+            ],
+            [
+              -29.550974297576065,
+              68.5,
+              39.94902570242394
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 13781.722837193025
+        }
+      ],
+      "exact_welded_edges": 4752,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3168,
+      "manifold3d_import_volume_mm3": 13781.72283719302,
+      "name": "wheel_2"
+    },
+    {
+      "path": "audit/components/component_12.stl",
+      "sha256": "ce7795ec03fcbf82279f04d66ac27e9a9d5fe030bc9256c975eea39265279e73",
+      "bytes": 778591,
+      "triangles": 3168,
+      "raw_vertices": 9504,
+      "exact_welded_vertices": 1576,
+      "bounds_mm": [
+        [
+          29.550974297576065,
+          54.5,
+          -4.949025702423935
+        ],
+        [
+          74.44902570242394,
+          68.5,
+          39.94902570242394
+        ]
+      ],
+      "extents_mm": [
+        44.89805140484788,
+        14.0,
+        44.89805140484788
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 13781.722837193018,
+      "positive_volume": true,
+      "surface_area_mm2": 7007.7687381152455,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3168,
+          "bounds_mm": [
+            [
+              29.550974297576065,
+              54.5,
+              -4.949025702423935
+            ],
+            [
+              74.44902570242394,
+              68.5,
+              39.94902570242394
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 13781.722837193025
+        }
+      ],
+      "exact_welded_edges": 4752,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3168,
+      "manifold3d_import_volume_mm3": 13781.72283719302,
+      "name": "wheel_3"
+    },
+    {
+      "path": "audit/components/component_13.stl",
+      "sha256": "a67b7ee93e823170dd8b88c8acc7960958b5fa2ce648929c54a9d908cbff605c",
+      "bytes": 896428,
+      "triangles": 3434,
+      "raw_vertices": 10302,
+      "exact_welded_vertices": 1707,
+      "bounds_mm": [
+        [
+          -67.0,
+          -64.5,
+          2.5
+        ],
+        [
+          -37.0,
+          -54.5,
+          32.5
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        10.0,
+        30.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5811.6445603679085,
+      "positive_volume": true,
+      "surface_area_mm2": 2899.742140775006,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3434,
+          "bounds_mm": [
+            [
+              -67.0,
+              -64.5,
+              2.5
+            ],
+            [
+              -37.0,
+              -54.5,
+              32.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5811.644560367912
+        }
+      ],
+      "exact_welded_edges": 5151,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3434,
+      "manifold3d_import_volume_mm3": 5811.64456036791,
+      "name": "hub_0"
+    },
+    {
+      "path": "audit/components/component_14.stl",
+      "sha256": "18ac2670698e172d68b8ccbcdab3863c918b16653f2e96e673adede511c76ad4",
+      "bytes": 885891,
+      "triangles": 3434,
+      "raw_vertices": 10302,
+      "exact_welded_vertices": 1707,
+      "bounds_mm": [
+        [
+          37.0,
+          -64.5,
+          2.5
+        ],
+        [
+          67.0,
+          -54.5,
+          32.5
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        10.0,
+        30.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5811.644560367909,
+      "positive_volume": true,
+      "surface_area_mm2": 2899.742140775006,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3434,
+          "bounds_mm": [
+            [
+              37.0,
+              -64.5,
+              2.5
+            ],
+            [
+              67.0,
+              -54.5,
+              32.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5811.644560367913
+        }
+      ],
+      "exact_welded_edges": 5151,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3434,
+      "manifold3d_import_volume_mm3": 5811.64456036791,
+      "name": "hub_1"
+    },
+    {
+      "path": "audit/components/component_15.stl",
+      "sha256": "fab7ea889bda683429634c7602a8aff665edb5cdb3559925e87831624b5ee5ae",
+      "bytes": 885896,
+      "triangles": 3434,
+      "raw_vertices": 10302,
+      "exact_welded_vertices": 1707,
+      "bounds_mm": [
+        [
+          -67.0,
+          54.5,
+          2.5
+        ],
+        [
+          -37.0,
+          64.5,
+          32.5
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        10.0,
+        30.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5811.64456036791,
+      "positive_volume": true,
+      "surface_area_mm2": 2899.742140775006,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3434,
+          "bounds_mm": [
+            [
+              -67.0,
+              54.5,
+              2.5
+            ],
+            [
+              -37.0,
+              64.5,
+              32.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5811.644560367912
+        }
+      ],
+      "exact_welded_edges": 5151,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3434,
+      "manifold3d_import_volume_mm3": 5811.64456036791,
+      "name": "hub_2"
+    },
+    {
+      "path": "audit/components/component_16.stl",
+      "sha256": "aa4e22dd707cbc912d5b4198644383535184a9464d562729ea4a2f02e5def054",
+      "bytes": 875352,
+      "triangles": 3434,
+      "raw_vertices": 10302,
+      "exact_welded_vertices": 1707,
+      "bounds_mm": [
+        [
+          37.0,
+          54.5,
+          2.5
+        ],
+        [
+          67.0,
+          64.5,
+          32.5
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        10.0,
+        30.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5811.644560367909,
+      "positive_volume": true,
+      "surface_area_mm2": 2899.742140775006,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3434,
+          "bounds_mm": [
+            [
+              37.0,
+              54.5,
+              2.5
+            ],
+            [
+              67.0,
+              64.5,
+              32.5
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5811.644560367907
+        }
+      ],
+      "exact_welded_edges": 5151,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3434,
+      "manifold3d_import_volume_mm3": 5811.64456036791,
+      "name": "hub_3"
+    },
+    {
+      "path": "audit/components/component_17.stl",
+      "sha256": "86789a763dee43cb752d49746dacb754f0e85c089c99e7c65acbc75cff49431a",
+      "bytes": 769409,
+      "triangles": 3360,
+      "raw_vertices": 10080,
+      "exact_welded_vertices": 1666,
+      "bounds_mm": [
+        [
+          -45.0,
+          -21.0,
+          4.0
+        ],
+        [
+          45.0,
+          21.0,
+          11.0
+        ]
+      ],
+      "extents_mm": [
+        90.0,
+        42.0,
+        7.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 11763.464122764299,
+      "positive_volume": true,
+      "surface_area_mm2": 9314.86425550896,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 3360,
+          "bounds_mm": [
+            [
+              -45.0,
+              -21.0,
+              4.0
+            ],
+            [
+              45.0,
+              21.0,
+              11.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 11763.464122764293
+        }
+      ],
+      "exact_welded_edges": 5040,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 3360,
+      "manifold3d_import_volume_mm3": 11763.464122764295,
+      "name": "battery"
+    },
+    {
+      "path": "audit/components/component_18.stl",
+      "sha256": "6c5fd6509968be8ae90b37b6643f8dbe1bf54badf1b4d0e37382fdbdc7f99a53",
+      "bytes": 995777,
+      "triangles": 4352,
+      "raw_vertices": 13056,
+      "exact_welded_vertices": 2156,
+      "bounds_mm": [
+        [
+          -60.0,
+          -38.0,
+          38.0
+        ],
+        [
+          60.0,
+          38.0,
+          41.0
+        ]
+      ],
+      "extents_mm": [
+        120.0,
+        76.0,
+        3.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 26015.269602624354,
+      "positive_volume": true,
+      "surface_area_mm2": 19042.12928593378,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 4352,
+          "bounds_mm": [
+            [
+              -60.0,
+              -38.0,
+              38.0
+            ],
+            [
+              60.0,
+              38.0,
+              41.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 26015.26960262435
+        }
+      ],
+      "exact_welded_edges": 6528,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 4352,
+      "manifold3d_import_volume_mm3": 26015.269602624343,
+      "name": "deck"
+    },
+    {
+      "path": "audit/components/component_19.stl",
+      "sha256": "ef4b212920ea499dce3d8931315361e873809da1005e596c652dcfb91dd8131d",
+      "bytes": 182167,
+      "triangles": 768,
+      "raw_vertices": 2304,
+      "exact_welded_vertices": 384,
+      "bounds_mm": [
+        [
+          -54.0,
+          -18.0,
+          4.0
+        ],
+        [
+          -46.0,
+          -10.0,
+          38.0
+        ]
+      ],
+      "extents_mm": [
+        8.0,
+        8.0,
+        34.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 1399.3339595061104,
+      "positive_volume": true,
+      "surface_area_mm2": 1299.77774648905,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              -54.0,
+              -18.0,
+              4.0
+            ],
+            [
+              -46.0,
+              -10.0,
+              38.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061116
+        }
+      ],
+      "exact_welded_edges": 1152,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 768,
+      "manifold3d_import_volume_mm3": 1399.3339595061107,
+      "name": "standoff_0"
+    },
+    {
+      "path": "audit/components/component_20.stl",
+      "sha256": "3146db27bdbcfe12967361919af6a8b750407ca1c8c7de13d8e295cab9a89464",
+      "bytes": 179858,
+      "triangles": 768,
+      "raw_vertices": 2304,
+      "exact_welded_vertices": 384,
+      "bounds_mm": [
+        [
+          -54.0,
+          10.0,
+          4.0
+        ],
+        [
+          -46.0,
+          18.0,
+          38.0
+        ]
+      ],
+      "extents_mm": [
+        8.0,
+        8.0,
+        34.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 1399.3339595061104,
+      "positive_volume": true,
+      "surface_area_mm2": 1299.77774648905,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              -54.0,
+              10.0,
+              4.0
+            ],
+            [
+              -46.0,
+              18.0,
+              38.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061116
+        }
+      ],
+      "exact_welded_edges": 1152,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 768,
+      "manifold3d_import_volume_mm3": 1399.333959506111,
+      "name": "standoff_1"
+    },
+    {
+      "path": "audit/components/component_21.stl",
+      "sha256": "e391ccfa167f3d43f8a6e9ff9c15d2a1816c981f84bc0bef8c5796b2709cd94a",
+      "bytes": 179863,
+      "triangles": 768,
+      "raw_vertices": 2304,
+      "exact_welded_vertices": 384,
+      "bounds_mm": [
+        [
+          46.0,
+          -18.0,
+          4.0
+        ],
+        [
+          54.0,
+          -10.0,
+          38.0
+        ]
+      ],
+      "extents_mm": [
+        8.0,
+        8.0,
+        34.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 1399.3339595061104,
+      "positive_volume": true,
+      "surface_area_mm2": 1299.77774648905,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              46.0,
+              -18.0,
+              4.0
+            ],
+            [
+              54.0,
+              -10.0,
+              38.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061104
+        }
+      ],
+      "exact_welded_edges": 1152,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 768,
+      "manifold3d_import_volume_mm3": 1399.3339595061107,
+      "name": "standoff_2"
+    },
+    {
+      "path": "audit/components/component_22.stl",
+      "sha256": "f0e4f1db7fd2c1695a2bf9abec2b56dc05246dd832d01b4311992943ba82b646",
+      "bytes": 177554,
+      "triangles": 768,
+      "raw_vertices": 2304,
+      "exact_welded_vertices": 384,
+      "bounds_mm": [
+        [
+          46.0,
+          10.0,
+          4.0
+        ],
+        [
+          54.0,
+          18.0,
+          38.0
+        ]
+      ],
+      "extents_mm": [
+        8.0,
+        8.0,
+        34.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 1399.3339595061116,
+      "positive_volume": true,
+      "surface_area_mm2": 1299.77774648905,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 768,
+          "bounds_mm": [
+            [
+              46.0,
+              10.0,
+              4.0
+            ],
+            [
+              54.0,
+              18.0,
+              38.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 1399.3339595061104
+        }
+      ],
+      "exact_welded_edges": 1152,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 768,
+      "manifold3d_import_volume_mm3": 1399.3339595061107,
+      "name": "standoff_3"
+    },
+    {
+      "path": "audit/components/component_23.stl",
+      "sha256": "3dae81980c13da1ce9c8f24b6882c7587fe89206cfaa2806e787397b31bf4d39",
+      "bytes": 452259,
+      "triangles": 1988,
+      "raw_vertices": 5964,
+      "exact_welded_vertices": 984,
+      "bounds_mm": [
+        [
+          -13.0,
+          -16.0,
+          41.0
+        ],
+        [
+          45.0,
+          16.0,
+          44.0
+        ]
+      ],
+      "extents_mm": [
+        58.0,
+        32.0,
+        3.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5137.016144704584,
+      "positive_volume": true,
+      "surface_area_mm2": 4319.416300220761,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1988,
+          "bounds_mm": [
+            [
+              -13.0,
+              -16.0,
+              41.0
+            ],
+            [
+              45.0,
+              16.0,
+              44.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5137.016144704584
+        }
+      ],
+      "exact_welded_edges": 2982,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1988,
+      "manifold3d_import_volume_mm3": 5137.016144704586,
+      "name": "esp_carrier"
+    },
+    {
+      "path": "audit/components/component_24.stl",
+      "sha256": "1ee0120626436e61ccc0d06eaaf8e9d481da23f559192b1fe83e26ebb9815389",
+      "bytes": 416647,
+      "triangles": 1864,
+      "raw_vertices": 5592,
+      "exact_welded_vertices": 920,
+      "bounds_mm": [
+        [
+          -60.0,
+          -18.0,
+          41.0
+        ],
+        [
+          -36.0,
+          18.0,
+          67.0
+        ]
+      ],
+      "extents_mm": [
+        24.0,
+        36.0,
+        26.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 4170.563436176614,
+      "positive_volume": true,
+      "surface_area_mm2": 3767.9728890390898,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1864,
+          "bounds_mm": [
+            [
+              -60.0,
+              -18.0,
+              41.0
+            ],
+            [
+              -36.0,
+              18.0,
+              67.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 4170.563436176617
+        }
+      ],
+      "exact_welded_edges": 2796,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1864,
+      "manifold3d_import_volume_mm3": 4170.563436176618,
+      "name": "camera"
+    },
+    {
+      "path": "audit/components/component_25.stl",
+      "sha256": "9b6d577613f7a3a743983ae96968691733c0e32e7729958731b464b62a2861b4",
+      "bytes": 537673,
+      "triangles": 2488,
+      "raw_vertices": 7464,
+      "exact_welded_vertices": 1224,
+      "bounds_mm": [
+        [
+          -82.0,
+          -45.0,
+          4.0
+        ],
+        [
+          -65.0,
+          45.0,
+          34.0
+        ]
+      ],
+      "extents_mm": [
+        17.0,
+        90.0,
+        30.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 9206.355405437433,
+      "positive_volume": true,
+      "surface_area_mm2": 6839.488753026977,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 2488,
+          "bounds_mm": [
+            [
+              -82.0,
+              -45.0,
+              4.0
+            ],
+            [
+              -65.0,
+              45.0,
+              34.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 9206.35540543743
+        }
+      ],
+      "exact_welded_edges": 3732,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 2488,
+      "manifold3d_import_volume_mm3": 9206.35540543743,
+      "name": "tof"
+    },
+    {
+      "path": "audit/components/component_26.stl",
+      "sha256": "7d7e597005eed98139ffda74788a2d35968a05f86c058347d64e781a3381a62a",
+      "bytes": 263275,
+      "triangles": 1184,
+      "raw_vertices": 3552,
+      "exact_welded_vertices": 590,
+      "bounds_mm": [
+        [
+          -89.0,
+          -55.0,
+          4.0
+        ],
+        [
+          -59.0,
+          55.0,
+          20.0
+        ]
+      ],
+      "extents_mm": [
+        30.0,
+        110.0,
+        16.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 7866.482080474171,
+      "positive_volume": true,
+      "surface_area_mm2": 5273.927009932313,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1184,
+          "bounds_mm": [
+            [
+              -89.0,
+              -55.0,
+              4.0
+            ],
+            [
+              -59.0,
+              55.0,
+              20.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 7866.482080474175
+        }
+      ],
+      "exact_welded_edges": 1776,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1184,
+      "manifold3d_import_volume_mm3": 7866.482080474161,
+      "name": "bumper"
+    }
+  ],
+  "local_placed_equivalence": [
+    {
+      "component": "base",
+      "local_export": "base_plate",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 1.1820634384655386,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "mount_0",
+      "local_export": "n20_motor_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.15668898201092807,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "mount_1",
+      "local_export": "n20_motor_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.15668898201092807,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "mount_2",
+      "local_export": "n20_motor_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.15668898201092807,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "mount_3",
+      "local_export": "n20_motor_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.15668898201092807,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "wheel_0",
+      "local_export": "wheel",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.2756344567438604,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "wheel_1",
+      "local_export": "wheel",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.2756344567438604,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "wheel_2",
+      "local_export": "wheel",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.2756344567438604,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "wheel_3",
+      "local_export": "wheel",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.2756344567438604,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "hub_0",
+      "local_export": "wheel_hub_adapter",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.11623289120735822,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "hub_1",
+      "local_export": "wheel_hub_adapter",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.11623289120735822,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "hub_2",
+      "local_export": "wheel_hub_adapter",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.11623289120735822,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "hub_3",
+      "local_export": "wheel_hub_adapter",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.11623289120735822,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "battery",
+      "local_export": "battery_tray",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.23526928245528592,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "deck",
+      "local_export": "top_cover",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.5203053920524869,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "esp_carrier",
+      "local_export": "esp32_tray",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.10274032289409173,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "camera",
+      "local_export": "camera_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.08341126872353238,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "tof",
+      "local_export": "tof_sensor_bar",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.18412710810874863,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    },
+    {
+      "component": "bumper",
+      "local_export": "front_bumper",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.15732964160948323,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
+    }
+  ],
+  "assembly_pair_count": 351,
+  "pairs_excluded_by_nonoverlapping_aabbs": 322,
+  "boolean_intersections": [
+    {
+      "a": "mount_0",
+      "b": "motor_envelope_0",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_0",
+      "b": "battery",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_0",
+      "b": "tof",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_0",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_1",
+      "b": "motor_envelope_1",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_1",
+      "b": "battery",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_2",
+      "b": "motor_envelope_2",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_2",
+      "b": "battery",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_2",
+      "b": "tof",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_2",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_3",
+      "b": "motor_envelope_3",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "mount_3",
+      "b": "battery",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_0",
+      "b": "wheel_0",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_0",
+      "b": "hub_0",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_1",
+      "b": "wheel_1",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_1",
+      "b": "hub_1",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_2",
+      "b": "wheel_2",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_2",
+      "b": "hub_2",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_3",
+      "b": "wheel_3",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "motor_envelope_3",
+      "b": "hub_3",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_0",
+      "b": "hub_0",
+      "volume_mm3": 1.6586385043204643e-13,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_0",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_1",
+      "b": "hub_1",
+      "volume_mm3": 1.1612585892883942e-13,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_2",
+      "b": "hub_2",
+      "volume_mm3": 7.959041412042289e-14,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_2",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "wheel_3",
+      "b": "hub_3",
+      "volume_mm3": 6.537955940522089e-14,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "hub_0",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "hub_2",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    },
+    {
+      "a": "tof",
+      "b": "bumper",
+      "volume_mm3": 0.0,
+      "status": "Error.NoError",
+      "pass": true
+    }
+  ],
+  "service_paths": [
+    {
+      "part": "motor_envelope_0",
+      "path": "vertical lift after removing deck/carriers and matching wheel+hub for motor; release ties/fasteners first",
+      "sampled_lift_mm": [
+        0.25,
+        1,
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "tested_overlaps": 4,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "part": "motor_envelope_1",
+      "path": "vertical lift after removing deck/carriers and matching wheel+hub for motor; release ties/fasteners first",
+      "sampled_lift_mm": [
+        0.25,
+        1,
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "tested_overlaps": 4,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "part": "motor_envelope_2",
+      "path": "vertical lift after removing deck/carriers and matching wheel+hub for motor; release ties/fasteners first",
+      "sampled_lift_mm": [
+        0.25,
+        1,
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "tested_overlaps": 4,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "part": "motor_envelope_3",
+      "path": "vertical lift after removing deck/carriers and matching wheel+hub for motor; release ties/fasteners first",
+      "sampled_lift_mm": [
+        0.25,
+        1,
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "tested_overlaps": 4,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "part": "battery",
+      "path": "vertical lift after removing deck/carriers and matching wheel+hub for motor; release ties/fasteners first",
+      "sampled_lift_mm": [
+        0.25,
+        1,
+        2,
+        5,
+        10,
+        20,
+        40
+      ],
+      "tested_overlaps": 20,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    }
+  ],
+  "sampled_wheel_rotations": [
+    {
+      "wheel": "wheel_0",
+      "angles_deg": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330
+      ],
+      "tested_overlaps": 24,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "wheel_1",
+      "angles_deg": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330
+      ],
+      "tested_overlaps": 12,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "wheel_2",
+      "angles_deg": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330
+      ],
+      "tested_overlaps": 24,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "wheel": "wheel_3",
+      "angles_deg": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330
+      ],
+      "tested_overlaps": 12,
+      "maximum_overlap_mm3": 0.0,
+      "pass": true
+    }
+  ],
+  "nominal_dimensions_mm": {
+    "chassis": [
+      150,
+      105,
+      4
+    ],
+    "wheel": [
+      45,
+      14
+    ],
+    "wheelbase": 104,
+    "track": 123,
+    "nominal_ground_clearance": 5,
+    "shaft_height_above_base": 17.5,
+    "gearbox_face_to_wheel": 2,
+    "generic_shaft_engagement": 6,
+    "deck": [
+      120,
+      76,
+      3
+    ],
+    "deck_bottom_z": 38,
+    "spacer_height": 34,
+    "battery_clear_cavity": [
+      62,
+      32
+    ],
+    "battery_floor": 2.4,
+    "battery_max_pack_height_with_3mm_top_margin": 28.6
+  },
+  "measured_assembly_bounds_mm": [
+    [
+      -89.0,
+      -68.5,
+      -4.949025702423935
+    ],
+    [
+      75.0,
+      68.5,
+      67.0
+    ]
+  ],
+  "measured_assembly_extents_mm": [
+    164.0,
+    137.0,
+    71.94902570242394
+  ],
+  "static_ground_clearance_mm": 4.949025702423935,
+  "visual_assembly_mesh": {
+    "path": "cute_rover_complete.stl",
+    "sha256": "9e6df2c52fc28eedc1dde0e6dbd8d8732b24cb6b56b08858ac7b3afaebeea5d0",
+    "bytes": 13091064,
+    "triangles": 54322,
+    "raw_vertices": 162966,
+    "exact_welded_vertices": 26993,
+    "bounds_mm": [
+      [
+        -89.0,
+        -68.5,
+        -4.949025702423935
+      ],
+      [
+        75.0,
+        68.5,
+        67.0
+      ]
+    ],
+    "extents_mm": [
+      164.0,
+      137.0,
+      71.94902570242394
+    ],
+    "watertight": true,
+    "winding_consistent": true,
+    "is_volume": true,
+    "signed_volume_mm3": 254252.95776053154,
+    "positive_volume": true,
+    "surface_area_mm2": 127408.98266416203,
+    "connected_face_components": 5,
+    "connected_closed_positive_solids": 5,
+    "components": [
+      {
+        "triangles": 30282,
+        "bounds_mm": [
+          [
+            -89.0,
+            -60.5,
+            0.0
+          ],
+          [
+            75.0,
+            60.5,
+            67.0
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 175879.48817028778
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            -74.44902570242394,
+            -68.5,
+            -4.949025702423935
+          ],
+          [
+            -29.550974297576065,
+            -54.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.36739756093
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            29.550974297576065,
+            -68.5,
+            -4.949025702423935
+          ],
+          [
+            74.44902570242394,
+            -54.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.367397560924
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            -74.44902570242394,
+            54.5,
+            -4.949025702423935
+          ],
+          [
+            -29.550974297576065,
+            68.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.367397560927
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            29.550974297576065,
+            54.5,
+            -4.949025702423935
+          ],
+          [
+            74.44902570242394,
+            68.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.367397560938
+      }
+    ],
+    "exact_welded_edges": 81483,
+    "boundary_edges_incidence_1": 0,
+    "nonmanifold_edges_incidence_gt2": 0,
+    "maximum_edge_incidence": 2,
+    "all_edges_have_two_faces": true,
+    "nonmanifold_edge_examples": [],
+    "duplicate_faces_ignoring_winding": 0,
+    "zero_area_faces": 0,
+    "near_degenerate_faces_area_le_1e_12_mm2": 0,
+    "finite_vertex_coordinates": true,
+    "manifold3d_import_status": "Error.NoError",
+    "manifold3d_import_empty": false,
+    "manifold3d_import_triangles": 54322,
+    "manifold3d_import_volume_mm3": 254252.9577605315,
+    "csg_sha256": "10f43e8df25b1d8299901b2ff99c8b0db2edd99c787df7a547ae897df0af3ade"
+  },
+  "failures": [],
+  "pass": true
+}

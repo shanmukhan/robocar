@@ -1,0 +1,13 @@
+interface,quantity,fastener,nominal_grip_mm,length_requirement,notes
+Motor saddle to base,8,M3 socket/Allen-head bolt and nut,7,Measure chosen nut/washer stack and below-base protrusion,Nuts below base; head relief diameter6.6; two bolts per motor
+Battery tabs to base,4,M3 bolt and nut,6.4,Measure chosen nut/washer stack,Thread straps before securing tray; nuts below base
+Rear spacers and deck,2,Long M3 bolt and nut,41,Measure actual washers and nut engagement,Bottom-entering bolt avoids below-base screw tip
+Front spacers deck camera,2,Long M3 bolt and nut,44,Measure actual washers and nut engagement,Shared camera/standoff fasteners
+Camera extra deck holes,2,M3 bolt and nut,6,Measure actual nut/washer stack,Two additional holes beyond shared spacers
+ESP carrier to deck,4,M3 bolt and nut,6,Measure actual nut/washer stack,Carrier fixture only; PCB mount/spacers still unverified
+ToF tabs to base,2,M3 bolt and nut,8,Measure actual nut/washer stack,Actual PCB retention remains unverified
+Bumper central foot to base,2,M3 bolt and nut,7,Measure actual nut/washer stack,Check underside tool access and ground clearance
+Wheel to hub,12,M3 axial bolt and captured nut,14,14 mm effective under-head length,M3x14 or M3x16 plus2mm head-side spacers; heads outboard and flush inboard tips
+Hub to motor shaft,4,Headless M3 grub screw and captured nut,unverified,Nominal10mm probe only; select actual tip and engagement,Radial window aligned30deg; exact shaft flat/usable length unverified
+Motor retention,8,Cable ties,unverified,Must fit2.6x2mm transverse channels,Two ties per motor; preload and torque reaction need real fit test
+Battery retention,2,Battery straps,unverified,Must fit real pack and8x4.4mm slot routes,Select width/length from actual pack; strain relief still unverified

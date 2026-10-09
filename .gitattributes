@@ -1,0 +1,2 @@
+# Preserve the exact CSV bytes recorded in the audit's checksum inventory.
+01_Cute_N20_4WD/audit/printable_parts.csv -text

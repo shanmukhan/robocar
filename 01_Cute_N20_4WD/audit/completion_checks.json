@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-10-09",
+  "master_source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+  "geometric_checks_pass": true,
+  "printable_export_count": 12,
+  "assembly_pairs_checked": 351,
+  "root_images_inspected": 6,
+  "production_ready": false,
+  "production_fit_status": "UNVERIFIED: exact motor/battery/PCB/fastener/printer fit and physical tests pending",
+  "original_cute_files_preserved_and_hash_verified": 19,
+  "original_outside_project_files_hash_verified": 170,
+  "original_outside_project_changes": [],
+  "additional_root_image_files_observed_during_audit": [
+    "images/Cute 4WD Robot Car Orthographic Sheet.png",
+    "images/DIY Robot Rover Orthographic View Sheet.png",
+    "images/Six-View Colorful Robot Rover Assembly Sheet.png",
+    "images/Yellow 4WD Robot Rover Assembly Guide.png"
+  ],
+  "artifact_hash_checks_pass": true,
+  "local_document_links_exist": true,
+  "prototype_print_pack_crc_pass": true,
+  "prototype_print_pack": "cute_rover_prototype_print_pack.zip"
+}

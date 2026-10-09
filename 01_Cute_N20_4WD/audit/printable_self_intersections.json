@@ -1,0 +1,2020 @@
+{
+  "generated_at_utc": "2026-10-09T17:49:02.687438+00:00",
+  "method": "Independent float64 triangle-level inspection: BVH/AABB broad phase; mutual plane/line interval overlap for transverse crossings; projected convex polygon clipping for coplanar positive-area overlap. Exact-equal vertices are indexed together without changing coordinates. Shared-edge intersections are excluded only when limited to their expected common edge. Shared-vertex pairs remain checked for overlap beyond their common vertex. No repair, mesh simplification, approximate welding, or normal correction is performed.",
+  "epsilon_mm": 1e-08,
+  "scope": "Individual exports/*.stl printable meshes only; complete assembled STL is visual-only and excluded.",
+  "limitations": "Numerical diagnostic, not an exact-predicate CGAL certificate. Positive-length crossings <= epsilon, coplanar overlap areas <= epsilon times the larger triangle extent, isolated point/edge contacts, and near-parallel normals below 1e-12 may remain unreported. ASCII STL rounding is preserved. Separate topology/normal checks, hardware interference checks and manufacturing review remain necessary.",
+  "reference_definition": "https://doc.cgal.org/latest/Polygon_mesh_processing/group__PMP__intersection__grp.html",
+  "numpy_version": "2.5.3",
+  "trimesh_version": "5.1.1",
+  "controls": {
+    "purpose": "Mechanically relevant detection controls: two 10 mm solids overlapping by 1 mm with offset faces, two with aligned coplanar faces overlapping by 1 mm, and two separated by 0.1 mm. These synthetic controls do not modify project meshes.",
+    "overlapping_boxes": {
+      "triangles": 24,
+      "candidate_triangle_pairs": 132,
+      "pairs_with_shared_exact_vertices": 92,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 14,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 14,
+      "examples_first_25": [
+        {
+          "triangle_ids": [
+            10,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.25,
+                -4.75
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                5.25,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.5
+        },
+        {
+          "triangle_ids": [
+            11,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.25,
+                -4.75
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                5.25,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.25
+        },
+        {
+          "triangle_ids": [
+            13,
+            10
+          ],
+          "triangles_mm": [
+            [
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ],
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            17,
+            10
+          ],
+          "triangles_mm": [
+            [
+              [
+                14.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ]
+            ],
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.5
+        },
+        {
+          "triangle_ids": [
+            17,
+            11
+          ],
+          "triangles_mm": [
+            [
+              [
+                14.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ]
+            ],
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.25
+        },
+        {
+          "triangle_ids": [
+            10,
+            15
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.25,
+                -4.75
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            9,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.25,
+                -4.75
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                5.25,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.75
+        },
+        {
+          "triangle_ids": [
+            6,
+            13
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.25
+        },
+        {
+          "triangle_ids": [
+            6,
+            17
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.75
+        },
+        {
+          "triangle_ids": [
+            9,
+            15
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.25,
+                -4.75
+              ],
+              [
+                14.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 0.25
+        },
+        {
+          "triangle_ids": [
+            6,
+            12
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                5.25,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 8.75
+        },
+        {
+          "triangle_ids": [
+            14,
+            7
+          ],
+          "triangles_mm": [
+            [
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                5.25,
+                5.25
+              ],
+              [
+                4.0,
+                5.25,
+                -4.75
+              ]
+            ],
+            [
+              [
+                -5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            14,
+            9
+          ],
+          "triangles_mm": [
+            [
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ],
+              [
+                4.0,
+                5.25,
+                5.25
+              ],
+              [
+                4.0,
+                5.25,
+                -4.75
+              ]
+            ],
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 8.75
+        },
+        {
+          "triangle_ids": [
+            4,
+            12
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                -4.75,
+                5.25
+              ],
+              [
+                4.0,
+                5.25,
+                5.25
+              ],
+              [
+                4.0,
+                -4.75,
+                -4.75
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        }
+      ],
+      "elapsed_seconds": 0.004
+    },
+    "coplanar_overlap_boxes": {
+      "triangles": 24,
+      "candidate_triangle_pairs": 188,
+      "pairs_with_shared_exact_vertices": 92,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 36,
+      "coplanar_overlap_pairs": 12,
+      "transverse_crossing_pairs": 24,
+      "examples_first_25": [
+        {
+          "triangle_ids": [
+            10,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            11,
+            18
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            11,
+            19
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            11,
+            21
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            13,
+            10
+          ],
+          "triangles_mm": [
+            [
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            17,
+            10
+          ],
+          "triangles_mm": [
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            10,
+            15
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            11,
+            16
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 9.0
+        },
+        {
+          "triangle_ids": [
+            6,
+            18
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            8,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            8,
+            21
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            7,
+            19
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            9,
+            20
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            9,
+            19
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 9.0,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            9,
+            21
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            6,
+            17
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            6,
+            16
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 9.0,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            8,
+            15
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                5.0,
+                -5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 9.0,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            7,
+            16
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            5,
+            18
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            4,
+            19
+          ],
+          "triangles_mm": [
+            [
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                5.0,
+                5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                5.0
+              ],
+              [
+                14.0,
+                5.0,
+                5.0
+              ],
+              [
+                4.0,
+                5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            1,
+            13
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            1,
+            15
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                4.0,
+                5.0,
+                -5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "transverse_segment_intersection",
+          "intersection_length_mm": 1.0
+        },
+        {
+          "triangle_ids": [
+            5,
+            13
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 9.0,
+          "area_detection_threshold_mm2": 1e-07
+        },
+        {
+          "triangle_ids": [
+            5,
+            17
+          ],
+          "triangles_mm": [
+            [
+              [
+                5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                -5.0,
+                -5.0,
+                5.0
+              ],
+              [
+                5.0,
+                -5.0,
+                -5.0
+              ]
+            ],
+            [
+              [
+                14.0,
+                -5.0,
+                5.0
+              ],
+              [
+                4.0,
+                -5.0,
+                5.0
+              ],
+              [
+                14.0,
+                -5.0,
+                -5.0
+              ]
+            ]
+          ],
+          "shared_exact_vertices": 0,
+          "type": "coplanar_area_overlap",
+          "projected_overlap_area_mm2": 0.5,
+          "area_detection_threshold_mm2": 1e-07
+        }
+      ],
+      "elapsed_seconds": 0.005
+    },
+    "separated_boxes": {
+      "triangles": 24,
+      "candidate_triangle_pairs": 108,
+      "pairs_with_shared_exact_vertices": 92,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 0.003
+    },
+    "passed": true
+  },
+  "meshes": [
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/base_plate.stl",
+      "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
+      "unchanged_during_check": true,
+      "triangles": 10624,
+      "candidate_triangle_pairs": 381456,
+      "pairs_with_shared_exact_vertices": 147491,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 10.672
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/battery_tray.stl",
+      "sha256": "d37721caf9c1afae2646287953bf7077f2dee04767e7be4d6774fe5e408052a2",
+      "unchanged_during_check": true,
+      "triangles": 3360,
+      "candidate_triangle_pairs": 32189,
+      "pairs_with_shared_exact_vertices": 23408,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 0.937
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/camera_mount.stl",
+      "sha256": "1e1a4e2abe7e0354c55d4a08c9d17f2b89eba5d9c974e9a57da242e8a152d529",
+      "unchanged_during_check": true,
+      "triangles": 1864,
+      "candidate_triangle_pairs": 90435,
+      "pairs_with_shared_exact_vertices": 35123,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 2.495
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/esp32_tray.stl",
+      "sha256": "9cbc459d14b4919b41e37daed4d5612bfbf2cd23d6fee949bda27f697ad230b7",
+      "unchanged_during_check": true,
+      "triangles": 1988,
+      "candidate_triangle_pairs": 65725,
+      "pairs_with_shared_exact_vertices": 26076,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 1.76
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/fit_coupon.stl",
+      "sha256": "27b20971d6a98c902e53de9b3bfbb9bfae5a753560963efb05df819edde1e7aa",
+      "unchanged_during_check": true,
+      "triangles": 2336,
+      "candidate_triangle_pairs": 77635,
+      "pairs_with_shared_exact_vertices": 40148,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 2.278
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/front_bumper.stl",
+      "sha256": "9a759d4ccb3333d561ebff9bb94ae9d06cba24f32166a189232b5250f9afa2c8",
+      "unchanged_during_check": true,
+      "triangles": 1184,
+      "candidate_triangle_pairs": 17583,
+      "pairs_with_shared_exact_vertices": 11984,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 0.525
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/n20_motor_mount.stl",
+      "sha256": "10f20064415ef2aac7b03eb60c057f9c216a5fbb0765f355fe3c1bc3bcd374d2",
+      "unchanged_during_check": true,
+      "triangles": 1498,
+      "candidate_triangle_pairs": 23108,
+      "pairs_with_shared_exact_vertices": 16749,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 0.709
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/standoffs.stl",
+      "sha256": "d08115f09de939dfcf14b0b2b34e5f89b7e5ebf9088b8cd13b84d6de02d885c8",
+      "unchanged_during_check": true,
+      "triangles": 3072,
+      "candidate_triangle_pairs": 25056,
+      "pairs_with_shared_exact_vertices": 19808,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 0.732
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/tof_sensor_bar.stl",
+      "sha256": "040ccf74e824955563df6ba4cc0c21badd4356dcfc386a538b545460dc760905",
+      "unchanged_during_check": true,
+      "triangles": 2488,
+      "candidate_triangle_pairs": 42715,
+      "pairs_with_shared_exact_vertices": 29823,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 1.324
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/top_cover.stl",
+      "sha256": "2da6565e75371d8369fdb3c2948789e997c2a9c6e7db81419ec23a0d82b9aa02",
+      "unchanged_during_check": true,
+      "triangles": 4352,
+      "candidate_triangle_pairs": 239314,
+      "pairs_with_shared_exact_vertices": 68008,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 6.256
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel.stl",
+      "sha256": "9a74b145dc0fe445edaf7130ad3ae4c63616474ab1a4324ba9500147d3338d32",
+      "unchanged_during_check": true,
+      "triangles": 3168,
+      "candidate_triangle_pairs": 36045,
+      "pairs_with_shared_exact_vertices": 25930,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 1.104
+    },
+    {
+      "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel_hub_adapter.stl",
+      "sha256": "072ddd3b5fe89b40b628eab898dfeb519f6d4e235d632ac9f031c90e070f792b",
+      "unchanged_during_check": true,
+      "triangles": 3434,
+      "candidate_triangle_pairs": 37311,
+      "pairs_with_shared_exact_vertices": 28579,
+      "degenerate_triangles": 0,
+      "finite_coordinates": true,
+      "detected_intersection_pairs": 0,
+      "coplanar_overlap_pairs": 0,
+      "transverse_crossing_pairs": 0,
+      "examples_first_25": [],
+      "elapsed_seconds": 1.125
+    }
+  ],
+  "passed": true,
+  "export_provenance": {
+    "manifest_path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/export_manifest.json",
+    "manifest_sha256": "b917197b28548c8501e14f93ab57c12c8d7bd36bc887a76088dce4cb01a6e7cd",
+    "source_sha256": {
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.scad": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/base_plate.scad": "3a8cf7fc00475fc88f2423794b3e395dcc6b9601e2e651b03bba3beb02aed7bc",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/battery_tray.scad": "a1db4649ac2dc152e903e1dba9c7e4d02fc842dce8063a953eb87d59c7487817",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/camera_mount.scad": "ea96308388b60342f7079bf4f57a5ad8f806816d096f5f4065d976d6a8469bd2",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/esp32_tray.scad": "a832708c0a69bbed834f02696380c8ea5679fce2f40ebebb0f3669a194e1af82",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/fit_coupon.scad": "03486d4ff962acf5be4be7966d42381a533c137bf376b1933e43981c6769d758",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/front_bumper.scad": "0e52815bc4c21d7f9dc015d86f9fe478b0f0165c55144c37b8029ae291b3b110",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/n20_motor_mount.scad": "d5522a0b38fe4bed27a7e5096b15364a06d2b7730bbe088d494d7f89c9c30096",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/standoffs.scad": "4cf75b77d956d567364d26fc1e6870b6823648cffe52d65fa6917a9aa6ecee47",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/tof_sensor_bar.scad": "c679a7a4611fbb76f9d550bc24b8e1874f74f0aa7a51b85ed5c1b2e86f9ecea5",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/top_cover.scad": "b7a4e158442b2476d8bead701a17f03a33c6ff53f053a27a847e95ccc720ad16",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel.scad": "2b29c96cbfd372318f2fac61024d8d0c5cc87b56c32dde208d356d0c4b3acded",
+      "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad": "655f9c6d797cfe49c40567f0576d0b6126c99d991ff73fb13ed5baa02ecebebe"
+    },
+    "all_checked_meshes_match_successful_export_manifest": true
+  }
+}
