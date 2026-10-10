@@ -2,6 +2,8 @@
 
 **Use only `../exports/*.stl`.** Every mesh is in millimetres, starts at Z=0, and has validated closed topology. Camera, ToF and wheel exports already use the preferred print rotation. The complete assembly STL and meshes under `audit/components`, `baseline_meshes` or `hardware_checks` are inspection artifacts.
 
+Updated 2026-10-10 with the USB-C charger cradle. Print the new `usb_c_charger_mount.stl` and updated `top_cover.stl`; see [USB-C charging integration](../USB_C_CHARGING.md) for the exact module, fasteners, protected battery requirements and fit checks.
+
 **Production readiness remains unverified.** Exact motors, boards, battery, hardware, printer and material profile are unspecified. No slicer project, G-code or physical print test was supplied. The table describes geometric process needs; inspect actual layer/toolpath previews before printing.
 
 PETG is the project's intended prototype material; PLA can serve for indoor fit trials. Use the printer/material manufacturer's calibrated profile. As a provisional assessment basis, a 0.4 mm nozzle, approximately 0.45 mm extrusion width and 0.2 mm layers are assumed. [Prusa's design guidance](https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135) explains why wall resolution, bridges, orientations and support capability depend on settings. Three/four nominal paths are about 1.35/1.8 mm; this is a geometric screen, not a strength guarantee.
@@ -20,6 +22,7 @@ PETG is the project's intended prototype material; PLA can serve for indoor fit 
 | `tof_sensor_bar.stl` / 1 | Already rear face on bed; exported bounds 30×90×17 | Short Ø3.4 transverse tab-hole bridges; no support beneath elevated beam in this orientation | 4 mm carrier; outer slot-edge ligament ≥2.5 mm at rounded face, optic-to-slot web 1.9 mm; three Ø8 apertures; actual PCB/FOV unverified |
 | `front_bumper.stl` / 1 | As exported, wall and central foot on bed | No support expected | 4 mm wall, 3 mm central foot, tab end ligament 2.3 mm; long narrow bed contact may need brim; two fasteners; impact strength untested |
 | `fit_coupon.stl` / optional 1 | As exported, flat down | No support expected | 60×20×5; four trial bores left-to-right Ø3.1,3.2,3.3,3.4 and far-right shaft trial Ø3.25; measure the finished print, not screen dimensions |
+| `usb_c_charger_mount.stl` / 1 | Floor down; exported bounds 44.8×29.8×17 | Two 2.8 mm underside tie-channel bridges; rear notch and forward wire exit open above | 3 mm floor, 1.6 mm above channels; 2.4 mm walls; 1.3 mm outside tie slots; 39×18×6.3 module envelope, 0.5 mm edge clearance; 2×M3×10 carrier bolts and narrow insulated ties; measure actual PCB/plug |
 
 These are named local source features, not a global automated thickness/strength certification. Rounded corners, stress concentrations, anisotropy, shrinkage and material creep require physical assessment. No unsupported part is declared successfully printed merely because it rendered.
 

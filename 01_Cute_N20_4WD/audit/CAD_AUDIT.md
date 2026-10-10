@@ -2,11 +2,13 @@
 
 **Audit date:** 2026-10-09. **Geometry verdict:** corrected prototype meshes pass the recorded checks. **Production verdict:** UNVERIFIED; exact hardware and a physical printer fit test are still required. The supplied `goal.md` ends at “9. Identify parts”; this audit covers all available instructions, including the image verification in its objective.
 
+**Updated 2026-10-10:** added the rear-right USB-C charging-module cradle and matching deck holes. All current exports and checks below were regenerated. [USB-C charging integration](../USB_C_CHARGING.md) identifies the recommended module, protected 2S battery requirements, reserved plug space and physical fit limits.
+
 ## Deliverables and authority
 
 - [Master SCAD](../cute_rover_complete.scad) is the authoritative parametric geometry. `parts/*.scad` select its modules and explicitly set the same `$fn=96`.
 - [Prototype print pack](../cute_rover_prototype_print_pack.zip) bundles the selected sources, exports and guide.
-- [Individual print exports](../exports/) contain 12 STL/CSG/PNG sets. There are 11 vehicle part types plus one fit coupon. `standoffs.stl` intentionally contains four separate spacers; the other files contain one solid each.
+- [Individual print exports](../exports/) contain 13 STL/CSG/PNG sets. There are 12 vehicle part types plus one fit coupon. `standoffs.stl` intentionally contains four separate spacers; the other files contain one solid each.
 - [Current assembly render](../cute_rover_assembled_preview.png), [dimension views](assembly_dimensions.png), and [part previews](parts_preview.png) are generated from current source/meshes. Silver motor shapes are generic clearance envelopes.
 - `cute_rover_complete.stl`, `cute_rover_complete.csg`, and `parts/assembly.scad` describe the assembled vehicle, including motor envelopes. **Do not print the complete assembly STL.** Print individual parts.
 - [Baseline](baseline/) preserves every original Cute project file, including the old STL, SCAD, CSG, PNG, wrappers and documents. [Baseline inventory](baseline_inventory.json) records original file hashes. [Initial findings](INITIAL_FINDINGS.md) and [baseline mesh metrics](baseline_mesh_metrics.json) retain the before-correction evidence.
@@ -59,6 +61,8 @@ All values are millimetres. STL does not encode units; import these files as **m
 | Standoff diameter / height | 8 / 34 |
 | Battery cavity / floor | 62 × 32 / 2.4 |
 | Battery space to deck, reserving 3 mm above pack | 28.6 high; connector/strap exit must also fit |
+| USB-C charger cradle / placement | 44.8 × 29.8 × 17; centre X=39,Y=32.5; floor Z=41 |
+| Charger module envelope / plug reservation | 39 × 18 × 6.3; rear +X plug 14 wide × 8 high × 30 long |
 | Original generic motor can | 25 long × 12 wide × 10 high, excluding gearbox |
 | Original generic gearbox | 6 long × 12 wide × 12 high |
 | Generic shaft / projection / engagement | Ø3 / 8 / 6 |
@@ -72,17 +76,19 @@ The 25+6 mm motor lengths and 8 mm shaft are inherited illustrative dimensions, 
 
 ## Validation evidence
 
-[Export manifest](export_manifest.json) records OpenSCAD version, source/artifact hashes, commands, render summaries and logs. All 40 jobs succeeded with no reported warnings/errors: 12 individual parts, 27 independent placed components, and the visual assembly. Current exports use OpenSCAD 2026.10.08 with its Manifold solid backend.
+[Export manifest](export_manifest.json) records OpenSCAD version, source/artifact hashes, commands, render summaries and logs. All 42 jobs succeeded with no reported warnings/errors: 13 individual parts, 28 independent placed components, and the visual assembly. Current exports use OpenSCAD 2026.10.08 with its Manifold solid backend.
 
 [Validation results](validation_results.json) record:
 
-- All 12 print meshes have finite coordinates, positive volume, consistent winding, two incident faces at every exactly welded edge, no boundary/non-manifold edges, no duplicate or degenerate triangles, and their expected number of connected solids.
+- All 13 print meshes have finite coordinates, positive volume, consistent winding, two incident faces at every exactly welded edge, no boundary/non-manifold edges, no duplicate or degenerate triangles, and their expected number of connected solids.
 - All exported parts start at Z=0. Bounds are checked against the matching placed source geometry after reversing print rotations; independent symmetric Boolean differences pass the recorded numerical tolerance.
-- All **351 component pairs** are checked. Nonoverlapping bounding boxes exclude 322 pairs; 29 require solid Boolean intersections. No positive-volume interference above 0.001 mm³ is found. Mating surface contact and shaft/bore clearance are intentional.
+- All **378 component pairs** are checked. Nonoverlapping bounding boxes exclude 349 pairs; 29 require solid Boolean intersections. No positive-volume interference above 0.001 mm³ is found. Mating surface contact and shaft/bore clearance are intentional.
 - Four wheel meshes rotated in 30° increments through a full turn remain clear of the modeled fixed components. This sampling is backed by axial separation and wheel-radius envelopes; it does not measure real tyre/shaft runout.
 - Sampled vertical motor extraction and battery-tray extraction pass after removing the upper deck/carriers, releasing fasteners/ties, and removing the relevant wheel/hub for a motor. Real terminal leads, harnesses and selected component insertion paths remain unverified.
 
-[Triangle self-intersection checks](printable_self_intersections.json) independently examine all 12 printable meshes without repairing them: **1,068,572 candidate pairs, zero transverse crossings or coplanar area overlaps detected**. Intersecting/separated controls pass. This is a floating-point diagnostic with a 1e−8 mm positional tolerance and documented near-parallel/tiny-contact limitations; it is not an exact-predicate proof.
+[Triangle self-intersection checks](printable_self_intersections.json) independently examine all 13 printable meshes without repairing them: **1,134,164 candidate pairs, zero transverse crossings or coplanar area overlaps detected**. Intersecting/separated controls pass. This is a floating-point diagnostic with a 1e−8 mm positional tolerance and documented near-parallel/tiny-contact limitations; it is not an exact-predicate proof.
+
+[Charger access checks](charger_access_results.json) pass 31 checks against declared default envelopes: module seating, rear plug insertion, vertical board removal, M3 shafts/heads/nuts and tools, and ties through the floor slots and underside channels. A deliberately oversized 18 mm cable boot collides with the guard, confirming the check can detect insufficient port clearance. The actual USB receptacle and cable remain unmeasured.
 
 [Mechanical review](MECHANICAL_REVIEW.md) and [hardware probe results](hardware_checks/nominal_hardware_results.json) check provisional M3 nut/head and driver envelopes independently. These use declared nominal hardware, not purchased fastener measurements. The old radial angle intentionally reproduces a hardware collision; the corrected 30° layout clears it. See the report for exact probe scope and assumptions.
 

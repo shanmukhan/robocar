@@ -1,43 +1,44 @@
 {
-  "generated_at_utc": "2026-10-09T17:48:32.564013+00:00",
+  "generated_at_utc": "2026-10-10T10:56:39.639186+00:00",
   "openscad_executable": "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
   "openscad_version": "OpenSCAD version 2026.10.08",
-  "source_root": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD",
+  "source_root": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD",
   "source_sha256": {
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.scad": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/base_plate.scad": "3a8cf7fc00475fc88f2423794b3e395dcc6b9601e2e651b03bba3beb02aed7bc",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/battery_tray.scad": "a1db4649ac2dc152e903e1dba9c7e4d02fc842dce8063a953eb87d59c7487817",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/camera_mount.scad": "ea96308388b60342f7079bf4f57a5ad8f806816d096f5f4065d976d6a8469bd2",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/esp32_tray.scad": "a832708c0a69bbed834f02696380c8ea5679fce2f40ebebb0f3669a194e1af82",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/fit_coupon.scad": "03486d4ff962acf5be4be7966d42381a533c137bf376b1933e43981c6769d758",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/front_bumper.scad": "0e52815bc4c21d7f9dc015d86f9fe478b0f0165c55144c37b8029ae291b3b110",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/n20_motor_mount.scad": "d5522a0b38fe4bed27a7e5096b15364a06d2b7730bbe088d494d7f89c9c30096",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/standoffs.scad": "4cf75b77d956d567364d26fc1e6870b6823648cffe52d65fa6917a9aa6ecee47",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/tof_sensor_bar.scad": "c679a7a4611fbb76f9d550bc24b8e1874f74f0aa7a51b85ed5c1b2e86f9ecea5",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/top_cover.scad": "b7a4e158442b2476d8bead701a17f03a33c6ff53f053a27a847e95ccc720ad16",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel.scad": "2b29c96cbfd372318f2fac61024d8d0c5cc87b56c32dde208d356d0c4b3acded",
-    "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad": "655f9c6d797cfe49c40567f0576d0b6126c99d991ff73fb13ed5baa02ecebebe"
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_complete.scad": "5b93f8ecde6941c00b0bfbacb356c0b4777d9e04ad2e35564c2c5153b0b3768a",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/base_plate.scad": "3a8cf7fc00475fc88f2423794b3e395dcc6b9601e2e651b03bba3beb02aed7bc",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/battery_tray.scad": "a1db4649ac2dc152e903e1dba9c7e4d02fc842dce8063a953eb87d59c7487817",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/camera_mount.scad": "ea96308388b60342f7079bf4f57a5ad8f806816d096f5f4065d976d6a8469bd2",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/esp32_tray.scad": "a832708c0a69bbed834f02696380c8ea5679fce2f40ebebb0f3669a194e1af82",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/fit_coupon.scad": "03486d4ff962acf5be4be7966d42381a533c137bf376b1933e43981c6769d758",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/front_bumper.scad": "0e52815bc4c21d7f9dc015d86f9fe478b0f0165c55144c37b8029ae291b3b110",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/n20_motor_mount.scad": "d5522a0b38fe4bed27a7e5096b15364a06d2b7730bbe088d494d7f89c9c30096",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/standoffs.scad": "4cf75b77d956d567364d26fc1e6870b6823648cffe52d65fa6917a9aa6ecee47",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/tof_sensor_bar.scad": "c679a7a4611fbb76f9d550bc24b8e1874f74f0aa7a51b85ed5c1b2e86f9ecea5",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/top_cover.scad": "b7a4e158442b2476d8bead701a17f03a33c6ff53f053a27a847e95ccc720ad16",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/usb_c_charger_mount.scad": "a9d1631af8491922740acaef95be14f6fcb3443c9bf1761fe0932cea0e0c2bd3",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel.scad": "2b29c96cbfd372318f2fac61024d8d0c5cc87b56c32dde208d356d0c4b3acded",
+    "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad": "655f9c6d797cfe49c40567f0576d0b6126c99d991ff73fb13ed5baa02ecebebe"
   },
-  "printable_parts": 12,
-  "placed_components": 27,
+  "printable_parts": 13,
+  "placed_components": 28,
   "assembly_warning": "Complete assembly STL is visual-only: it includes hardware envelopes and assembled touching surfaces. Print only exports/*.stl after reading the audit and resolving hardware fit.",
   "jobs": [
     {
       "id": "base_plate",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/base_plate.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/base_plate.scad",
       "source_sha256": "3a8cf7fc00475fc88f2423794b3e395dcc6b9601e2e651b03bba3beb02aed7bc",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/base_plate_base_plate.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/base_plate_base_plate.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/base_plate_base_plate.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/base_plate_base_plate.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/base_plate_base_plate.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/base_plate_base_plate.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/base_plate.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/base_plate.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -45,10 +46,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/base_plate.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/base_plate.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.274,
+      "elapsed_seconds": 0.251,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -104,50 +105,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 139,
+          "milliseconds": 129,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.139",
-          "total": 139
+          "time": "0:00:00.129",
+          "total": 129
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/base_plate.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/base_plate.stl",
           "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
           "bytes": 2395133
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/base_plate.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/base_plate.csg",
           "sha256": "72f441ad3d49c25555699339ff95d7bf7921eb662ed9f3638591394763b08662",
           "bytes": 7025
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/base_plate.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/base_plate.png",
           "sha256": "3a3f3b2627b55b7ced289956cc5d977232f07ae4e274a740a9aac0f65ab04575",
           "bytes": 55143
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/base_plate.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/base_plate.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/base_plate.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/base_plate.summary.json"
     },
     {
       "id": "battery_tray",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/battery_tray.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/battery_tray.scad",
       "source_sha256": "a1db4649ac2dc152e903e1dba9c7e4d02fc842dce8063a953eb87d59c7487817",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/battery_tray_battery_tray.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/battery_tray_battery_tray.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/battery_tray_battery_tray.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/battery_tray_battery_tray.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/battery_tray_battery_tray.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/battery_tray_battery_tray.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/battery_tray.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/battery_tray.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -155,10 +156,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/battery_tray.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/battery_tray.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.201,
+      "elapsed_seconds": 0.204,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -214,50 +215,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 125,
+          "milliseconds": 127,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.125",
-          "total": 125
+          "time": "0:00:00.127",
+          "total": 127
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/battery_tray.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/battery_tray.stl",
           "sha256": "d37721caf9c1afae2646287953bf7077f2dee04767e7be4d6774fe5e408052a2",
           "bytes": 768798
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/battery_tray.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/battery_tray.csg",
           "sha256": "e8de99261153971103101c3525cd06f40a6b4e529d49ecc98c4abc68f76720ad",
           "bytes": 3061
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/battery_tray.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/battery_tray.png",
           "sha256": "6c204937e236824aec79bc1d4525136ac096a01191fec09f86ad56ef557d23cb",
           "bytes": 54180
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/battery_tray.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/battery_tray.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/battery_tray.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/battery_tray.summary.json"
     },
     {
       "id": "camera_mount",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/camera_mount.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/camera_mount.scad",
       "source_sha256": "ea96308388b60342f7079bf4f57a5ad8f806816d096f5f4065d976d6a8469bd2",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/camera_mount_camera_mount.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/camera_mount_camera_mount.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/camera_mount_camera_mount.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/camera_mount_camera_mount.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/camera_mount_camera_mount.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/camera_mount_camera_mount.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/camera_mount.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/camera_mount.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -265,10 +266,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/camera_mount.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/camera_mount.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.2,
+      "elapsed_seconds": 0.203,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -334,40 +335,40 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/camera_mount.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/camera_mount.stl",
           "sha256": "1e1a4e2abe7e0354c55d4a08c9d17f2b89eba5d9c974e9a57da242e8a152d529",
           "bytes": 408874
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/camera_mount.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/camera_mount.csg",
           "sha256": "5049d92c789efcfc0019c551c5fa5bb2bd8a99388ecd35db08d092391d243c56",
           "bytes": 3282
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/camera_mount.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/camera_mount.png",
           "sha256": "89f62ca6fc4fc1b063cf042ffde93247b677a00b9d49a08465041ce55b8cafca",
           "bytes": 69049
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/camera_mount.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/camera_mount.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/camera_mount.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/camera_mount.summary.json"
     },
     {
       "id": "component_00",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_00.scad",
-      "source_sha256": "9829d322c6e52633c618214cea270f58cab0d65ef4c0621ead4a8d7937614042",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_00.scad",
+      "source_sha256": "404c411137fd548d5fd6cb0a84c2f4373b93bff945bd39ecb2bb3751af504a85",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_00_component_00.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_00_component_00.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_00.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_00.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_00.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_00.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.134,
+      "elapsed_seconds": 0.114,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -423,41 +424,41 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 82,
+          "milliseconds": 62,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.082",
-          "total": 82
+          "time": "0:00:00.062",
+          "total": 62
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_00.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_00.stl",
           "sha256": "eb446dcec10b6e4104fe415d36a8027c164eb24ec303dedc4c25521407345e1d",
           "bytes": 2395133
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_00.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_00.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_00.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_00.summary.json",
       "component_index": 0
     },
     {
       "id": "component_01",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_01.scad",
-      "source_sha256": "4cf4c0619e6d43f63278b88904d664d09dbf15941e779f87a25b7b6675e99ed3",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_01.scad",
+      "source_sha256": "5ee49552b49fa4dfac5cdbb86e362690975f1b07bf4c5dac374159fd5077fcf9",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_01_component_01.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_01_component_01.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_01.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_01.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_01.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_01.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.064,
+      "elapsed_seconds": 0.071,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -513,218 +514,38 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 15,
+          "milliseconds": 18,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.015",
-          "total": 15
+          "time": "0:00:00.018",
+          "total": 18
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_01.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_01.stl",
           "sha256": "36d7a33bfba342c5f9b97dfa154ba3ef9ba871c4201de512073d7bc0dcd9ff13",
           "bytes": 329067
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_01.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_01.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_01.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_01.summary.json",
       "component_index": 1
     },
     {
       "id": "component_02",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_02.scad",
-      "source_sha256": "9a6956b61914e78f24753d985d78febaddc454777ee7fa4362dc03e0813404ea",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_02.scad",
+      "source_sha256": "3fca280b393b26462b90bbde72e01ac67b206de78c50e7577768213eba031a3d",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_02_component_02.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_02_component_02.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_02.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_02.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.086,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 2500000,
-            "entries": 18,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 221472,
-            "entries": 24,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              68.0,
-              -20.5,
-              20.5
-            ],
-            "min": [
-              36.0,
-              -54.0,
-              4.0
-            ],
-            "size": [
-              32.0,
-              33.5,
-              16.5
-            ]
-          },
-          "dimensions": 3,
-          "facets": 1498,
-          "simple": true,
-          "vertices": 743
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 14,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.014",
-          "total": 14
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_02.stl",
-          "sha256": "d96d499f971f131e55b3dd2cd5eee0e6423663e3a0772c63fa42b83ea9d905cd",
-          "bytes": 324542
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_02.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_02.summary.json",
-      "component_index": 2
-    },
-    {
-      "id": "component_03",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_03.scad",
-      "source_sha256": "6fdce5b879a2f6c8d5b329cb36b8c59854d9ee5615474f14c5e75c7041ef9267",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_03_component_03.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_03.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_03.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.082,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 2314250,
-            "entries": 17,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 221472,
-            "entries": 24,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              -36.0,
-              54.0,
-              20.5
-            ],
-            "min": [
-              -68.0,
-              20.5,
-              4.0
-            ],
-            "size": [
-              32.0,
-              33.5,
-              16.5
-            ]
-          },
-          "dimensions": 3,
-          "facets": 1498,
-          "simple": true,
-          "vertices": 743
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 15,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.015",
-          "total": 15
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_03.stl",
-          "sha256": "164b37c1635b3b04124e6e0c219c2d4c47b609ef62f441dda282cf55b56e13d8",
-          "bytes": 324574
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_03.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_03.summary.json",
-      "component_index": 3
-    },
-    {
-      "id": "component_04",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_04.scad",
-      "source_sha256": "ff74e28a22019513696be364a3d77e318143c50d7a2422a02ea48826a38d4345",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_04_component_04.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_04.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_04.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_02.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_02.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.065,
@@ -734,6 +555,186 @@
       "summary": {
         "cache": {
           "cgal_cache": {
+            "bytes": 2500000,
+            "entries": 18,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 221472,
+            "entries": 24,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              68.0,
+              -20.5,
+              20.5
+            ],
+            "min": [
+              36.0,
+              -54.0,
+              4.0
+            ],
+            "size": [
+              32.0,
+              33.5,
+              16.5
+            ]
+          },
+          "dimensions": 3,
+          "facets": 1498,
+          "simple": true,
+          "vertices": 743
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 14,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.014",
+          "total": 14
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_02.stl",
+          "sha256": "d96d499f971f131e55b3dd2cd5eee0e6423663e3a0772c63fa42b83ea9d905cd",
+          "bytes": 324542
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_02.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_02.summary.json",
+      "component_index": 2
+    },
+    {
+      "id": "component_03",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_03.scad",
+      "source_sha256": "4890c3b22e8c81fce17bda5668d5ad29a9fe8ce22f135b4787da1c1635c097a5",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_03_component_03.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_03.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_03.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.08,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 2314250,
+            "entries": 17,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 221472,
+            "entries": 24,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              -36.0,
+              54.0,
+              20.5
+            ],
+            "min": [
+              -68.0,
+              20.5,
+              4.0
+            ],
+            "size": [
+              32.0,
+              33.5,
+              16.5
+            ]
+          },
+          "dimensions": 3,
+          "facets": 1498,
+          "simple": true,
+          "vertices": 743
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 27,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.027",
+          "total": 27
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_03.stl",
+          "sha256": "164b37c1635b3b04124e6e0c219c2d4c47b609ef62f441dda282cf55b56e13d8",
+          "bytes": 324574
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_03.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_03.summary.json",
+      "component_index": 3
+    },
+    {
+      "id": "component_04",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_04.scad",
+      "source_sha256": "befe1bceef47a3f63e4859435b17c68f806a36c7c6343604ef39d5f01f0bd6b4",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_04_component_04.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_04.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_04.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.079,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
             "bytes": 2314250,
             "entries": 17,
             "max_size": 104857600
@@ -783,398 +784,38 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 14,
+          "milliseconds": 16,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.014",
-          "total": 14
+          "time": "0:00:00.016",
+          "total": 16
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_04.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_04.stl",
           "sha256": "714f9c379bbf242b79073d27976b529e00bf779c83e3b87b4607a26718d6fab7",
           "bytes": 320056
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_04.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_04.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_04.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_04.summary.json",
       "component_index": 4
     },
     {
       "id": "component_05",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_05.scad",
-      "source_sha256": "34f25b6d147c9f83d16399b9abbb152bbebeb18cb2e7d7e5993c32c85db8b269",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_05.scad",
+      "source_sha256": "4e9ef2fcedce32db631a50c2527519914f72985fbc557381a5088d2728875f08",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_05_component_05.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_05_component_05.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_05.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_05.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.054,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 520000,
-            "entries": 10,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 52360,
-            "entries": 7,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              -46.0,
-              -21.5,
-              23.5
-            ],
-            "min": [
-              -58.0,
-              -60.5,
-              11.5
-            ],
-            "size": [
-              12.0,
-              39.0,
-              12.0
-            ]
-          },
-          "dimensions": 3,
-          "facets": 412,
-          "simple": true,
-          "vertices": 208
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 2,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.002",
-          "total": 2
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_05.stl",
-          "sha256": "3cb1e0f9b9388bbcbe52913f4d16a7245181971d9e6ebe759273eff19bf1a762",
-          "bytes": 95104
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_05.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_05.summary.json",
-      "component_index": 5
-    },
-    {
-      "id": "component_06",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_06.scad",
-      "source_sha256": "6b36d9a8c577785ccfeb2964efd2b7e2bf5faa43793afb3c67891fd55637ff5e",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_06_component_06.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_06.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_06.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.053,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 520000,
-            "entries": 10,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 52360,
-            "entries": 7,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              58.0,
-              -21.5,
-              23.5
-            ],
-            "min": [
-              46.0,
-              -60.5,
-              11.5
-            ],
-            "size": [
-              12.0,
-              39.0,
-              12.0
-            ]
-          },
-          "dimensions": 3,
-          "facets": 412,
-          "simple": true,
-          "vertices": 208
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 2,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.002",
-          "total": 2
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_06.stl",
-          "sha256": "1b001ce99526b9950b2f6383725a4b209ac4863d21c1da528479a21fae96ea46",
-          "bytes": 93868
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_06.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_06.summary.json",
-      "component_index": 6
-    },
-    {
-      "id": "component_07",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_07.scad",
-      "source_sha256": "c02a4dcf37513aac39902adbe19c5221fcd93d712c01b14c0080db2a87e607c9",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_07_component_07.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_07.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_07.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.053,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 468000,
-            "entries": 9,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 52360,
-            "entries": 7,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              -46.0,
-              60.5,
-              23.5
-            ],
-            "min": [
-              -58.0,
-              21.5,
-              11.5
-            ],
-            "size": [
-              12.0,
-              39.0,
-              12.0
-            ]
-          },
-          "dimensions": 3,
-          "facets": 412,
-          "simple": true,
-          "vertices": 208
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 2,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.002",
-          "total": 2
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_07.stl",
-          "sha256": "7996f7fc22cbcfcfc31fc697179bf955cd23581c6230e276759636b1490684c0",
-          "bytes": 93680
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_07.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_07.summary.json",
-      "component_index": 7
-    },
-    {
-      "id": "component_08",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_08.scad",
-      "source_sha256": "8badf5e1da172101e3d784a514fba4ac4ee591b7e2a7189e3eee0dc761f7de9b",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_08_component_08.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_08.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_08.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.052,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 468000,
-            "entries": 9,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 52360,
-            "entries": 7,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              58.0,
-              60.5,
-              23.5
-            ],
-            "min": [
-              46.0,
-              21.5,
-              11.5
-            ],
-            "size": [
-              12.0,
-              39.0,
-              12.0
-            ]
-          },
-          "dimensions": 3,
-          "facets": 412,
-          "simple": true,
-          "vertices": 208
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 2,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.002",
-          "total": 2
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_08.stl",
-          "sha256": "08efbaa48fc8a4e82985b439df31564941fbb176dc262e6d88da355e214c8b45",
-          "bytes": 92444
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_08.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_08.summary.json",
-      "component_index": 8
-    },
-    {
-      "id": "component_09",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_09.scad",
-      "source_sha256": "4fe9f037d56e16b16c1a8780133febbbce82e0790276eba3e58f98a44130fe56",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_09_component_09.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_09.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_09.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_05.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_05.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.07,
@@ -1184,13 +825,13 @@
       "summary": {
         "cache": {
           "cgal_cache": {
-            "bytes": 4502000,
-            "entries": 13,
+            "bytes": 520000,
+            "entries": 10,
             "max_size": 104857600
           },
           "geometry_cache": {
-            "bytes": 289288,
-            "entries": 31,
+            "bytes": 52360,
+            "entries": 7,
             "max_size": 104857600
           }
         },
@@ -1211,76 +852,76 @@
         "geometry": {
           "bounding_box": {
             "max": [
-              -29.550974297576065,
-              -54.5,
-              39.94902570242394
+              -46.0,
+              -21.5,
+              23.5
             ],
             "min": [
-              -74.44902570242394,
-              -68.5,
-              -4.949025702423935
+              -58.0,
+              -60.5,
+              11.5
             ],
             "size": [
-              44.89805140484788,
-              14.0,
-              44.89805140484788
+              12.0,
+              39.0,
+              12.0
             ]
           },
           "dimensions": 3,
-          "facets": 3168,
+          "facets": 412,
           "simple": true,
-          "vertices": 1576
+          "vertices": 208
         },
         "time": {
           "hours": 0,
-          "milliseconds": 21,
+          "milliseconds": 2,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.021",
-          "total": 21
+          "time": "0:00:00.002",
+          "total": 2
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_09.stl",
-          "sha256": "f5efa58a3cfa7304159682143cafd20bf876a3084cd759a9c150faf1f975d709",
-          "bytes": 799054
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_05.stl",
+          "sha256": "3cb1e0f9b9388bbcbe52913f4d16a7245181971d9e6ebe759273eff19bf1a762",
+          "bytes": 95104
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_09.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_09.summary.json",
-      "component_index": 9
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_05.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_05.summary.json",
+      "component_index": 5
     },
     {
-      "id": "component_10",
+      "id": "component_06",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_10.scad",
-      "source_sha256": "a3373f1b6aff9951e0e3fc4ce6ae5c3dc0b83c068850e90c1c58305b3ff05503",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_06.scad",
+      "source_sha256": "d46f17c408d588abfc1f068db559f7d1d4e853a19805554c1016146f0493e2d6",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_10_component_10.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_06_component_06.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_10.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_10.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_06.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_06.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.074,
+      "elapsed_seconds": 0.055,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
       "summary": {
         "cache": {
           "cgal_cache": {
-            "bytes": 4502000,
-            "entries": 13,
+            "bytes": 520000,
+            "entries": 10,
             "max_size": 104857600
           },
           "geometry_cache": {
-            "bytes": 289288,
-            "entries": 31,
+            "bytes": 52360,
+            "entries": 7,
             "max_size": 104857600
           }
         },
@@ -1301,60 +942,240 @@
         "geometry": {
           "bounding_box": {
             "max": [
-              74.44902570242394,
-              -54.5,
-              39.94902570242394
+              58.0,
+              -21.5,
+              23.5
             ],
             "min": [
-              29.550974297576065,
-              -68.5,
-              -4.949025702423935
+              46.0,
+              -60.5,
+              11.5
             ],
             "size": [
-              44.89805140484788,
-              14.0,
-              44.89805140484788
+              12.0,
+              39.0,
+              12.0
             ]
           },
           "dimensions": 3,
-          "facets": 3168,
+          "facets": 412,
           "simple": true,
-          "vertices": 1576
+          "vertices": 208
         },
         "time": {
           "hours": 0,
-          "milliseconds": 22,
+          "milliseconds": 2,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.022",
-          "total": 22
+          "time": "0:00:00.002",
+          "total": 2
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_10.stl",
-          "sha256": "e3cff2fce97d3e00f9151830f2fde74030a2765ba950a07fb241e5eed853fb09",
-          "bytes": 789051
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_06.stl",
+          "sha256": "1b001ce99526b9950b2f6383725a4b209ac4863d21c1da528479a21fae96ea46",
+          "bytes": 93868
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_10.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_10.summary.json",
-      "component_index": 10
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_06.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_06.summary.json",
+      "component_index": 6
     },
     {
-      "id": "component_11",
+      "id": "component_07",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_11.scad",
-      "source_sha256": "dd59c5c65c48503b2e2b315980b2a943139084d9dd5eee3a0e9681a5f1d10f03",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_07.scad",
+      "source_sha256": "9748ca1119be2d03210b032be4fc8b91dae53aba1027210552b6982761ae0cf7",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_11_component_11.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_07_component_07.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_11.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_11.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_07.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_07.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.058,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 468000,
+            "entries": 9,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 52360,
+            "entries": 7,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              -46.0,
+              60.5,
+              23.5
+            ],
+            "min": [
+              -58.0,
+              21.5,
+              11.5
+            ],
+            "size": [
+              12.0,
+              39.0,
+              12.0
+            ]
+          },
+          "dimensions": 3,
+          "facets": 412,
+          "simple": true,
+          "vertices": 208
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 2,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.002",
+          "total": 2
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_07.stl",
+          "sha256": "7996f7fc22cbcfcfc31fc697179bf955cd23581c6230e276759636b1490684c0",
+          "bytes": 93680
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_07.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_07.summary.json",
+      "component_index": 7
+    },
+    {
+      "id": "component_08",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_08.scad",
+      "source_sha256": "3b7866958c5038eda84decb74c96d8d3c26779aae4f48f0a763aa95dabf3d329",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_08_component_08.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_08.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_08.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.057,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 468000,
+            "entries": 9,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 52360,
+            "entries": 7,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              58.0,
+              60.5,
+              23.5
+            ],
+            "min": [
+              46.0,
+              21.5,
+              11.5
+            ],
+            "size": [
+              12.0,
+              39.0,
+              12.0
+            ]
+          },
+          "dimensions": 3,
+          "facets": 412,
+          "simple": true,
+          "vertices": 208
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 2,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.002",
+          "total": 2
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_08.stl",
+          "sha256": "08efbaa48fc8a4e82985b439df31564941fbb176dc262e6d88da355e214c8b45",
+          "bytes": 92444
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_08.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_08.summary.json",
+      "component_index": 8
+    },
+    {
+      "id": "component_09",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_09.scad",
+      "source_sha256": "cb119c2bdb5730720609d6e69eac65ece025914caafafe9f46b21bff73738e3c",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_09_component_09.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_09.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_09.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.075,
@@ -1392,6 +1213,186 @@
           "bounding_box": {
             "max": [
               -29.550974297576065,
+              -54.5,
+              39.94902570242394
+            ],
+            "min": [
+              -74.44902570242394,
+              -68.5,
+              -4.949025702423935
+            ],
+            "size": [
+              44.89805140484788,
+              14.0,
+              44.89805140484788
+            ]
+          },
+          "dimensions": 3,
+          "facets": 3168,
+          "simple": true,
+          "vertices": 1576
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 20,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.020",
+          "total": 20
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_09.stl",
+          "sha256": "f5efa58a3cfa7304159682143cafd20bf876a3084cd759a9c150faf1f975d709",
+          "bytes": 799054
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_09.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_09.summary.json",
+      "component_index": 9
+    },
+    {
+      "id": "component_10",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_10.scad",
+      "source_sha256": "38496088f3d43427b706b53766fec28f532ab05d6ed44aa8ef1ec5d74a98be78",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_10_component_10.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_10.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_10.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.075,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 4502000,
+            "entries": 13,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 289288,
+            "entries": 31,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              74.44902570242394,
+              -54.5,
+              39.94902570242394
+            ],
+            "min": [
+              29.550974297576065,
+              -68.5,
+              -4.949025702423935
+            ],
+            "size": [
+              44.89805140484788,
+              14.0,
+              44.89805140484788
+            ]
+          },
+          "dimensions": 3,
+          "facets": 3168,
+          "simple": true,
+          "vertices": 1576
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 22,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.022",
+          "total": 22
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_10.stl",
+          "sha256": "e3cff2fce97d3e00f9151830f2fde74030a2765ba950a07fb241e5eed853fb09",
+          "bytes": 789051
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_10.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_10.summary.json",
+      "component_index": 10
+    },
+    {
+      "id": "component_11",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_11.scad",
+      "source_sha256": "033a0af4c040b277d5ff4a3d2c7615fbfc9ea2c5d2005e5c1ea6032b2c59be02",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_11_component_11.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_11.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_11.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.073,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 4502000,
+            "entries": 13,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 289288,
+            "entries": 31,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              -29.550974297576065,
               68.5,
               39.94902570242394
             ],
@@ -1413,38 +1414,38 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 23,
+          "milliseconds": 22,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.023",
-          "total": 23
+          "time": "0:00:00.022",
+          "total": 22
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_11.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_11.stl",
           "sha256": "efcbc7d523b462833a83e07b98424861b7ee2f1a11ea67dfeea771015407680f",
           "bytes": 788592
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_11.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_11.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_11.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_11.summary.json",
       "component_index": 11
     },
     {
       "id": "component_12",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_12.scad",
-      "source_sha256": "fbd6a4b75f5ad89c637c667290ac09a991537526d9df5f95ef719fa85ce91921",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_12.scad",
+      "source_sha256": "f301513721531cb07801cea34aa882cfd97afb85b1bf798952d3e94532381f06",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_12_component_12.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_12_component_12.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_12.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_12.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_12.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_12.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.073,
@@ -1513,31 +1514,31 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_12.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_12.stl",
           "sha256": "ce7795ec03fcbf82279f04d66ac27e9a9d5fe030bc9256c975eea39265279e73",
           "bytes": 778591
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_12.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_12.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_12.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_12.summary.json",
       "component_index": 12
     },
     {
       "id": "component_13",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_13.scad",
-      "source_sha256": "6c4f5398243558865844c86cf9df723cd351fdf525ea0b8e69f7a252906f47b9",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_13.scad",
+      "source_sha256": "9071bcd073263a12c5faad64d5a5b39b221b768760ad66ccc78eb7193ded4967",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_13_component_13.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_13_component_13.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_13.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_13.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_13.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_13.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.076,
+      "elapsed_seconds": 0.078,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -1593,41 +1594,41 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 23,
+          "milliseconds": 24,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.023",
-          "total": 23
+          "time": "0:00:00.024",
+          "total": 24
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_13.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_13.stl",
           "sha256": "a67b7ee93e823170dd8b88c8acc7960958b5fa2ce648929c54a9d908cbff605c",
           "bytes": 896428
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_13.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_13.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_13.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_13.summary.json",
       "component_index": 13
     },
     {
       "id": "component_14",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_14.scad",
-      "source_sha256": "bc4d6deb81f61bd02b58867aa1552ef9de653726bde78d6adddf27a9e735f021",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_14.scad",
+      "source_sha256": "8bca0200c1ec01fdd282ac7173184fb3a53d2e9862658a63d1db8000405882d7",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_14_component_14.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_14_component_14.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_14.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_14.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_14.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_14.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.072,
+      "elapsed_seconds": 0.075,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -1683,128 +1684,38 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 22,
+          "milliseconds": 23,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.022",
-          "total": 22
+          "time": "0:00:00.023",
+          "total": 23
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_14.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_14.stl",
           "sha256": "18ac2670698e172d68b8ccbcdab3863c918b16653f2e96e673adede511c76ad4",
           "bytes": 885891
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_14.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_14.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_14.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_14.summary.json",
       "component_index": 14
     },
     {
       "id": "component_15",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_15.scad",
-      "source_sha256": "b6eb25aac65cef77c73917404d83424d268a27048e55787e22bce8d752e90c47",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_15.scad",
+      "source_sha256": "22dae4aae645a969176dca44fc8dee624430a8e62c7c0a2788836335d6308af6",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_15_component_15.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_15_component_15.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_15.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_15.scad"
-      ],
-      "returncode": 0,
-      "elapsed_seconds": 0.073,
-      "diagnostics": [],
-      "missing_or_empty_outputs": [],
-      "summary_valid": true,
-      "summary": {
-        "cache": {
-          "cgal_cache": {
-            "bytes": 5474500,
-            "entries": 15,
-            "max_size": 104857600
-          },
-          "geometry_cache": {
-            "bytes": 242000,
-            "entries": 26,
-            "max_size": 104857600
-          }
-        },
-        "camera": {
-          "distance": 140.0,
-          "fov": 22.5,
-          "rotation": [
-            55.0,
-            0.0,
-            25.0
-          ],
-          "translation": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "geometry": {
-          "bounding_box": {
-            "max": [
-              -37.0,
-              64.5,
-              32.5
-            ],
-            "min": [
-              -67.0,
-              54.5,
-              2.5
-            ],
-            "size": [
-              30.0,
-              10.0,
-              30.0
-            ]
-          },
-          "dimensions": 3,
-          "facets": 3434,
-          "simple": true,
-          "vertices": 1707
-        },
-        "time": {
-          "hours": 0,
-          "milliseconds": 21,
-          "minutes": 0,
-          "seconds": 0,
-          "time": "0:00:00.021",
-          "total": 21
-        }
-      },
-      "success": true,
-      "artifacts": [
-        {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_15.stl",
-          "sha256": "fab7ea889bda683429634c7602a8aff665edb5cdb3559925e87831624b5ee5ae",
-          "bytes": 885896
-        }
-      ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_15.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_15.summary.json",
-      "component_index": 15
-    },
-    {
-      "id": "component_16",
-      "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_16.scad",
-      "source_sha256": "66a0bfaa2b682b3df6b747ab24883c8fd888e6aaaab5df9b3d2e31208a5abc86",
-      "command": [
-        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
-        "--backend=Manifold",
-        "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_16_component_16.stl",
-        "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_16.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_16.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_15.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_15.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.074,
@@ -1841,6 +1752,96 @@
         "geometry": {
           "bounding_box": {
             "max": [
+              -37.0,
+              64.5,
+              32.5
+            ],
+            "min": [
+              -67.0,
+              54.5,
+              2.5
+            ],
+            "size": [
+              30.0,
+              10.0,
+              30.0
+            ]
+          },
+          "dimensions": 3,
+          "facets": 3434,
+          "simple": true,
+          "vertices": 1707
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 22,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.022",
+          "total": 22
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_15.stl",
+          "sha256": "fab7ea889bda683429634c7602a8aff665edb5cdb3559925e87831624b5ee5ae",
+          "bytes": 885896
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_15.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_15.summary.json",
+      "component_index": 15
+    },
+    {
+      "id": "component_16",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_16.scad",
+      "source_sha256": "b489ab93591ad0ce12ece7d7fe66d7896389a4ac37244f1444ffc092b21c84d9",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_16_component_16.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_16.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_16.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.075,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 5474500,
+            "entries": 15,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 242000,
+            "entries": 26,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
               67.0,
               64.5,
               32.5
@@ -1873,31 +1874,31 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_16.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_16.stl",
           "sha256": "aa4e22dd707cbc912d5b4198644383535184a9464d562729ea4a2f02e5def054",
           "bytes": 875352
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_16.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_16.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_16.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_16.summary.json",
       "component_index": 16
     },
     {
       "id": "component_17",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_17.scad",
-      "source_sha256": "c50dea04356004e08e32d54c1cb0aa3cf0699cf670b40ff7742adf1c3bb9a861",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_17.scad",
+      "source_sha256": "f47759fb4c8d3b6fb28560808d2b46c9800b9ceebf58425593c2a4227c50a2ff",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_17_component_17.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_17_component_17.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_17.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_17.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_17.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_17.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.068,
+      "elapsed_seconds": 0.07,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -1963,44 +1964,44 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_17.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_17.stl",
           "sha256": "86789a763dee43cb752d49746dacb754f0e85c089c99e7c65acbc75cff49431a",
           "bytes": 769409
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_17.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_17.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_17.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_17.summary.json",
       "component_index": 17
     },
     {
       "id": "component_18",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_18.scad",
-      "source_sha256": "e6fe08ee2a9be93a6c3886e3aae19dee6a64a74e2c52537638fd4f2c9a0413ad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_18.scad",
+      "source_sha256": "242f16828c1537460a102d999f31b8a85f200256dabc75d4bdadf477d5eb7d6a",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_18_component_18.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_18_component_18.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_18.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_18.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_18.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_18.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.085,
+      "elapsed_seconds": 0.089,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
       "summary": {
         "cache": {
           "cgal_cache": {
-            "bytes": 6847000,
-            "entries": 18,
+            "bytes": 7999000,
+            "entries": 19,
             "max_size": 104857600
           },
           "geometry_cache": {
-            "bytes": 425824,
-            "entries": 28,
+            "bytes": 491072,
+            "entries": 32,
             "max_size": 104857600
           }
         },
@@ -2037,47 +2038,47 @@
             ]
           },
           "dimensions": 3,
-          "facets": 4352,
+          "facets": 5128,
           "simple": true,
-          "vertices": 2156
+          "vertices": 2540
         },
         "time": {
           "hours": 0,
-          "milliseconds": 32,
+          "milliseconds": 35,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.032",
-          "total": 32
+          "time": "0:00:00.035",
+          "total": 35
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_18.stl",
-          "sha256": "6c5fd6509968be8ae90b37b6643f8dbe1bf54badf1b4d0e37382fdbdc7f99a53",
-          "bytes": 995777
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_18.stl",
+          "sha256": "43142a5268c4aaf5a64bdbccae6a8930d9874f9034395c6b88ee6f60e41a61e6",
+          "bytes": 1174850
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_18.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_18.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_18.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_18.summary.json",
       "component_index": 18
     },
     {
       "id": "component_19",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_19.scad",
-      "source_sha256": "ddcb82b07e5f584d0fa42371623a81646be31c4597287cb94683803a310525b0",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_19.scad",
+      "source_sha256": "06a5706b85989136bc6fd238ddf03c73e6b7c06e671e0abfad470b308864f1f5",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_19_component_19.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_19_component_19.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_19.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_19.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_19.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_19.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.055,
+      "elapsed_seconds": 0.057,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2133,41 +2134,41 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 4,
+          "milliseconds": 5,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.004",
-          "total": 4
+          "time": "0:00:00.005",
+          "total": 5
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_19.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_19.stl",
           "sha256": "ef4b212920ea499dce3d8931315361e873809da1005e596c652dcfb91dd8131d",
           "bytes": 182167
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_19.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_19.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_19.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_19.summary.json",
       "component_index": 19
     },
     {
       "id": "component_20",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_20.scad",
-      "source_sha256": "3e1e65b00e196f736232749d793143a1ffdae7ac27a1df87c5655dc3a183eecc",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_20.scad",
+      "source_sha256": "e8bbf91a6043ed0c958a9ed8c359bf9ae874eafc81f76160552ad3531197990f",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_20_component_20.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_20_component_20.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_20.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_20.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_20.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_20.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.055,
+      "elapsed_seconds": 0.054,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2233,31 +2234,31 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_20.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_20.stl",
           "sha256": "3146db27bdbcfe12967361919af6a8b750407ca1c8c7de13d8e295cab9a89464",
           "bytes": 179858
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_20.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_20.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_20.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_20.summary.json",
       "component_index": 20
     },
     {
       "id": "component_21",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_21.scad",
-      "source_sha256": "0023b97aece5464879f3a36376c223f84706af24c5c279f1a94d6aa9a9e1347f",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_21.scad",
+      "source_sha256": "7a3b33b54ed4d67be761ecdfd37e196df79a84c5f881540e545d98e6bdc6f3b8",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_21_component_21.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_21_component_21.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_21.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_21.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_21.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_21.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.054,
+      "elapsed_seconds": 0.056,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2313,41 +2314,41 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 3,
+          "milliseconds": 4,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.003",
-          "total": 3
+          "time": "0:00:00.004",
+          "total": 4
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_21.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_21.stl",
           "sha256": "e391ccfa167f3d43f8a6e9ff9c15d2a1816c981f84bc0bef8c5796b2709cd94a",
           "bytes": 179863
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_21.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_21.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_21.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_21.summary.json",
       "component_index": 21
     },
     {
       "id": "component_22",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_22.scad",
-      "source_sha256": "fe8d3c513afe4d4aaf5d33d106326e67b00a6b8ad302e538a7931185c0cb3916",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_22.scad",
+      "source_sha256": "e799c9e57bc8a2c1ee546fe03365c67fe81e617a6f7219e6b0a49c26d8a624dc",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_22_component_22.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_22_component_22.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_22.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_22.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_22.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_22.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.054,
+      "elapsed_seconds": 0.055,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2413,31 +2414,31 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_22.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_22.stl",
           "sha256": "f0e4f1db7fd2c1695a2bf9abec2b56dc05246dd832d01b4311992943ba82b646",
           "bytes": 177554
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_22.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_22.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_22.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_22.summary.json",
       "component_index": 22
     },
     {
       "id": "component_23",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_23.scad",
-      "source_sha256": "5b9d08c86e250275dedfd028ad23b97f8ceca6e8db32ee98f14731699efcffbd",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_23.scad",
+      "source_sha256": "f5968b06ebc3d0007dba8a7439ec48276aa0589bdaeb5df9d710c339bec2d636",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_23_component_23.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_23_component_23.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_23.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_23.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_23.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_23.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.06,
+      "elapsed_seconds": 0.065,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2503,31 +2504,31 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_23.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_23.stl",
           "sha256": "3dae81980c13da1ce9c8f24b6882c7587fe89206cfaa2806e787397b31bf4d39",
           "bytes": 452259
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_23.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_23.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_23.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_23.summary.json",
       "component_index": 23
     },
     {
       "id": "component_24",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_24.scad",
-      "source_sha256": "dde211b2ec2a3521073c1d9dadc1d044082a2e9b7255a1c61d2a9e3565bd678e",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_24.scad",
+      "source_sha256": "c6c516bede6f6ad2a1102c7909c27c7b29efb8c1834a97af238360fbc3105716",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_24_component_24.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_24_component_24.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_24.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_24.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_24.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_24.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.063,
+      "elapsed_seconds": 0.067,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2583,41 +2584,41 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 12,
+          "milliseconds": 15,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.012",
-          "total": 12
+          "time": "0:00:00.015",
+          "total": 15
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_24.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_24.stl",
           "sha256": "1ee0120626436e61ccc0d06eaaf8e9d481da23f559192b1fe83e26ebb9815389",
           "bytes": 416647
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_24.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_24.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_24.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_24.summary.json",
       "component_index": 24
     },
     {
       "id": "component_25",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_25.scad",
-      "source_sha256": "b2b167d52bde77ae0bc512021340b57e3f33bbae2b46254a89fe73b785d4ba82",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_25.scad",
+      "source_sha256": "0fcfa4cf08ae90ceb1dd1f8f93650e41111a84729985cf4a39aa4f3008f69b6c",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_25_component_25.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_25_component_25.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_25.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_25.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_25.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_25.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.071,
+      "elapsed_seconds": 0.074,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2673,38 +2674,38 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 20,
+          "milliseconds": 22,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.020",
-          "total": 20
+          "time": "0:00:00.022",
+          "total": 22
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_25.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_25.stl",
           "sha256": "9b6d577613f7a3a743983ae96968691733c0e32e7729958731b464b62a2861b4",
           "bytes": 537673
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_25.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_25.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_25.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_25.summary.json",
       "component_index": 25
     },
     {
       "id": "component_26",
       "role": "placed_assembly_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_26.scad",
-      "source_sha256": "a0e2f9fcc44f214381921693968398e45801f961af6178d8a519e41275f0545f",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_26.scad",
+      "source_sha256": "8d698e9c2a3f42984aaf1242cb997b9f2f5cb4a7d3cff7e9d81d5a68fc13b739",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_26_component_26.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_26_component_26.stl",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/component_26.summary.json",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_26.scad"
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_26.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_26.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.064,
@@ -2773,31 +2774,121 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/components/component_26.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_26.stl",
           "sha256": "7d7e597005eed98139ffda74788a2d35968a05f86c058347d64e781a3381a62a",
           "bytes": 263275
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_26.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/component_26.summary.json",
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_26.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_26.summary.json",
       "component_index": 26
+    },
+    {
+      "id": "component_27",
+      "role": "placed_assembly_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_27.scad",
+      "source_sha256": "ef044630ccfd439b4d48f053a3859d2b04a2270041c0ca422faab1bf46c3a892",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_27_component_27.stl",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/component_27.summary.json",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_27.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.063,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 3415000,
+            "entries": 27,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 181096,
+            "entries": 31,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 140.0,
+          "fov": 22.5,
+          "rotation": [
+            55.0,
+            0.0,
+            25.0
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              61.4,
+              47.4,
+              58.0
+            ],
+            "min": [
+              16.6,
+              17.6,
+              41.0
+            ],
+            "size": [
+              44.8,
+              29.799999999999997,
+              17.0
+            ]
+          },
+          "dimensions": 3,
+          "facets": 1382,
+          "simple": true,
+          "vertices": 681
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 10,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.010",
+          "total": 10
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/components/component_27.stl",
+          "sha256": "cb2c49bf586db94a5e31befec2e1de22b13827c3a13669196693788424a73593",
+          "bytes": 291838
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_27.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/component_27.summary.json",
+      "component_index": 27
     },
     {
       "id": "esp32_tray",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/esp32_tray.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/esp32_tray.scad",
       "source_sha256": "a832708c0a69bbed834f02696380c8ea5679fce2f40ebebb0f3669a194e1af82",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/esp32_tray_esp32_tray.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/esp32_tray_esp32_tray.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/esp32_tray_esp32_tray.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/esp32_tray_esp32_tray.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/esp32_tray_esp32_tray.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/esp32_tray_esp32_tray.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/esp32_tray.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/esp32_tray.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -2805,10 +2896,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/esp32_tray.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/esp32_tray.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.192,
+      "elapsed_seconds": 0.194,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2864,50 +2955,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 126,
+          "milliseconds": 125,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.126",
-          "total": 126
+          "time": "0:00:00.125",
+          "total": 125
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/esp32_tray.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/esp32_tray.stl",
           "sha256": "9cbc459d14b4919b41e37daed4d5612bfbf2cd23d6fee949bda27f697ad230b7",
           "bytes": 446942
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/esp32_tray.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/esp32_tray.csg",
           "sha256": "1891b01197ca57cbf156542835f1b2051bf98e4fce41cfb302551058efd2587d",
           "bytes": 1935
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/esp32_tray.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/esp32_tray.png",
           "sha256": "41cbafddd40bab1bde5bde0cbd2f808b41057c0fdd9702c019b2818af857bcd5",
           "bytes": 50313
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/esp32_tray.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/esp32_tray.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/esp32_tray.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/esp32_tray.summary.json"
     },
     {
       "id": "fit_coupon",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/fit_coupon.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/fit_coupon.scad",
       "source_sha256": "03486d4ff962acf5be4be7966d42381a533c137bf376b1933e43981c6769d758",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/fit_coupon_fit_coupon.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/fit_coupon_fit_coupon.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/fit_coupon_fit_coupon.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/fit_coupon_fit_coupon.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/fit_coupon_fit_coupon.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/fit_coupon_fit_coupon.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/fit_coupon.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/fit_coupon.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -2915,10 +3006,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/fit_coupon.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/fit_coupon.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.191,
+      "elapsed_seconds": 0.193,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -2974,50 +3065,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 125,
+          "milliseconds": 124,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.125",
-          "total": 125
+          "time": "0:00:00.124",
+          "total": 124
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/fit_coupon.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/fit_coupon.stl",
           "sha256": "27b20971d6a98c902e53de9b3bfbb9bfae5a753560963efb05df819edde1e7aa",
           "bytes": 538852
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/fit_coupon.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/fit_coupon.csg",
           "sha256": "bd3129da18064c2d49e166a84a40f0958690dd6d45267990ad54b5640d0c6c8c",
           "bytes": 1743
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/fit_coupon.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/fit_coupon.png",
           "sha256": "d5f86d6c83051fcbfc190c5f627d50046bd5847023240976b390c44f66a46bb5",
           "bytes": 48733
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/fit_coupon.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/fit_coupon.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/fit_coupon.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/fit_coupon.summary.json"
     },
     {
       "id": "front_bumper",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/front_bumper.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/front_bumper.scad",
       "source_sha256": "0e52815bc4c21d7f9dc015d86f9fe478b0f0165c55144c37b8029ae291b3b110",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/front_bumper_front_bumper.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/front_bumper_front_bumper.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/front_bumper_front_bumper.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/front_bumper_front_bumper.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/front_bumper_front_bumper.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/front_bumper_front_bumper.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/front_bumper.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/front_bumper.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3025,10 +3116,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/front_bumper.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/front_bumper.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.181,
+      "elapsed_seconds": 0.183,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -3084,50 +3175,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 114,
+          "milliseconds": 117,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.114",
-          "total": 114
+          "time": "0:00:00.117",
+          "total": 117
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/front_bumper.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/front_bumper.stl",
           "sha256": "9a759d4ccb3333d561ebff9bb94ae9d06cba24f32166a189232b5250f9afa2c8",
           "bytes": 262518
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/front_bumper.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/front_bumper.csg",
           "sha256": "6bd07c28f9d8154299ac56adbeb193054d6834298e083175dc464739de0d1284",
           "bytes": 1524
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/front_bumper.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/front_bumper.png",
           "sha256": "459c392622a9504bb3aea5cdc3a3fb402b38c9a982bd17118078ad126048fa82",
           "bytes": 44061
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/front_bumper.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/front_bumper.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/front_bumper.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/front_bumper.summary.json"
     },
     {
       "id": "n20_motor_mount",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/n20_motor_mount.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/n20_motor_mount.scad",
       "source_sha256": "d5522a0b38fe4bed27a7e5096b15364a06d2b7730bbe088d494d7f89c9c30096",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/n20_motor_mount_n20_motor_mount.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/n20_motor_mount_n20_motor_mount.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/n20_motor_mount_n20_motor_mount.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/n20_motor_mount_n20_motor_mount.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/n20_motor_mount_n20_motor_mount.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/n20_motor_mount_n20_motor_mount.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/n20_motor_mount.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/n20_motor_mount.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3135,10 +3226,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/n20_motor_mount.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/n20_motor_mount.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.186,
+      "elapsed_seconds": 0.189,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -3194,50 +3285,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 118,
+          "milliseconds": 120,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.118",
-          "total": 118
+          "time": "0:00:00.120",
+          "total": 120
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/n20_motor_mount.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/n20_motor_mount.stl",
           "sha256": "10f20064415ef2aac7b03eb60c057f9c216a5fbb0765f355fe3c1bc3bcd374d2",
           "bytes": 327903
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/n20_motor_mount.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/n20_motor_mount.csg",
           "sha256": "a40a3ad73d787ceb19d414d0bbcf6228e26e07131431327b10f2687a6f81b9c7",
           "bytes": 2587
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/n20_motor_mount.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/n20_motor_mount.png",
           "sha256": "4f80a9c80bfa474ef585f864e38c85d9c3938270bfeba88ed8ba3e20b63620ad",
           "bytes": 55761
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/n20_motor_mount.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/n20_motor_mount.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/n20_motor_mount.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/n20_motor_mount.summary.json"
     },
     {
       "id": "standoffs",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/standoffs.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/standoffs.scad",
       "source_sha256": "4cf75b77d956d567364d26fc1e6870b6823648cffe52d65fa6917a9aa6ecee47",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/standoffs_standoffs.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/standoffs_standoffs.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/standoffs_standoffs.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/standoffs_standoffs.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/standoffs_standoffs.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/standoffs_standoffs.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/standoffs.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/standoffs.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3245,10 +3336,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/standoffs.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/standoffs.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.186,
+      "elapsed_seconds": 0.188,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -3304,50 +3395,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 125,
+          "milliseconds": 127,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.125",
-          "total": 125
+          "time": "0:00:00.127",
+          "total": 127
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/standoffs.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/standoffs.stl",
           "sha256": "d08115f09de939dfcf14b0b2b34e5f89b7e5ebf9088b8cd13b84d6de02d885c8",
           "bytes": 710767
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/standoffs.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/standoffs.csg",
           "sha256": "925a2810e1dd9a8ae63d91b25ab604ceb330fa6d7d9d48e7a94bd3e0f6a9e395",
           "bytes": 1663
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/standoffs.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/standoffs.png",
           "sha256": "47cee6763f24702b54580a1fac64f9b5d9d5caf93cf0996a9db7bac04baa493b",
           "bytes": 48736
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/standoffs.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/standoffs.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/standoffs.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/standoffs.summary.json"
     },
     {
       "id": "tof_sensor_bar",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/tof_sensor_bar.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/tof_sensor_bar.scad",
       "source_sha256": "c679a7a4611fbb76f9d550bc24b8e1874f74f0aa7a51b85ed5c1b2e86f9ecea5",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/tof_sensor_bar_tof_sensor_bar.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/tof_sensor_bar_tof_sensor_bar.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/tof_sensor_bar_tof_sensor_bar.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/tof_sensor_bar_tof_sensor_bar.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/tof_sensor_bar_tof_sensor_bar.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/tof_sensor_bar_tof_sensor_bar.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/tof_sensor_bar.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/tof_sensor_bar.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3355,10 +3446,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/tof_sensor_bar.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/tof_sensor_bar.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.191,
+      "elapsed_seconds": 0.193,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -3414,50 +3505,50 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 119,
+          "milliseconds": 118,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.119",
-          "total": 119
+          "time": "0:00:00.118",
+          "total": 118
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/tof_sensor_bar.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/tof_sensor_bar.stl",
           "sha256": "040ccf74e824955563df6ba4cc0c21badd4356dcfc386a538b545460dc760905",
           "bytes": 535226
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/tof_sensor_bar.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/tof_sensor_bar.csg",
           "sha256": "4e602443e96d50cd128fb75923fe4b53b63864aab89447d8bfe175979ec2abcf",
           "bytes": 3659
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/tof_sensor_bar.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/tof_sensor_bar.png",
           "sha256": "181adfee68b49816211d9f5ea667fff3cd3ea7ca026b81a807de47fa1c14cd36",
           "bytes": 62500
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/tof_sensor_bar.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/tof_sensor_bar.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/tof_sensor_bar.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/tof_sensor_bar.summary.json"
     },
     {
       "id": "top_cover",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/top_cover.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/top_cover.scad",
       "source_sha256": "b7a4e158442b2476d8bead701a17f03a33c6ff53f053a27a847e95ccc720ad16",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/top_cover_top_cover.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/top_cover_top_cover.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/top_cover_top_cover.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/top_cover_top_cover.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/top_cover_top_cover.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/top_cover_top_cover.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/top_cover.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/top_cover.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3465,23 +3556,23 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/top_cover.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/top_cover.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.199,
+      "elapsed_seconds": 0.215,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
       "summary": {
         "cache": {
           "cgal_cache": {
-            "bytes": 2535000,
-            "entries": 10,
+            "bytes": 2919000,
+            "entries": 11,
             "max_size": 104857600
           },
           "geometry_cache": {
-            "bytes": 425824,
-            "entries": 28,
+            "bytes": 491072,
+            "entries": 32,
             "max_size": 104857600
           }
         },
@@ -3518,56 +3609,56 @@
             ]
           },
           "dimensions": 3,
-          "facets": 4352,
+          "facets": 5128,
           "simple": true,
-          "vertices": 2156
+          "vertices": 2540
         },
         "time": {
           "hours": 0,
-          "milliseconds": 112,
+          "milliseconds": 126,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.112",
-          "total": 112
+          "time": "0:00:00.126",
+          "total": 126
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/top_cover.stl",
-          "sha256": "2da6565e75371d8369fdb3c2948789e997c2a9c6e7db81419ec23a0d82b9aa02",
-          "bytes": 982721
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/top_cover.stl",
+          "sha256": "c388fe3b879dfe8c41185e965d849e1e0155ff3992998aec0a2029045df78f18",
+          "bytes": 1159466
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/top_cover.csg",
-          "sha256": "385d34dbe20fe7151a659615267e820fb8d479466a74f98d784e4b6dd8f0101e",
-          "bytes": 3491
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/top_cover.csg",
+          "sha256": "546b91cc5cd6a73f06c301b2e5fece1eade634b9c0d65d4b17ebcef1da074ab0",
+          "bytes": 3913
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/top_cover.png",
-          "sha256": "9b620f80a9f03a218458aba998d2c38fcca662fec7c8be77b938830b53ae4279",
-          "bytes": 50179
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/top_cover.png",
+          "sha256": "ce65e666899fd627bdf8a898a3ebe396e1490433f354581d7c69a5a0d735bd9c",
+          "bytes": 50728
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/top_cover.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/top_cover.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/top_cover.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/top_cover.summary.json"
     },
     {
-      "id": "visual_assembly",
-      "role": "visual_only_assembly_not_for_printing",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.scad",
-      "source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+      "id": "usb_c_charger_mount",
+      "role": "printable_component",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/usb_c_charger_mount.scad",
+      "source_sha256": "a9d1631af8491922740acaef95be14f6fcb3443c9bf1761fe0932cea0e0c2bd3",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/visual_assembly_cute_rover_complete.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/usb_c_charger_mount_usb_c_charger_mount.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/visual_assembly_cute_rover_complete.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/usb_c_charger_mount_usb_c_charger_mount.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/visual_assembly_cute_rover_assembled_preview.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/usb_c_charger_mount_usb_c_charger_mount.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/visual_assembly.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/usb_c_charger_mount.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3575,23 +3666,133 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/usb_c_charger_mount.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.524,
+      "elapsed_seconds": 0.182,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
       "summary": {
         "cache": {
           "cgal_cache": {
-            "bytes": 104164750,
-            "entries": 377,
+            "bytes": 861250,
+            "entries": 12,
             "max_size": 104857600
           },
           "geometry_cache": {
-            "bytes": 3321760,
-            "entries": 285,
+            "bytes": 181096,
+            "entries": 31,
+            "max_size": 104857600
+          }
+        },
+        "camera": {
+          "distance": 144.61930302916542,
+          "fov": 22.5,
+          "rotation": [
+            63.26136712927479,
+            0.0,
+            319.0856167799749
+          ],
+          "translation": [
+            0.0,
+            0.0,
+            8.5
+          ]
+        },
+        "geometry": {
+          "bounding_box": {
+            "max": [
+              22.4,
+              14.9,
+              17.0
+            ],
+            "min": [
+              -22.4,
+              -14.9,
+              0.0
+            ],
+            "size": [
+              44.8,
+              29.8,
+              17.0
+            ]
+          },
+          "dimensions": 3,
+          "facets": 1382,
+          "simple": true,
+          "vertices": 681
+        },
+        "time": {
+          "hours": 0,
+          "milliseconds": 119,
+          "minutes": 0,
+          "seconds": 0,
+          "time": "0:00:00.119",
+          "total": 119
+        }
+      },
+      "success": true,
+      "artifacts": [
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/usb_c_charger_mount.stl",
+          "sha256": "977394caa28c5329538ae1b677a6a01a00a50a404ea4113ba93c3c6f94a38e1d",
+          "bytes": 295774
+        },
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/usb_c_charger_mount.csg",
+          "sha256": "0c51abf75f99894bc4402500a93a73078dd3ca3d9a12fbc4fd812ee72ba86082",
+          "bytes": 3282
+        },
+        {
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/usb_c_charger_mount.png",
+          "sha256": "d110509ab7e61097010b2fb21c1d06d03e2a59a032d7e6b9a45ce7c8210e09cd",
+          "bytes": 54958
+        }
+      ],
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/usb_c_charger_mount.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/usb_c_charger_mount.summary.json"
+    },
+    {
+      "id": "visual_assembly",
+      "role": "visual_only_assembly_not_for_printing",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_complete.scad",
+      "source_sha256": "5b93f8ecde6941c00b0bfbacb356c0b4777d9e04ad2e35564c2c5153b0b3768a",
+      "command": [
+        "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
+        "--backend=Manifold",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/visual_assembly_cute_rover_complete.stl",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/visual_assembly_cute_rover_complete.csg",
+        "-o",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/visual_assembly_cute_rover_assembled_preview.png",
+        "--summary=all",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/visual_assembly.summary.json",
+        "--imgsize=1800,1400",
+        "--camera=-260,-300,220,0,0,20",
+        "--projection=o",
+        "--viewall",
+        "--autocenter",
+        "--render=1",
+        "--colorscheme=Tomorrow",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_complete.scad"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.569,
+      "diagnostics": [],
+      "missing_or_empty_outputs": [],
+      "summary_valid": true,
+      "summary": {
+        "cache": {
+          "cgal_cache": {
+            "bytes": 103778250,
+            "entries": 392,
+            "max_size": 104857600
+          },
+          "geometry_cache": {
+            "bytes": 3535480,
+            "entries": 318,
             "max_size": 104857600
           }
         },
@@ -3628,56 +3829,56 @@
             ]
           },
           "dimensions": 3,
-          "facets": 54322,
+          "facets": 56098,
           "simple": true,
-          "vertices": 26993
+          "vertices": 27869
         },
         "time": {
           "hours": 0,
-          "milliseconds": 135,
+          "milliseconds": 144,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.135",
-          "total": 135
+          "time": "0:00:00.144",
+          "total": 144
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.stl",
-          "sha256": "9e6df2c52fc28eedc1dde0e6dbd8d8732b24cb6b56b08858ac7b3afaebeea5d0",
-          "bytes": 13091064
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_complete.stl",
+          "sha256": "8af8b695f9d2d0af31e3b962c76b8dd932841b0d91a0c62951b24bfef4acc223",
+          "bytes": 13484363
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_complete.csg",
-          "sha256": "10f43e8df25b1d8299901b2ff99c8b0db2edd99c787df7a547ae897df0af3ade",
-          "bytes": 95467
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_complete.csg",
+          "sha256": "772bf3f3723642740c26982ea6f6ec9af493e16afdc0da5408254c3f1f13985a",
+          "bytes": 101629
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/cute_rover_assembled_preview.png",
-          "sha256": "b742de3ba6cbba016b22764f6801c4949980e89eb7ab08b26dce7a8a4b5cd9fb",
-          "bytes": 91314
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/cute_rover_assembled_preview.png",
+          "sha256": "e369127d21ab4cdb90434ddf13b994e6c67ba3156c9653ca29699e1f1f2d588d",
+          "bytes": 92453
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/visual_assembly.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/visual_assembly.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/visual_assembly.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/visual_assembly.summary.json"
     },
     {
       "id": "wheel",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel.scad",
       "source_sha256": "2b29c96cbfd372318f2fac61024d8d0c5cc87b56c32dde208d356d0c4b3acded",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_wheel.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_wheel.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_wheel.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_wheel.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_wheel.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_wheel.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3685,7 +3886,7 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel.scad"
       ],
       "returncode": 0,
       "elapsed_seconds": 0.195,
@@ -3754,40 +3955,40 @@
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel.stl",
           "sha256": "9a74b145dc0fe445edaf7130ad3ae4c63616474ab1a4324ba9500147d3338d32",
           "bytes": 783347
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel.csg",
           "sha256": "b21447ea61c4df4307f68421b76039efea68be7e0146289dc5d4ede7bad34f38",
           "bytes": 4758
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel.png",
           "sha256": "3eaf5cb863580bb683651373e5256eca881966afae0f7b2734f115925f5fd582",
           "bytes": 52480
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/wheel.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/wheel.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/wheel.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/wheel.summary.json"
     },
     {
       "id": "wheel_hub_adapter",
       "role": "printable_component",
-      "source": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad",
+      "source": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad",
       "source_sha256": "655f9c6d797cfe49c40567f0576d0b6126c99d991ff73fb13ed5baa02ecebebe",
       "command": [
         "/private/tmp/cute-OpenSCAD.app/Contents/MacOS/OpenSCAD",
         "--backend=Manifold",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_hub_adapter_wheel_hub_adapter.stl",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_hub_adapter_wheel_hub_adapter.stl",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_hub_adapter_wheel_hub_adapter.csg",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_hub_adapter_wheel_hub_adapter.csg",
         "-o",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_hub_adapter_wheel_hub_adapter.png",
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_hub_adapter_wheel_hub_adapter.png",
         "--summary=all",
-        "--summary-file=/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/.export_cad_rqyo2kbo/wheel_hub_adapter.summary.json",
+        "--summary-file=/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/.export_cad___n93z34/wheel_hub_adapter.summary.json",
         "--imgsize=1800,1400",
         "--camera=-260,-300,220,0,0,20",
         "--projection=o",
@@ -3795,10 +3996,10 @@
         "--autocenter",
         "--render=1",
         "--colorscheme=Tomorrow",
-        "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad"
+        "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/parts/wheel_hub_adapter.scad"
       ],
       "returncode": 0,
-      "elapsed_seconds": 0.19,
+      "elapsed_seconds": 0.194,
       "diagnostics": [],
       "missing_or_empty_outputs": [],
       "summary_valid": true,
@@ -3854,33 +4055,33 @@
         },
         "time": {
           "hours": 0,
-          "milliseconds": 116,
+          "milliseconds": 121,
           "minutes": 0,
           "seconds": 0,
-          "time": "0:00:00.116",
-          "total": 116
+          "time": "0:00:00.121",
+          "total": 121
         }
       },
       "success": true,
       "artifacts": [
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel_hub_adapter.stl",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel_hub_adapter.stl",
           "sha256": "072ddd3b5fe89b40b628eab898dfeb519f6d4e235d632ac9f031c90e070f792b",
           "bytes": 864766
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel_hub_adapter.csg",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel_hub_adapter.csg",
           "sha256": "6d89846d7d35b63ca29b67c5e11363a2720a1aff879a9224be2ef40be2d31dac",
           "bytes": 2491
         },
         {
-          "path": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/exports/wheel_hub_adapter.png",
+          "path": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/exports/wheel_hub_adapter.png",
           "sha256": "54152f0c105505b0c4f346e90761e2d54fc757f409572bcd0f3f3fe4d8b71311",
           "bytes": 51064
         }
       ],
-      "log": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/wheel_hub_adapter.log",
-      "summary_file": "/Users/shanmukhan/Developer/repo/rover_cad_complete/01_Cute_N20_4WD/audit/render_logs/wheel_hub_adapter.summary.json"
+      "log": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/wheel_hub_adapter.log",
+      "summary_file": "/Users/shanmukhan/Developer/repo/robocar/01_Cute_N20_4WD/audit/render_logs/wheel_hub_adapter.summary.json"
     }
   ],
   "source_unchanged_during_export": true,

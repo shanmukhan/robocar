@@ -11,13 +11,14 @@ Start with the [CAD audit](audit/CAD_AUDIT.md), [print guide](audit/PRINT_GUIDE.
 - Nominal chassis ground clearance 5 mm; displayed treaded-mesh clearance 4.949 mm, excluding hardware protrusions.
 - 120 × 76 × 3 mm electronics deck at Z=38, supported by four 34 mm spacers.
 - Floor-backed lower battery tray, generic controller carrier, upright camera carrier, three forward sensor apertures and a mounted bumper.
+- Rear-right USB-C charger cradle for the SoBotz SBTZ00017 2S/8.4 V module; two mating deck holes, board seats, tie channels and rear cable access. See [module recommendation and wiring](USB_C_CHARGING.md).
 - Front is **−X**; wheel/shaft axes are along Y.
 
 ## Files
 
 `cute_rover_complete.scad` is authoritative. `parts/*.scad` select individual geometry with matching `$fn=96`; wheel/camera/ToF wrappers apply practical print rotations.
 
-[exports/](exports/) contains **12 STL/CSG/PNG sets**: 11 vehicle part types and one optional fit coupon. Every mesh is closed and manifold; `standoffs.stl` intentionally includes four separate spacers. A [prototype print pack](cute_rover_prototype_print_pack.zip) includes the individual exports, sources, guide and previews. Quantities and dimensions are in [printable_parts.csv](audit/printable_parts.csv).
+[exports/](exports/) contains **13 STL/CSG/PNG sets**: 12 vehicle part types and one optional fit coupon. Every mesh is closed and manifold; `standoffs.stl` intentionally includes four separate spacers. A [prototype print pack](cute_rover_prototype_print_pack.zip) includes the individual exports, sources, guide and previews. Quantities and dimensions are in [printable_parts.csv](audit/printable_parts.csv).
 
 **Do not print `cute_rover_complete.stl` or `parts/assembly.scad`.** The complete assembly includes generic motor envelopes and contacting assembled pieces. Use only individual print exports after checking the guide and actual hardware.
 
@@ -28,6 +29,8 @@ Start with the [CAD audit](audit/CAD_AUDIT.md), [print guide](audit/PRINT_GUIDE.
 Measure motor can and gearbox lengths separately, widths/heights, shaft axis/diameter/flat/usable length, front pilot and terminals. Update `N20_BODY_*`, `N20_GEARBOX_*`, `N20_SHAFT_*` and mating clearances accordingly; the original 25 mm can + 6 mm gearbox and 8 mm shaft are generic placeholders.
 
 Select and measure the battery, ESP32-S3/camera, three ToF breakouts, both drivers, regulator, switch and connectors. Their complete mounting, wiring and insertion paths are not verified by this generic CAD. Print a coupon and one motor/wheel/hub fit set before the full vehicle.
+
+The charger cradle uses the seller's 39 × 18 × 6.3 mm module envelope. Print it and the updated deck; measure the actual PCB, USB-C plug and tie paths before final assembly. Charge a protected, balanced **2S Li-ion/LiPo** pack with the rover switched off; the module itself does not balance cells. Details and checks are in [USB_C_CHARGING.md](USB_C_CHARGING.md).
 
 Wheel bolts need **14 mm effective under-head length** (M3×14, or M3×16 with 2 mm head-side spacers); unspaced M3×16 tips collide with the saddles. The radial lock uses a **headless M3 grub screw**. Confirm actual nut/thread fit, retention and wheel runout.
 

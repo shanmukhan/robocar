@@ -1,8 +1,8 @@
 # Cute N20 4WD — corrected mechanical review
 
-Reviewed 2026-10-09 (India). Current master source SHA-256:
+Reviewed 2026-10-10 (India), including charger addition. Current master source SHA-256:
 
-`ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0`
+`5b93f8ecde6941c00b0bfbacb356c0b4777d9e04ad2e35564c2c5153b0b3768a`
 
 The corrected **default generic geometry** has coherent mating positions, a viable assembly sequence, and clear nominal fastener/tool access under the assumptions below. It is a prototype release: exact motor, battery, PCB, tyre material, printer fit and load capacity remain unverified. The previous revision and its defects are recorded separately in [INITIAL_FINDINGS.md](INITIAL_FINDINGS.md).
 
@@ -90,3 +90,9 @@ PETG is suitable for the documented prototype intent; actual extrusion width, la
 - Re-export and revalidate after parameter changes. Several board/support coordinates and tool-probe assumptions are explicit values for the default configuration; changing chassis, wheel, motor or carrier dimensions requires renewed mating, thin-wall, fastener-length and interference checks.
 
 This review supports the corrected **generic CAD and conditional prototype exports**. It does not authorize treating unresolved component interfaces as frozen manufacturing drawings.
+
+## USB-C charging cradle
+
+The rear-right cradle and deck share two M3 holes at (27,28.5) and (51,28.5). The 3 mm floor seats on Z=41; a 39×18×6.3 mm module is reserved above Z=48, with 0.5 mm lateral clearance. Two underside 1.4 mm tie channels keep the installed deck clear of the retaining ties. The floor retains 1.6 mm above these 2.8 mm bridges and 1.3 mm outside the tie slots.
+
+[Charger access checks](charger_access_results.json) pass the declared module envelope, rear 14×8×30 mm plug insertion path, vertical PCB lift, M3×10 hardware and pre-PCB tool access, and installed-deck tie routes. The 18 mm wide boot control collides as expected. [USB_C_CHARGING.md](../USB_C_CHARGING.md) records module selection, electrical requirements, printing and remaining actual-fit checks.

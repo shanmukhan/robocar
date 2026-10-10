@@ -7,9 +7,9 @@ import trimesh
 import manifold3d as m
 from mesh_metrics import inspect
 PROJECT=Path(__file__).resolve().parents[2]
-NAMES=['base']+[f'mount_{i}' for i in range(4)]+[f'motor_envelope_{i}' for i in range(4)]+[f'wheel_{i}' for i in range(4)]+[f'hub_{i}' for i in range(4)]+['battery','deck']+[f'standoff_{i}' for i in range(4)]+['esp_carrier','camera','tof','bumper']
+NAMES=['base']+[f'mount_{i}' for i in range(4)]+[f'motor_envelope_{i}' for i in range(4)]+[f'wheel_{i}' for i in range(4)]+[f'hub_{i}' for i in range(4)]+['battery','deck']+[f'standoff_{i}' for i in range(4)]+['esp_carrier','camera','tof','bumper','usb_c_charger_mount']
 EXPECTED_SOLIDS={'standoffs':4}
-LOCAL_FOR_INDEX={0:'base_plate',17:'battery_tray',18:'top_cover',23:'esp32_tray',24:'camera_mount',25:'tof_sensor_bar',26:'front_bumper'}
+LOCAL_FOR_INDEX={0:'base_plate',17:'battery_tray',18:'top_cover',23:'esp32_tray',24:'camera_mount',25:'tof_sensor_bar',26:'front_bumper',27:'usb_c_charger_mount'}
 LOCAL_FOR_INDEX.update({i:'n20_motor_mount' for i in range(1,5)})
 LOCAL_FOR_INDEX.update({i:'wheel' for i in range(9,13)})
 LOCAL_FOR_INDEX.update({i:'wheel_hub_adapter' for i in range(13,17)})
@@ -35,6 +35,7 @@ def matrix(i):
     elif i==24:a[:3,3]=[-48,0,41]
     elif i==25:a[:3,3]=[-80,0,4]
     elif i==26:a[:3,3]=[-87,0,4]
+    elif i==27:a[:3,3]=[39,32.5,41]
     return a
 
 def main():
@@ -65,7 +66,7 @@ def main():
     found={Path(p['path']).stem for p in parts}
     if required!=found:failures.append(f'Export set mismatch: required={sorted(required)}, found={sorted(found)}')
     placed=[];solids=[];component_reports=[]
-    for i in range(27):
+    for i in range(len(NAMES)):
         p=PROJECT/'audit'/'components'/f'component_{i:02d}.stl'
         mesh=load_mesh(p);placed.append(mesh);solids.append(solid(mesh))
         rr=inspect(p);rr['path']=str(p.relative_to(PROJECT));rr['name']=NAMES[i]
@@ -100,7 +101,7 @@ def main():
             delta=abs((solid(expected)-solids[19+j]).volume())+abs((solids[19+j]-solid(expected)).volume())
             if delta>0.02:failures.append('Spacer geometry differs between pack and assembly')
     intersections=[];pairs=0;excluded_aabb=0
-    for i,j in itertools.combinations(range(27),2):
+    for i,j in itertools.combinations(range(len(NAMES)),2):
         pairs+=1
         low=np.maximum(placed[i].bounds[0],placed[j].bounds[0]);high=np.minimum(placed[i].bounds[1],placed[j].bounds[1])
         if np.any(high<=low+1e-8):excluded_aabb+=1;continue
@@ -115,12 +116,12 @@ def main():
     # unplug wiring/remove ties, then remove that wheel+hub before lifting.
     # Only declared envelopes can be checked; real harnesses remain unknown.
     for i in list(range(5,9))+[17]:
-        removed={18,23,24,i}
+        removed={18,23,24,27,i}
         if i<9:removed.update({i+4,i+8})
         max_overlap=0.;tested=0
         for dz in [0.25,1,2,5,10,20,40]:
             moving=placed[i].copy();moving.apply_translation([0,0,dz]);ms=solid(moving)
-            for j in set(range(27))-removed:
+            for j in set(range(len(NAMES)))-removed:
                 if np.any(np.minimum(moving.bounds[1],placed[j].bounds[1])<=np.maximum(moving.bounds[0],placed[j].bounds[0])+1e-8):continue
                 tested+=1;overlap=abs((ms^solids[j]).volume());max_overlap=max(max_overlap,overlap)
         passed=max_overlap<0.001
@@ -133,7 +134,7 @@ def main():
         for angle in range(0,360,30):
             axis=trimesh.transformations.rotation_matrix(np.deg2rad(angle),[0,1,0],centre)
             moving=placed[wi].copy();moving.apply_transform(axis);ms=solid(moving)
-            for j in set(range(27))-{wi,wi+4}:
+            for j in set(range(len(NAMES)))-{wi,wi+4}:
                 if np.any(np.minimum(moving.bounds[1],placed[j].bounds[1])<=np.maximum(moving.bounds[0],placed[j].bounds[0])+1e-8):continue
                 tested+=1;overlap=abs((ms^solids[j]).volume());max_overlap=max(max_overlap,overlap)
         passed=max_overlap<0.001
@@ -141,7 +142,7 @@ def main():
         if not passed:failures.append(f'Wheel rotation interference: {NAMES[wi]}')
     base=placed[0]; wheel_bounds=np.vstack([placed[i].bounds for i in range(9,13)])
     envelope=np.vstack([x.bounds for x in placed]);minimum=envelope.min(0);maximum=envelope.max(0)
-    result={'method':'OpenSCAD F6 source exports; exact-coordinate topology without repair; manifold3d solid Boolean differences/intersections of all 27 independently exported assembly components. Mating surface contact is intentional. Small numeric volume threshold 0.001 mm3. Placement expectations are an independent record of the audited DEFAULT configuration; updating parameters requires updating these expectations.',
+    result={'method':'OpenSCAD F6 source exports; exact-coordinate topology without repair; manifold3d solid Boolean differences/intersections of all 28 independently exported assembly components. Mating surface contact is intentional. Small numeric volume threshold 0.001 mm3. Placement expectations are an independent record of the audited DEFAULT configuration; updating parameters requires updating these expectations.',
         'scope_limitations':['No purchased hardware dimensions or physical prints are available. Motors are only conservative generic envelopes, not selected component meshes.','No screw/nut/PCB/battery/cable physical envelopes are certified; tolerance, loads, torque and retention need measured fit tests.','Closed topology and Boolean import do not independently prove absence of every triangle self-intersection; OpenSCAD full solid evaluation and independent Boolean operations provide further evidence.','Slicer/G-code and real printer support/bridging/warping results are not certified.'],
         'versions':{n:importlib.metadata.version(n) for n in ['trimesh','manifold3d','numpy']},
         'master_source_sha256':hashlib.sha256((PROJECT/'cute_rover_complete.scad').read_bytes()).hexdigest(),

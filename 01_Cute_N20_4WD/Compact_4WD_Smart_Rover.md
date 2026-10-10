@@ -1,7 +1,7 @@
 # Compact 4WD Smart Rover
 
 **Project status:** CAD geometry audited; hardware fit, electronics integration and physical printing remain unverified  
-**Document date:** 2026-10-09
+**Document date:** 2026-10-10
 
 ## 1. Purpose
 
@@ -83,6 +83,8 @@ Initial baseline was **2S (7.4 V nominal) rechargeable battery**. Exact capacity
 
 Use a regulator with adequate current margin and keep motor wiring separated from sensitive sensor/camera wiring where practical.
 
+Built-in USB-C charging now has a dedicated rear-right cradle and matching upper-deck holes. The recommended [SoBotz SBTZ00017 2S module](https://sobotz.com/en/product/charging-module/) is 39 × 18 × 6.3 mm, charges to 8.4 V, and ships configured for approximately 0.55 A battery current. Use a protected, balanced 2S Li-ion/LiPo pack and charge with the rover off; this module has no cell balancing. The charger connects to the pack's approved protected charge terminals, upstream of the rover load switch. See [USB-C charging integration](USB_C_CHARGING.md) for the source, STL, plug access and wiring. Actual purchased fit remains unverified.
+
 ## 8. CAD lessons
 
 Earlier conceptual CAD had wheel-placement/assembly problems. The corrected process is:
@@ -109,6 +111,7 @@ Earlier conceptual CAD had wheel-placement/assembly problems. The corrected proc
 - camera mount
 - one generic three-position ToF carrier
 - battery tray
+- USB-C charger cradle — SoBotz SBTZ00017 envelope; rear-facing access and under-floor tie routes
 - power switch mount — unverified and not supplied in current CAD
 - front bumper; decorative side covers are not supplied
 
@@ -124,7 +127,8 @@ PETG is the preferred general-purpose prototype material; PLA is acceptable for 
 | 1 | ESP32-S3 camera board | Exact board to be frozen |
 | 3 | VL53L0X | ToF |
 | 1 | 2S battery | Capacity to be selected |
-| 1 | Matching charger | Chemistry-specific |
+| 1 | USB-C 2S charger module | SoBotz SBTZ00017; 8.4 V, ~0.55 A charging; no cell balancing |
+| 1 | 5 V USB supply and cable | ≥1 A input supply; verify actual USB-C cable compatibility |
 | 1 | 5 V/logic regulator | Adequate current margin |
 | 1 | Fuse | Size from measured current |
 | 1 | Power switch | DC-rated |

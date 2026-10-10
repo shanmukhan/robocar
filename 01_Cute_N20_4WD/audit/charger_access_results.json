@@ -1,0 +1,636 @@
+{
+  "generated_at_utc": "2026-10-10T10:58:29.234859+00:00",
+  "master_source_sha256": "5b93f8ecde6941c00b0bfbacb356c0b4777d9e04ad2e35564c2c5153b0b3768a",
+  "method": "Independent default dimensions; manifold3d Boolean intersections against all 28 source-exported assembly components. Contact planes allowed; interference threshold 0.001 mm3.",
+  "limitations": [
+    "Board and plug are reserved bounding boxes; PCB underside, USB connector offset, solder pads, actual plug, cable bend and tie routes require measurement.",
+    "Electrical charge/protection/balancing and physical fit/strength are not certified by these geometric checks.",
+    "Fastener tool check assumes PCB is fitted after the carrier screws; actual hardware must match the modeled dimensions."
+  ],
+  "checks": [
+    {
+      "name": "Published 39x18x6.3 mm board envelope at edge seats",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          48.0
+        ],
+        [
+          58.5,
+          41.5,
+          54.3
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 0 mm",
+      "bounds_mm": [
+        [
+          58.5,
+          25.5,
+          46.5
+        ],
+        [
+          88.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 0.5 mm",
+      "bounds_mm": [
+        [
+          59.0,
+          25.5,
+          46.5
+        ],
+        [
+          89.0,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 1 mm",
+      "bounds_mm": [
+        [
+          59.5,
+          25.5,
+          46.5
+        ],
+        [
+          89.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 2 mm",
+      "bounds_mm": [
+        [
+          60.5,
+          25.5,
+          46.5
+        ],
+        [
+          90.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 5 mm",
+      "bounds_mm": [
+        [
+          63.5,
+          25.5,
+          46.5
+        ],
+        [
+          93.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 10 mm",
+      "bounds_mm": [
+        [
+          68.5,
+          25.5,
+          46.5
+        ],
+        [
+          98.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 20 mm",
+      "bounds_mm": [
+        [
+          78.5,
+          25.5,
+          46.5
+        ],
+        [
+          108.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "Rear 14x8x30 mm plug reservation, insertion offset 30 mm",
+      "bounds_mm": [
+        [
+          88.5,
+          25.5,
+          46.5
+        ],
+        [
+          118.5,
+          39.5,
+          54.5
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "Board vertical service lift 0.25 mm after releasing ties",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          48.25
+        ],
+        [
+          58.5,
+          41.5,
+          54.55
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Board vertical service lift 1 mm after releasing ties",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          49.0
+        ],
+        [
+          58.5,
+          41.5,
+          55.3
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Board vertical service lift 5 mm after releasing ties",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          53.0
+        ],
+        [
+          58.5,
+          41.5,
+          59.3
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Board vertical service lift 10 mm after releasing ties",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          58.0
+        ],
+        [
+          58.5,
+          41.5,
+          64.3
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "Board vertical service lift 30 mm after releasing ties",
+      "bounds_mm": [
+        [
+          19.5,
+          23.5,
+          78.0
+        ],
+        [
+          58.5,
+          41.5,
+          84.3
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "M3x10 shaft at (27,28.5)",
+      "bounds_mm": [
+        [
+          25.5,
+          27.0,
+          34.0
+        ],
+        [
+          28.5,
+          30.0,
+          44.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "deck",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        },
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 head at (27,28.5)",
+      "bounds_mm": [
+        [
+          23.7,
+          25.2,
+          44.0
+        ],
+        [
+          30.3,
+          31.8,
+          47.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 1.6653345369377348e-15,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 tool access before installing PCB at (27,28.5)",
+      "bounds_mm": [
+        [
+          23.7,
+          25.2,
+          44.0
+        ],
+        [
+          30.3,
+          31.8,
+          64.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 1.6653345369377348e-15,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 nut under deck at (27,28.5)",
+      "bounds_mm": [
+        [
+          23.709103465619133,
+          25.65,
+          35.3
+        ],
+        [
+          30.290896534380867,
+          31.35,
+          38.0
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "M3 head vs board at X=27",
+      "volume_mm3": 0.0,
+      "vertical_clearance_mm": 1,
+      "pass": true
+    },
+    {
+      "name": "M3x10 shaft at (51,28.5)",
+      "bounds_mm": [
+        [
+          49.5,
+          27.0,
+          34.0
+        ],
+        [
+          52.5,
+          30.0,
+          44.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "deck",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        },
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 head at (51,28.5)",
+      "bounds_mm": [
+        [
+          47.7,
+          25.2,
+          44.0
+        ],
+        [
+          54.3,
+          31.8,
+          47.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 2.0539125955565396e-15,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 tool access before installing PCB at (51,28.5)",
+      "bounds_mm": [
+        [
+          47.7,
+          25.2,
+          44.0
+        ],
+        [
+          54.3,
+          31.8,
+          64.0
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 2.0539125955565396e-15,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "M3 nut under deck at (51,28.5)",
+      "bounds_mm": [
+        [
+          47.70910346561913,
+          25.65,
+          35.3
+        ],
+        [
+          54.29089653438087,
+          31.35,
+          38.0
+        ]
+      ],
+      "tested_overlaps": [],
+      "pass": true
+    },
+    {
+      "name": "M3 head vs board at X=51",
+      "volume_mm3": 0.0,
+      "vertical_clearance_mm": 1,
+      "pass": true
+    },
+    {
+      "name": "Tie slot through floor (33,19.6)",
+      "bounds_mm": [
+        [
+          31.61,
+          18.91,
+          40.9
+        ],
+        [
+          34.39,
+          20.290000000000003,
+          44.1
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Tie slot through floor (33,45.4)",
+      "bounds_mm": [
+        [
+          31.61,
+          44.71,
+          40.9
+        ],
+        [
+          34.39,
+          46.089999999999996,
+          44.1
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Tie under-floor channel at X=33, clear of installed deck",
+      "bounds_mm": [
+        [
+          31.61,
+          18.909999999999997,
+          41.010000000000005
+        ],
+        [
+          34.39,
+          46.09,
+          42.39
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Tie slot through floor (45,19.6)",
+      "bounds_mm": [
+        [
+          43.61,
+          18.91,
+          40.9
+        ],
+        [
+          46.39,
+          20.290000000000003,
+          44.1
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Tie slot through floor (45,45.4)",
+      "bounds_mm": [
+        [
+          43.61,
+          44.71,
+          40.9
+        ],
+        [
+          46.39,
+          46.089999999999996,
+          44.1
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Tie under-floor channel at X=45, clear of installed deck",
+      "bounds_mm": [
+        [
+          43.61,
+          18.909999999999997,
+          41.010000000000005
+        ],
+        [
+          46.39,
+          46.09,
+          42.39
+        ]
+      ],
+      "tested_overlaps": [
+        {
+          "part": "usb_c_charger_mount",
+          "volume_mm3": 0.0,
+          "status": "Error.NoError"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "Control: 18 mm wide boot collides with rear guard",
+      "volume_mm3": 77.54999999999993,
+      "pass": true
+    }
+  ],
+  "passed": true
+}

@@ -1,5 +1,5 @@
 {
-  "method": "OpenSCAD F6 source exports; exact-coordinate topology without repair; manifold3d solid Boolean differences/intersections of all 27 independently exported assembly components. Mating surface contact is intentional. Small numeric volume threshold 0.001 mm3. Placement expectations are an independent record of the audited DEFAULT configuration; updating parameters requires updating these expectations.",
+  "method": "OpenSCAD F6 source exports; exact-coordinate topology without repair; manifold3d solid Boolean differences/intersections of all 28 independently exported assembly components. Mating surface contact is intentional. Small numeric volume threshold 0.001 mm3. Placement expectations are an independent record of the audited DEFAULT configuration; updating parameters requires updating these expectations.",
   "scope_limitations": [
     "No purchased hardware dimensions or physical prints are available. Motors are only conservative generic envelopes, not selected component meshes.",
     "No screw/nut/PCB/battery/cable physical envelopes are certified; tolerance, loads, torque and retention need measured fit tests.",
@@ -11,7 +11,7 @@
     "manifold3d": "3.5.4",
     "numpy": "2.5.3"
   },
-  "master_source_sha256": "ab20425c38f1885bc060f11dfb80747b556f0968cb03b06d3ba99658b2f7b2e0",
+  "master_source_sha256": "5b93f8ecde6941c00b0bfbacb356c0b4777d9e04ad2e35564c2c5153b0b3768a",
   "printable_parts": [
     {
       "path": "exports/base_plate.stl",
@@ -699,11 +699,11 @@
     },
     {
       "path": "exports/top_cover.stl",
-      "sha256": "2da6565e75371d8369fdb3c2948789e997c2a9c6e7db81419ec23a0d82b9aa02",
-      "bytes": 982721,
-      "triangles": 4352,
-      "raw_vertices": 13056,
-      "exact_welded_vertices": 2156,
+      "sha256": "c388fe3b879dfe8c41185e965d849e1e0155ff3992998aec0a2029045df78f18",
+      "bytes": 1159466,
+      "triangles": 5128,
+      "raw_vertices": 15384,
+      "exact_welded_vertices": 2540,
       "bounds_mm": [
         [
           -60.0,
@@ -724,14 +724,14 @@
       "watertight": true,
       "winding_consistent": true,
       "is_volume": true,
-      "signed_volume_mm3": 26015.269602624354,
+      "signed_volume_mm3": 25960.833270103514,
       "positive_volume": true,
-      "surface_area_mm2": 19042.12928593378,
+      "surface_area_mm2": 19069.915449384724,
       "connected_face_components": 1,
       "connected_closed_positive_solids": 1,
       "components": [
         {
-          "triangles": 4352,
+          "triangles": 5128,
           "bounds_mm": [
             [
               -60.0,
@@ -746,10 +746,10 @@
           ],
           "watertight": true,
           "winding_consistent": true,
-          "signed_volume_mm3": 26015.26960262435
+          "signed_volume_mm3": 25960.83327010352
         }
       ],
-      "exact_welded_edges": 6528,
+      "exact_welded_edges": 7692,
       "boundary_edges_incidence_1": 0,
       "nonmanifold_edges_incidence_gt2": 0,
       "maximum_edge_incidence": 2,
@@ -761,9 +761,79 @@
       "finite_vertex_coordinates": true,
       "manifold3d_import_status": "Error.NoError",
       "manifold3d_import_empty": false,
-      "manifold3d_import_triangles": 4352,
-      "manifold3d_import_volume_mm3": 26015.26960262435,
-      "csg_sha256": "385d34dbe20fe7151a659615267e820fb8d479466a74f98d784e4b6dd8f0101e",
+      "manifold3d_import_triangles": 5128,
+      "manifold3d_import_volume_mm3": 25960.833270103518,
+      "csg_sha256": "546b91cc5cd6a73f06c301b2e5fece1eade634b9c0d65d4b17ebcef1da074ab0",
+      "expected_solids": 1,
+      "pass": true
+    },
+    {
+      "path": "exports/usb_c_charger_mount.stl",
+      "sha256": "977394caa28c5329538ae1b677a6a01a00a50a404ea4113ba93c3c6f94a38e1d",
+      "bytes": 295774,
+      "triangles": 1382,
+      "raw_vertices": 4146,
+      "exact_welded_vertices": 681,
+      "bounds_mm": [
+        [
+          -22.4,
+          -14.9,
+          0.0
+        ],
+        [
+          22.4,
+          14.9,
+          17.0
+        ]
+      ],
+      "extents_mm": [
+        44.8,
+        29.8,
+        17.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5965.125718088307,
+      "positive_volume": true,
+      "surface_area_mm2": 5131.231055562381,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1382,
+          "bounds_mm": [
+            [
+              -22.4,
+              -14.9,
+              0.0
+            ],
+            [
+              22.4,
+              14.9,
+              17.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5965.125718088307
+        }
+      ],
+      "exact_welded_edges": 2073,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1382,
+      "manifold3d_import_volume_mm3": 5965.125718088308,
+      "csg_sha256": "0c51abf75f99894bc4402500a93a73078dd3ca3d9a12fbc4fd812ee72ba86082",
       "expected_solids": 1,
       "pass": true
     },
@@ -2135,11 +2205,11 @@
     },
     {
       "path": "audit/components/component_18.stl",
-      "sha256": "6c5fd6509968be8ae90b37b6643f8dbe1bf54badf1b4d0e37382fdbdc7f99a53",
-      "bytes": 995777,
-      "triangles": 4352,
-      "raw_vertices": 13056,
-      "exact_welded_vertices": 2156,
+      "sha256": "43142a5268c4aaf5a64bdbccae6a8930d9874f9034395c6b88ee6f60e41a61e6",
+      "bytes": 1174850,
+      "triangles": 5128,
+      "raw_vertices": 15384,
+      "exact_welded_vertices": 2540,
       "bounds_mm": [
         [
           -60.0,
@@ -2160,14 +2230,14 @@
       "watertight": true,
       "winding_consistent": true,
       "is_volume": true,
-      "signed_volume_mm3": 26015.269602624354,
+      "signed_volume_mm3": 25960.833270103514,
       "positive_volume": true,
-      "surface_area_mm2": 19042.12928593378,
+      "surface_area_mm2": 19069.915449384724,
       "connected_face_components": 1,
       "connected_closed_positive_solids": 1,
       "components": [
         {
-          "triangles": 4352,
+          "triangles": 5128,
           "bounds_mm": [
             [
               -60.0,
@@ -2182,10 +2252,10 @@
           ],
           "watertight": true,
           "winding_consistent": true,
-          "signed_volume_mm3": 26015.26960262435
+          "signed_volume_mm3": 25960.83327010352
         }
       ],
-      "exact_welded_edges": 6528,
+      "exact_welded_edges": 7692,
       "boundary_edges_incidence_1": 0,
       "nonmanifold_edges_incidence_gt2": 0,
       "maximum_edge_incidence": 2,
@@ -2197,8 +2267,8 @@
       "finite_vertex_coordinates": true,
       "manifold3d_import_status": "Error.NoError",
       "manifold3d_import_empty": false,
-      "manifold3d_import_triangles": 4352,
-      "manifold3d_import_volume_mm3": 26015.269602624343,
+      "manifold3d_import_triangles": 5128,
+      "manifold3d_import_volume_mm3": 25960.833270103507,
       "name": "deck"
     },
     {
@@ -2744,6 +2814,74 @@
       "manifold3d_import_triangles": 1184,
       "manifold3d_import_volume_mm3": 7866.482080474161,
       "name": "bumper"
+    },
+    {
+      "path": "audit/components/component_27.stl",
+      "sha256": "cb2c49bf586db94a5e31befec2e1de22b13827c3a13669196693788424a73593",
+      "bytes": 291838,
+      "triangles": 1382,
+      "raw_vertices": 4146,
+      "exact_welded_vertices": 681,
+      "bounds_mm": [
+        [
+          16.6,
+          17.6,
+          41.0
+        ],
+        [
+          61.4,
+          47.4,
+          58.0
+        ]
+      ],
+      "extents_mm": [
+        44.8,
+        29.799999999999997,
+        17.0
+      ],
+      "watertight": true,
+      "winding_consistent": true,
+      "is_volume": true,
+      "signed_volume_mm3": 5965.125718088305,
+      "positive_volume": true,
+      "surface_area_mm2": 5131.231055562381,
+      "connected_face_components": 1,
+      "connected_closed_positive_solids": 1,
+      "components": [
+        {
+          "triangles": 1382,
+          "bounds_mm": [
+            [
+              16.6,
+              17.6,
+              41.0
+            ],
+            [
+              61.4,
+              47.4,
+              58.0
+            ]
+          ],
+          "watertight": true,
+          "winding_consistent": true,
+          "signed_volume_mm3": 5965.125718088305
+        }
+      ],
+      "exact_welded_edges": 2073,
+      "boundary_edges_incidence_1": 0,
+      "nonmanifold_edges_incidence_gt2": 0,
+      "maximum_edge_incidence": 2,
+      "all_edges_have_two_faces": true,
+      "nonmanifold_edge_examples": [],
+      "duplicate_faces_ignoring_winding": 0,
+      "zero_area_faces": 0,
+      "near_degenerate_faces_area_le_1e_12_mm2": 0,
+      "finite_vertex_coordinates": true,
+      "manifold3d_import_status": "Error.NoError",
+      "manifold3d_import_empty": false,
+      "manifold3d_import_triangles": 1382,
+      "manifold3d_import_volume_mm3": 5965.125718088306,
+      "name": "usb_c_charger_mount"
     }
   ],
   "local_placed_equivalence": [
@@ -2863,7 +3001,7 @@
       "component": "deck",
       "local_export": "top_cover",
       "symmetric_difference_mm3": 0.0,
-      "tolerance_mm3": 0.5203053920524869,
+      "tolerance_mm3": 0.5192166654020702,
       "max_bounds_error_mm": 0.0,
       "pass": true
     },
@@ -2898,10 +3036,18 @@
       "tolerance_mm3": 0.15732964160948323,
       "max_bounds_error_mm": 0.0,
       "pass": true
+    },
+    {
+      "component": "usb_c_charger_mount",
+      "local_export": "usb_c_charger_mount",
+      "symmetric_difference_mm3": 0.0,
+      "tolerance_mm3": 0.11930251436176613,
+      "max_bounds_error_mm": 0.0,
+      "pass": true
     }
   ],
-  "assembly_pair_count": 351,
-  "pairs_excluded_by_nonoverlapping_aabbs": 322,
+  "assembly_pair_count": 378,
+  "pairs_excluded_by_nonoverlapping_aabbs": 349,
   "boolean_intersections": [
     {
       "a": "mount_0",
@@ -3321,11 +3467,11 @@
   "static_ground_clearance_mm": 4.949025702423935,
   "visual_assembly_mesh": {
     "path": "cute_rover_complete.stl",
-    "sha256": "9e6df2c52fc28eedc1dde0e6dbd8d8732b24cb6b56b08858ac7b3afaebeea5d0",
-    "bytes": 13091064,
-    "triangles": 54322,
-    "raw_vertices": 162966,
-    "exact_welded_vertices": 26993,
+    "sha256": "8af8b695f9d2d0af31e3b962c76b8dd932841b0d91a0c62951b24bfef4acc223",
+    "bytes": 13484363,
+    "triangles": 56098,
+    "raw_vertices": 168294,
+    "exact_welded_vertices": 27869,
     "bounds_mm": [
       [
         -89.0,
@@ -3346,14 +3492,14 @@
     "watertight": true,
     "winding_consistent": true,
     "is_volume": true,
-    "signed_volume_mm3": 254252.95776053154,
+    "signed_volume_mm3": 260163.64714609899,
     "positive_volume": true,
-    "surface_area_mm2": 127408.98266416203,
+    "surface_area_mm2": 131058.67921888297,
     "connected_face_components": 5,
     "connected_closed_positive_solids": 5,
     "components": [
       {
-        "triangles": 30282,
+        "triangles": 32058,
         "bounds_mm": [
           [
             -89.0,
@@ -3368,7 +3514,7 @@
         ],
         "watertight": true,
         "winding_consistent": true,
-        "signed_volume_mm3": 175879.48817028778
+        "signed_volume_mm3": 181790.17755585522
       },
       {
         "triangles": 6010,
@@ -3381,42 +3527,6 @@
           [
             -29.550974297576065,
             -54.5,
-            39.94902570242394
-          ]
-        ],
-        "watertight": true,
-        "winding_consistent": true,
-        "signed_volume_mm3": 19593.36739756093
-      },
-      {
-        "triangles": 6010,
-        "bounds_mm": [
-          [
-            29.550974297576065,
-            -68.5,
-            -4.949025702423935
-          ],
-          [
-            74.44902570242394,
-            -54.5,
-            39.94902570242394
-          ]
-        ],
-        "watertight": true,
-        "winding_consistent": true,
-        "signed_volume_mm3": 19593.367397560924
-      },
-      {
-        "triangles": 6010,
-        "bounds_mm": [
-          [
-            -74.44902570242394,
-            54.5,
-            -4.949025702423935
-          ],
-          [
-            -29.550974297576065,
-            68.5,
             39.94902570242394
           ]
         ],
@@ -3429,6 +3539,42 @@
         "bounds_mm": [
           [
             29.550974297576065,
+            -68.5,
+            -4.949025702423935
+          ],
+          [
+            74.44902570242394,
+            -54.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.36739756093
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            -74.44902570242394,
+            54.5,
+            -4.949025702423935
+          ],
+          [
+            -29.550974297576065,
+            68.5,
+            39.94902570242394
+          ]
+        ],
+        "watertight": true,
+        "winding_consistent": true,
+        "signed_volume_mm3": 19593.36739756093
+      },
+      {
+        "triangles": 6010,
+        "bounds_mm": [
+          [
+            29.550974297576065,
             54.5,
             -4.949025702423935
           ],
@@ -3440,10 +3586,10 @@
         ],
         "watertight": true,
         "winding_consistent": true,
-        "signed_volume_mm3": 19593.367397560938
+        "signed_volume_mm3": 19593.36739756093
       }
     ],
-    "exact_welded_edges": 81483,
+    "exact_welded_edges": 84147,
     "boundary_edges_incidence_1": 0,
     "nonmanifold_edges_incidence_gt2": 0,
     "maximum_edge_incidence": 2,
@@ -3455,9 +3601,9 @@
     "finite_vertex_coordinates": true,
     "manifold3d_import_status": "Error.NoError",
     "manifold3d_import_empty": false,
-    "manifold3d_import_triangles": 54322,
-    "manifold3d_import_volume_mm3": 254252.9577605315,
-    "csg_sha256": "10f43e8df25b1d8299901b2ff99c8b0db2edd99c787df7a547ae897df0af3ade"
+    "manifold3d_import_triangles": 56098,
+    "manifold3d_import_volume_mm3": 260163.64714609899,
+    "csg_sha256": "772bf3f3723642740c26982ea6f6ec9af493e16afdc0da5408254c3f1f13985a"
   },
   "failures": [],
   "pass": true

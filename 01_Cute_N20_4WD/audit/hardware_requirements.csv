@@ -11,3 +11,5 @@ Wheel to hub,12,M3 axial bolt and captured nut,14,14 mm effective under-head len
 Hub to motor shaft,4,Headless M3 grub screw and captured nut,unverified,Nominal10mm probe only; select actual tip and engagement,Radial window aligned30deg; exact shaft flat/usable length unverified
 Motor retention,8,Cable ties,unverified,Must fit2.6x2mm transverse channels,Two ties per motor; preload and torque reaction need real fit test
 Battery retention,2,Battery straps,unverified,Must fit real pack and8x4.4mm slot routes,Select width/length from actual pack; strain relief still unverified
+USB-C charger cradle to deck,2,M3x10 bolt and M3 nut,6,10 mm under-head; no washers in nominal checked stack,Max head diameter 6.6 / height 3; nut 5.7 AF / 2.7 high; install carrier before PCB
+USB-C charger PCB retention,2,Narrow insulated cable tie,,Width <2.8 mm and thickness <1.4 mm; confirm channel fit,Route through paired slots and underside channels; avoid components and pads

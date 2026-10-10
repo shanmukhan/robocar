@@ -14,7 +14,8 @@ import trimesh
 ROOT=Path(__file__).resolve().parents[2]
 report=json.loads((ROOT/'audit/validation_results.json').read_text())
 plt.rcParams.update({'font.size':10,'font.family':'DejaVu Sans'})
-fig,axes=plt.subplots(3,4,figsize=(16,12),layout='constrained')
+fig,axes=plt.subplots(4,4,figsize=(16,16),layout='constrained')
+for ax in axes.flat:ax.axis('off')
 for ax,r in zip(axes.flat,report['printable_parts']):
     path=ROOT/r['path'];ax.imshow(Image.open(path.with_suffix('.png')));ax.axis('off')
     ext=' × '.join(f'{v:.1f}' for v in r['extents_mm'])
@@ -23,9 +24,9 @@ fig.suptitle('Cute N20 CAD — validated printable meshes in export orientation\
 fig.savefig(ROOT/'audit/parts_preview.png',dpi=150);plt.close(fig)
 fig,axes=plt.subplots(1,2,figsize=(16,8),layout='constrained')
 for ax,indices,title in zip(axes,[(0,1),(0,2)],['Top: front is −X; axles along Y','Side: nominal ground at Z=−5 mm']):
-    for i in range(27):
+    for i in range(len(report['placed_components'])):
         mesh=trimesh.load_mesh(ROOT/'audit/components'/f'component_{i:02d}.stl',process=False)
-        col='#c6a823' if i<5 or 18<=i<=22 or i==26 else '#b4b8bc' if i<9 else '#333333' if i<17 else '#ed9226'
+        col='#328fa8' if i==27 else '#c6a823' if i<5 or 18<=i<=22 or i==26 else '#b4b8bc' if i<9 else '#333333' if i<17 else '#ed9226'
         poly=PolyCollection(mesh.triangles[:,:,indices],facecolors=col,edgecolors='none',alpha=0.9)
         ax.add_collection(poly)
     ax.autoscale_view();ax.set_aspect('equal');ax.grid(alpha=0.2);ax.set_title(title)

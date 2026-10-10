@@ -68,6 +68,30 @@ TOF_POS=[-80,0];
 TOF_POINTS=[[11,-12],[11,12]];
 BUMPER_POS=[-87,0];
 BUMPER_POINTS=[[16,0],[24,0]];
+// SoBotz SBTZ00017, 2S/8.4 V USB-C boost charger, 0.55 A charge setting.
+// Published overall envelope only: verify purchased PCB/connector and tie paths.
+// Rear is +X. Carrier fasteners mount to deck, NOT through the charger PCB.
+CHARGER_L=39;
+CHARGER_W=18;
+CHARGER_H=6.3;
+CHARGER_CLEARANCE=0.5;         // per edge; prototype printer fit allowance
+CHARGER_WALL=2.4;
+CHARGER_FLOOR=3;
+CHARGER_SEAT_Z=7;             // board seat; 4 mm under-board screw/air space
+CHARGER_POS=[39,32.5];
+CHARGER_POINTS=[[-12,-4],[12,-4]];
+CHARGER_TIE_X=[-6,6];
+CHARGER_TIE_CHANNEL_H=1.4;     // under-floor route stays clear of the deck
+CHARGER_PORT_W=14;            // oversized, OPEN-TOP USB-C plug access notch
+CHARGER_PORT_BOTTOM=5;
+CHARGER_PLUG_H=8;             // reserved cable boot, not purchased geometry
+CHARGER_PLUG_L=30;
+CHARGER_PORT_Z=CHARGER_SEAT_Z+2.5; // assumed connector centre; measure actual
+CHARGER_INNER_L=CHARGER_L+2*CHARGER_CLEARANCE;
+CHARGER_INNER_W=CHARGER_W+2*CHARGER_CLEARANCE;
+CHARGER_OUTER_L=CHARGER_INNER_L+2*CHARGER_WALL;
+CHARGER_OUTER_W=CHARGER_INNER_W+2*CHARGER_WALL+6;
+CHARGER_PANEL_H=17;
 assert(GROUND_CLEARANCE>0 && SHAFT_Z>BASE_T+max(N20_BODY_H,N20_GEARBOX_H)/2);
 assert(STAND_H>0 && DECK_Z>BASE_T+MOUNT_TOP);
 assert(SHAFT_ENGAGEMENT>=4.5,"Generic shaft engagement too short: measure motor/hub");
@@ -76,6 +100,11 @@ assert(HUB_FLANGE_D/2>HUB_BOLT_R+M3_NUT_AF/sqrt(3)+2);
 assert(WHEEL_FACE_GAP>1.5,"Wheel must clear saddle nose");
 assert(HUB_H<WHEEL_W && HUB_FLANGE_H<HUB_H);
 assert(min(N20_BODY_H,N20_GEARBOX_H)>=8,"Check tie contact and saddle sidewall height");
+assert(CHARGER_CLEARANCE>0 && CHARGER_SEAT_Z>=CHARGER_FLOOR+4);
+assert(CHARGER_PORT_W<CHARGER_INNER_W && CHARGER_PORT_BOTTOM>CHARGER_FLOOR);
+assert(CHARGER_PORT_Z-CHARGER_PLUG_H/2>=CHARGER_PORT_BOTTOM);
+assert(CHARGER_PANEL_H>=CHARGER_SEAT_Z+CHARGER_H+2);
+assert(CHARGER_FLOOR-CHARGER_TIE_CHANNEL_H>=1.6);
 // center means XY-centred, never Z-centred.
 module rounded_box(x,y,z,r=3,center=false) {
     assert(x>=2*r && y>=2*r && z>0 && r>0);
@@ -246,8 +275,57 @@ module top_deck() {
         for(p=STAND_POINTS) hole_z(p,DECK_T);
         for(p=ESP_POINTS) hole_z([ESP_POS[0]+p[0],p[1]],DECK_T);
         for(p=CAMERA_POINTS) hole_z([CAMERA_POS[0]+p[0],p[1]],DECK_T);
+        for(p=CHARGER_POINTS) hole_z([CHARGER_POS[0]+p[0],CHARGER_POS[1]+p[1]],DECK_T);
         translate([-28,0,DECK_T/2]) cube([14,24,DECK_T+2*EPS],center=true);
     }
+}
+// Open ventilated cradle. Rear USB-C notch has no bridge to support.
+// Edge seats and two narrow insulated ties retain a board without drilled holes.
+// Route ties clear of parts/solder pads after inspecting the purchased module.
+module usb_c_charger_mount() {
+    difference() {
+        union() {
+            rounded_box(CHARGER_OUTER_L,CHARGER_OUTER_W,CHARGER_FLOOR,1,true);
+            // Edge seats contact the PCB underside; cavity walls have 0.5 mm gap.
+            for(s=[-1,1]) {
+                y=s==1?CHARGER_W/2-0.5:-CHARGER_INNER_W/2-CHARGER_WALL;
+                translate([-CHARGER_INNER_L/2,y,CHARGER_FLOOR])
+                    cube([CHARGER_INNER_L,CHARGER_WALL+CHARGER_CLEARANCE+0.5,
+                          CHARGER_SEAT_Z-CHARGER_FLOOR]);
+                wall_y=s==1?CHARGER_INNER_W/2:-CHARGER_INNER_W/2-CHARGER_WALL;
+                translate([-CHARGER_INNER_L/2,wall_y,CHARGER_FLOOR])
+                    cube([CHARGER_INNER_L,CHARGER_WALL,CHARGER_SEAT_Z+1.6-CHARGER_FLOOR]);
+            }
+            // Forward stop and rear connector guard; both joined to floor/rails.
+            for(x=[-CHARGER_OUTER_L/2,CHARGER_INNER_L/2])
+                translate([x,-CHARGER_INNER_W/2-CHARGER_WALL,CHARGER_FLOOR])
+                    cube([CHARGER_WALL,CHARGER_INNER_W+2*CHARGER_WALL,
+                          CHARGER_PANEL_H-CHARGER_FLOOR]);
+        }
+        for(p=CHARGER_POINTS) hole_z(p,CHARGER_PANEL_H);
+        // Tie slots stay outside edge seats, with a 1.3 mm outer floor ligament.
+        for(x=CHARGER_TIE_X,s=[-1,1])
+            translate([x,s*(CHARGER_INNER_W/2+CHARGER_WALL+1),CHARGER_FLOOR/2])
+                cube([2.8,1.4,CHARGER_FLOOR+2*EPS],center=true);
+        // Connect each slot pair UNDER the floor; the deck otherwise blocks ties.
+        for(x=CHARGER_TIE_X)
+            translate([x-1.4,-CHARGER_OUTER_W/2+1.3,-EPS])
+                cube([2.8,CHARGER_OUTER_W-2.6,CHARGER_TIE_CHANNEL_H+EPS]);
+        // Open-top front wire exit and rear plug opening, avoiding bridge roofs.
+        translate([-CHARGER_OUTER_L/2-EPS,-5,CHARGER_FLOOR])
+            cube([CHARGER_WALL+2*EPS,10,CHARGER_PANEL_H]);
+        translate([CHARGER_INNER_L/2-EPS,-CHARGER_PORT_W/2,CHARGER_PORT_BOTTOM])
+            cube([CHARGER_WALL+2*EPS,CHARGER_PORT_W,CHARGER_PANEL_H]);
+    }
+}
+// Assembly/check-only spaces: not printable electronics or cable models.
+module charger_board_envelope() {
+    translate([-CHARGER_L/2,-CHARGER_W/2,CHARGER_SEAT_Z])
+        cube([CHARGER_L,CHARGER_W,CHARGER_H]);
+}
+module charger_plug_clearance() {
+    translate([CHARGER_L/2,-CHARGER_PORT_W/2,CHARGER_PORT_Z-CHARGER_PLUG_H/2])
+        cube([CHARGER_PLUG_L,CHARGER_PORT_W,CHARGER_PLUG_H]);
 }
 // Back face on bed avoids supporting the elevated sensor beam.
 module tof_sensor_bar_print() { translate([0,0,2]) rotate([0,-90,0]) tof_sensor_bar(); }
@@ -273,7 +351,8 @@ module fit_coupon() {
 }
 // Indexed component exports allow actual independent-solid interference checks.
 // 0 base; 1..4 mounts; 5..8 motor envelopes; 9..12 wheels; 13..16 hubs;
-// 17 battery; 18 deck; 19..22 spacers; 23 ESP; 24 camera; 25 ToF; 26 bumper.
+// 17 battery; 18 deck; 19..22 spacers; 23 ESP; 24 camera; 25 ToF; 26 bumper;
+// 27 USB-C charger cradle. Board/cable envelopes are check-only modules above.
 module assembly_component(i) {
     sx=(i-1)%2==0?-1:1;
     sy=floor((i-1)%4/2)==0?-1:1;
@@ -289,10 +368,11 @@ module assembly_component(i) {
     else if(i==24) translate([CAMERA_POS[0],CAMERA_POS[1],DECK_Z+DECK_T]) camera_mount();
     else if(i==25) translate([TOF_POS[0],TOF_POS[1],BASE_T]) tof_sensor_bar();
     else if(i==26) translate([BUMPER_POS[0],BUMPER_POS[1],BASE_T]) front_bumper();
+    else if(i==27) translate([CHARGER_POS[0],CHARGER_POS[1],DECK_Z+DECK_T]) usb_c_charger_mount();
 }
 module assembly(show_motors=true,show_wheels=true,show_deck=true) {
-    for(i=[0:26]) if((show_motors || i<5 || i>8) && (show_wheels || i<9 || i>16) && (show_deck || i<18 || i>24))
-        color(i>=5 && i<=8?"silver":i>=9 && i<=16?"#303030":i==17 || i>=23 && i<=25?"orange":"gold")
+    for(i=[0:27]) if((show_motors || i<5 || i>8) && (show_wheels || i<9 || i>16) && (show_deck || (i<18 || i>24) && i!=27))
+        color(i>=5 && i<=8?"silver":i>=9 && i<=16?"#303030":i==27?"#328fa8":i==17 || i>=23 && i<=25?"orange":"gold")
             assembly_component(i);
 }
 assembly();

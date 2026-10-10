@@ -86,7 +86,7 @@ def main():
                         help="OpenSCAD executable; defaults to OPENSCAD_BIN")
     parser.add_argument("--source-root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--jobs", type=int, choices=[1, 2, 3], default=3)
-    parser.add_argument("--components", type=int, default=27)
+    parser.add_argument("--components", type=int, default=28)
     parser.add_argument("--part-previews", action="store_true", help="Also render every printable part PNG")
     parser.add_argument("--timeout", type=int, default=300, help="Seconds per export job")
     args = parser.parse_args()
